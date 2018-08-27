@@ -1,10 +1,10 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Abertura": ["tap", "eap", "canvas"],
+    "Projeto": ["doc-visao", "doc-arquitetura", "id-visual"],
+    "Roadmaps": ["rm-geral", "rm-devops", "rm-arquitetura"]
   },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+  "Sprints": {
+    "Sprints": ["sprint0", "sprint1", "sprint2"]
   }
 }

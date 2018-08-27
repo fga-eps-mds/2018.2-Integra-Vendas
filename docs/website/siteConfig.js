@@ -25,9 +25,9 @@ const siteConfig = {
   tagline: 'Um website para documentação do Mercadão da FGA',
 
   url: 'https://fga-eps-mds.github.io/2018.2-iFood/', // Your website URL
-  // baseUrl: '/2018.2-iFood/', // Base URL for your project */
+  baseUrl: '/2018.2-iFood/', // Base URL for your project */
   // Localhost
-  baseUrl: '/', // Base URL for your project */
+  // baseUrl: '/', // Base URL for your project */
 
   // Used for publishing and more
   projectName: '2018.2-iFood',

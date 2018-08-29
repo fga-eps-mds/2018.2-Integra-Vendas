@@ -6,4 +6,4 @@ sidebar_label: EAP
 
 ## Estrutura Analítica de Projeto
 
-EAP é um documento do balacobaco.
+![EAP](images/eap.jpg)

@@ -9,28 +9,29 @@ sidebar_label: TAP
 O iFoodFGA é um aplicativo que auxilia a conexão entre vendedores de sobremesas da FGA com os clientes em potencial.
 
 ## Propósito e Justificativa
+O iFoodFGA tem o objetivo de facilitar a forma como os vendedores atingem os clientes para poderem ter vendas com mais eficiência e eficácia.
 
 Os vendedores de sobremesas gastam um valioso tempo passando em todas as mesas, no horário do almoço, fazendo com que não consigam se concentrar em clientes que estejam mais dispostos a comprar, não só tendo um alto custo de tempo, como também de extensas movimentações repetitivas entre as mesas, que podem incomodar estudantes que não pretendem comprar o produto ou fazendo-os se irritarem se passado repedidamente vendedores em suas mesas.
 
 ## Objetivos
 
-Criar uma conexão transparente, objetiva e eficiente entre os vendedores e estudantes que tem o potencial de efetuar a compra do produto, fazendo com que exista uma grande economia de tempo para o vendedor, tanto economizando a locomoção entre as mesas, quanto de tempo de venda, assim sendo possível os compradores saírem também satisfeitos.
+Criar uma aplicação mobile que conecte de maneira objetiva vendedores de sobremesas no âmbito da FGA e consumidores interessados em seus produtos, gerando maior eficiência e eficácia no processo de venda, entregando satisfação ao consumidor e tempo ao vendedor.
 
-## Requisitos de alto nível
+## Requisitos de Alto Nível
 
 A solução, em alto nível, deverá seguir as seguintes diretrizes:
 
-* Estar alinhado com melhores práticas de usabilidade;
+* Deverá estar disponível para plataforma Android;
 
 * Deverá ter um design simples, que seja objetivo para que o usuário consiga realizar com rapidez o que deseja;
 
-* Sempre deverá haver entrega de valor;
-
 * Os dados devem ser armazenados de forma segura;
 
-* Sempre deverá estar alinhado com aprendizado para ter valor ao cliente;
+* Vendedores poderão disponibilizar seus produtos, bem como receber pedido;
 
-## Riscos
+* Compradores poderão visualizar os produtos, vendedores e quantidades disponíveis;
+
+## Riscos de Alto Nível
 
 |   Risco	|   Impacto	|  Ação preventiva 	|   Ação corretiva  |
 |----------	|----------	|----------------	|--------------	    |
@@ -41,9 +42,19 @@ A solução, em alto nível, deverá seguir as seguintes diretrizes:
 |Produto não atende necessidade do cliente|baixa adesão de usuários|Avaliar sempre as métricas de valor para tomar decisões rapidamente|Refinar o entendimento de valor do cliente|
 |Membro faltante nas reuniões semanais|Falha de comunicação|Definir datas que a maioria dos membros estão disponíveis|Alinhar o membro sobre a reunião|   	
 
-## Cronograma e Marcos
-
 ## Estimativa de Custo
+
+Valores fixos mensais se alongam por 4 meses que seria o prazo do projeto.
+
+|Recursos|Preço Unitário|Quantidade|Preço Total|
+|--------|--------------|----------|-----------|
+|Desenvolvedores|R$ 2400,00 mensais|6|R$ 57.600,00|
+|Equipe Fullstack|R$ 2400,00 mensais|4|R$ 38.400,00|
+|Notebooks|R$ 3.000,00|10|R$ 30.000,00|
+|Internet Banda Larga 15mb mensal|R$ 120,00| 10 | R$ 4.800,00|
+|Energia mensal|R$ 140,00|10|R$ 5.600,00|
+|Custo estimado|-|-|R$ 136.400,00|
+|Custo estimado + 15% de taxa de risco|-|-|R$ 156.860,00|
 
 ## Stakeholders
 
@@ -69,7 +80,5 @@ A solução, em alto nível, deverá seguir as seguintes diretrizes:
 ### Orientadora
 [Carla Silva Rocha Aguiar](https://github.com/RochaCarla)
 
-## Critérios de Aceitação
-
-## Referências
+##  Referências
 

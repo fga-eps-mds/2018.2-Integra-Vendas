@@ -28,7 +28,11 @@ imagem
 
 ### React-Native
 
+O React-Native é um framework que utiliza o mesmo design que o React tendo aplicação na construção de aplicativos mobile utilizando apenas javascript e traz uma rica interface, a partir de componentes declarativos, para o ambiente mobile. O React-Native trás uma propósta rápida e prática para recarregar o aplicativo instantâneamente, sem precisar compilar, com o "Hot Recoading", que tem como objetivo trazer um feedback em menos de 1 segundo. Este framework combina os componentes escritos em Objective-C, Java, ou Swift, podendo ser escritas parte do aplicativo usando um código nativo.
+
 ### Redux
+
+O Redux é um container de estado previsível para aplicativos JavaScript. Esse container ajuda a manter a consistência dos aplicativos em ambientes diferentes, sendo fácil de testar e proporcionando uma boa experiência ao desenvolvedor.
 
 ### Micro Serviços
 
@@ -39,7 +43,11 @@ imagem
 
 ### Model
 
+A model é a representação dos, permitindo obter informações do banco de dados sem conhecer a complexidade de tal. Essa camada contém tudo sobre os dados: como acessar, validar, comprotamentos e relações entre dados.
+
 ### View
+
+A view controla o fluxo de informações entre a model e o template. Essa camada utiliza lógica programada para decidir quais informações serão extraídas do banco de dados e quais serão transmitidas para exibição.
 
 ### Serializer
 

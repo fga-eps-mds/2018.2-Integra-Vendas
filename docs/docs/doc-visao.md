@@ -22,12 +22,17 @@ sidebar_label: Documento de Visão
 
 3. Descrições da parte interessada e dos usuários
 
-* 3.1 Resumo de Usuários
-* 3.2 Ambiente do Usuário
-* 3.3 Perfil dos Envolvidos
-* 3.4 Perfil dos Usuários
-* 3.5 Principais Necessidades dos Usuários e dos Envolvidos
-* 3.6 Alternativas e Concorrência
+* 3.1 Demográficos de Mercado
+* 3.2 Resumo da Parte Interessada
+* 3.3 Resumo de Usuários
+* 3.4 Ambiente do Usuário
+* 3.5 Perfil dos Envolvidos
+    * 3.5.1 Equipe de Desenvolvimento
+    * 3.5.2 Equipe de Gestão de Projeto
+* 3.6 Perfil dos Usuários
+    * 3.6.1 Compradores
+    * 3.6.2 Vendedores
+* 3.7 Principais Necessidades dos Usuários e dos Envolvidos
 
 4. Visão Geral do Produto
 5. Recursos do Produto
@@ -94,19 +99,81 @@ Após uma entrevista breve com a vendedora Priscila, ela nos apresentou dificuld
 #### 2.3 Instrução de Posição do Produto
 Para que os estudantes vendedores e os compradores que sofrem com a falta de um veículo de comunicação. O iFoodFGA, vem com o objetivo de servir como uma ponte de comunicação entre essas duas entidades (compradores e vendedores) a fim de melhorar o encontro e o comércio de produtos no ambiente acadêmico. Uma solução viável para isso, seria serviços como chat, uma ferramenta para compartilhamento de localização, e também uma listagem de todos os produtos que são oferecidos pelos vendedores, divididos por vendedores ou tags no sistema de busca.
 
-### 3. Descrições da parte interessada e dos usuários
+### 3. Descrições da Parte Interessada e dos Usuários
+#### 3.1 Demográficos de Mercado
+Atualmente a FGA comporta milhares de discentes, sendo que alguns dividem a jornada acadêmica com o comércio de produtos pela faculdade como uma forma de obter dinheiro durante esse período. Com o objetivo de estreitar a relação entre os compradores e os vendedores, esse projeto propõe-se a atingir os frequentadores da FGA e apresentar uma solução para facilitar o processo de venda de mercadorias — doces, sobremesas, marmitas, etc. — dentro da faculdade.
 
-#### 3.1 Resumo de Usuários
+#### 3.2 Resumo da Parte Interessada
+|Grupo|Descrição|Responsabilidade|
+|-|-|-|
+|Equipe de Desenvolvimento|Estudantes da disciplina de MDS, UnB-FGA.|Documentar, desenvolver, testar e implementar a aplicação.|
+|Equipe de Processos de Software|Estudantes da disciplina de EPS, UnB-FGA.|Coordenar, auxiliar e orientar a equipe de desenvolvimento de software, além de fundamentar o projeto.|
+|Cliente|Compradores/Vendedores de produtos na FGA.|Levantar os requisitos do software.|
+|Coachs|Estudantes da UnB, monitores da matéria de GPP/MDS.|Auxiliar e retirar dúvidas das equipes de desenvolvimento e gestão.|
+|Professora|Professora do curso de Engenharia de Software, UnB-FGA.|Orientar e avaliar os trabalhos realizados pelas equipe de MDS e EPS.|
 
-#### 3.2 Ambiente do Usuário
+#### 3.3 Resumo de Usuários
+|Grupo|Descrição|Responsabilidade|
+|-|-|-|
+|Comprador|Pessoa interessada em realizar a compra de produtos na FGA.|Solicitar o serviço por meio da aplicação.|
+|Vendedor|Pessoa que disponibiliza um menu com os itens a ser vendidos na FGA.|Cadastrar produtos e efetivar a compra em dado local junto ao comprador.|
 
-#### 3.3 Perfil dos Envolvidos
+#### 3.4 Ambiente do Usuário
+Dispositivos móveis:
+|Sistema|Versão|
+|-------|------|
+|Android|>= 4.1 (API 16)|
+|iOs|>= 9.0|
 
-#### 3.4 Perfil dos Usuários
+A aplicação estará ativa por parte do vendedor durante o seu período de atividade na faculdade indicando sua disponibilidade.
 
-#### 3.5 Principais necessidades dos usuários e dos envolvidos
+#### 3.5 Perfil dos Envolvidos
+##### 3.5.1 Equipe de Desenvolvimento
+|Representantes|André Pinto, Dâmaso Pereira, Gustavo Lima, Leonardo Medeiros, Shayane Alcântara, Welison Almeida|
+|-|-|
+|**Descrição**|Desenvolvedores.|
+|**Tipo**|Estudantes da FGA da disciplina de MDS.|
+|**Responsabilidade**|Desenvolvimento, documentação, implementação e Testes do _software_.|
+|**Critérios de Sucesso**|Concluir devidamente o _software_ e disponibilizá-lo ao público-alvo.|
+|**Envolvimento**|Alto.|
+|**Problemas/Comentários**|Inexperiência em relação às linguagens, metodologias e paradigmas que serão aplicadas ao projeto.|
 
-#### 3.6 Alternativas e Concorrência
+##### 3.5.2 Equipe de Gestão de Projeto
+|Representantes|Lucas Costa, Lucas Pereira, Ricardo Canela, Wesley Araujo|
+|-|-|
+|**Descrição**|Gerenciamento de projeto.|
+|**Tipo**|Estudantes da FGA da disciplina de GPP.|
+|**Responsabilidade**|Coordenar, auxiliar e orientar a equipe de desenvolvimento de software, além de fundamentar o projeto.|
+|**Critérios de Sucesso**|Gerir adequadamente o desenvolvimento, tratar riscos e entregar o produto.|
+|**Envolvimento**|Alto.|
+|**Problemas/Comentários**|-|
+
+#### 3.6 Perfil dos Usuários
+##### 3.6.1 Compradores
+|Representante|Compradores|
+|-|-|
+|**Descrição**|Pessoa interessada em comprar produtos de vendedores autônomos presentes na faculdade.|
+|**Tipo**|Comprador.|
+|**Responsabilidade**|Solicitar o serviço e dispor informações ao vendedor quanto à localização da realização da venda.|
+|**Critérios de Sucesso**|Comunicação efetiva e entrega do produto.|
+|**Envolvimento**|Alto.|
+|**Problemas/Comentários**|Não possuir um _smartphone_ com os pré-requisitos elecandos ou não ter acesso à internet.|
+
+##### 3.6.2 Vendedores
+|Representante|Vendedores|
+|-|-|
+|**Descrição**|Pessoa que vende seus produtos na FGA.|
+|**Tipo**|Vendedor.|
+|**Responsabilidade**|Disponibilizar um menu de mercadorias e encaminhar-se ao comprador para firmar a venda.|
+|**Critérios de Sucesso**|Comunicação efetiva e entrega do produto.|
+|**Envolvimento**|Alto.|
+|**Problemas/Comentários**|Não possuir um _smartphone_ com os pré-requisitos elecandos ou não ter acesso à internet.|
+
+#### 3.7 Principais Necessidades dos Usuários e dos Envolvidos
+|Necessidade|Interesse|Solução Proposta|
+|-|-|-|
+|**Apresentar a oferta**|Estabelecer um meio eficiente para os compradores terem informações sobre os produtos disponíveis.| Disponibilizar na aplicação um menu com os produtos associados ao vendedor.|
+|**Facilitar a compra**|Apresentar a disponibilidade do vendedor para efetivar a venda, abranger a comunicação entre comprador e vendedor.|Sistema de pedidos com recurso de comuniçação que possibilitará ao comprador combinar a entrega do produto e efetivar a compra.|
 
 ### 4. Visão Geral do Produto
 

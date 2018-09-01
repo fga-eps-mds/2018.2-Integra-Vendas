@@ -2,7 +2,7 @@
   "docs": {
     "Abertura": ["tap", "eap", "canvas"],
     "Projeto": ["doc-visao", "doc-arquitetura", "id-visual"],
-    "Roadmaps": ["rm-geral", "rm-devops", "rm-arquitetura"]
+    "Roadmaps": ["rm-geral", "rm-papeis"]
   },
   "Sprints": {
     "Sprints": ["sprint0", "sprint1", "sprint2"]

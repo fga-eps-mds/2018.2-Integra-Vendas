@@ -22,15 +22,15 @@ Novas funcionalidades sempre saem da branch **dev**, nunca da master.
 ```
 git checkout origin dev
 git pull origin dev --rebase
-git checkout -b login/gmail-integration-#7
-git push origin login/gmail-integration-#7
+git checkout -b feature/gmail-integration
+git push origin feature/gmail-integration
 
 ... coding ...
 
 git checkout origin dev
 git pull origin dev --rebase
-git merge login/gmail-integration-#7
-git push origin login/gmail-integration-#7
+git merge feature/gmail-integration
+git push origin feature/gmail-integration
 
 ... Pull request to dev ...
 ```
@@ -39,13 +39,13 @@ HotFix são atualizações esporádicas pequenas mas importantantes, de funciona
 ```
 git checkout origin dev
 git pull origin dev --rebase
-git checkout -b hotfix/gmail-integration-#7
+git checkout -b hotfix/gmail-integration
 
 ... hot fix ...
 git checkout origin dev
 git pull origin dev --rebase
-git merge origin hotfix/gmail-integration-#7
-git push origin hotfix/gmail-integration-#7
+git merge origin hotfix/gmail-integration
+git push origin hotfix/gmail-integration
 
 ... Pull Request to dev ...
 ```
@@ -58,15 +58,15 @@ Master é a branch de produção. Nela se encontra a versão que estará dispon�
 Dev é a branch de homologação. Nela se encontra a versão mais atualizada e estável do projeto.
 
 #### Nome das Branches
-As branches seguirão o nome de contexto/artefato
-* tema/funcionalidade-issue
-* doc/documento
+As branches seguirão o nome de tipo/artefato
+* feature/issue-funcionalidade
+* doc/documento-visao
 
 ```
-git checkout -b docs/EAP
+git checkout -b doc/EAP
 ```
 ```
-git checkout -b login/gmail-integration-#7
+git checkout -b feature/gmail-integration
 ```
 
 ### Política de Commits

@@ -4,7 +4,5 @@ title: Roadmap dos papéis
 sidebar_label: Roadmap dos papéis
 ---
 
-## Roadmap dos papéis
-
-*Roadmap bonitão*
+![roadmap_papeis](assets/roadmap-papeis.png)
 

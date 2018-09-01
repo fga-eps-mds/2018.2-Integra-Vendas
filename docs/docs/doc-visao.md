@@ -62,6 +62,8 @@ Esse projeto tem como finalidades, fazer a conexão entre vendedores autônomos 
 * App - Aplicativo *mobile*, para o sistema Android.
 * Projeto - Projeto do aplicativo iFoodFGA.
 * Tag - O que divide produtos especificos em categorias.
+* Back-end - Ele é o responsável, em termos gerais, pela implementação da regra de negócio.
+* Front-end - Parte da aplicação que interage diretamente com o usuário.
 
 #### 1.4 Referencias
 IBM Knowledge Center - Documento de Visão: Estruturas de um Documento de Visão.
@@ -226,9 +228,13 @@ O cliente poderá assinalar o interesse pelo produto, fazendo o pedido e logo em
 ### 6. Restrições
 
 #### 6.1 Restrições de Design
+O sistema precisa ser atrativo aos usuários e ao mesmo tempo de fácil uso.
 
 #### 6.2 Restrições de Implementação
+O sistema terá o *back-end* desenvolvido usando a linguagem Python com o *framework* Django e o *front-end* baseado em JavaScript com o *framework* React-native. O sistema deverá ser desenvolvido para funcionar junto a outros apps que serão desenvolvidos por outras equipes.
 
 #### 6.3 Restrições de Segurança
+O sistema se comunica com um banco de dados externo. O sistema deve ser resistente a ataques e possiveis tentativas de invasão.
 
 #### 6.4 Restrições de Uso
+Para o uso do sistema é necessário que o usuário tenha acesso a um dispositivo conectado à internet.

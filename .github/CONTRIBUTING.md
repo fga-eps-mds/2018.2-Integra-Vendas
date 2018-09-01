@@ -14,6 +14,39 @@ Para contribuir com o projeto é muito fácil e cada pouquinho conta! Basta segu
 ### Política de Issues
 Para criação de issue o [template Issue](docs/issue_template.md) deve ser seguido.
 
+### Gitflow
+Gitflow é o fluxo planejado para criação de branches. Afim de organizar e poder gerenciar melhor o projeto.
+
+#### Nova funcionalidade
+Novas funcionalidades sempre saem da branch **dev**, nunca da master.
+```
+git checkout origin dev
+git pull origin dev --rebase
+git checkout -b login/gmail-integration-#7
+git push origin login/gmail-integration-#7
+
+... coding ...
+
+git merge origin dev
+git push origin login/gmail-integration-#7
+
+... Pull request to dev ...
+```
+#### HotFix
+HotFix são atualizações esporádicas pequenas mas importantantes, de funcionalidades que já estão na branch de desenvolvimento ou produção.
+```
+git checkout origin dev
+git pull origin dev --rebase
+git checkout -b hotfix/gmail-integration-#7
+
+... hot fix ...
+
+git merge origin dev
+git push origin hotfix/gmail-integration-#7
+
+... Pull Request to dev ...
+```
+
 ### Política de Branches  
 #### *master*
 Master é a branch de produção. Nela se encontra a versão que estará disponível para utilização no mercado.

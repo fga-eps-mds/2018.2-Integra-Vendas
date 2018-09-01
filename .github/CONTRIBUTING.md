@@ -27,7 +27,9 @@ git push origin login/gmail-integration-#7
 
 ... coding ...
 
-git merge origin dev
+git checkout origin dev
+git pull origin dev --rebase
+git merge login/gmail-integration-#7
 git push origin login/gmail-integration-#7
 
 ... Pull request to dev ...
@@ -40,8 +42,9 @@ git pull origin dev --rebase
 git checkout -b hotfix/gmail-integration-#7
 
 ... hot fix ...
-
-git merge origin dev
+git checkout origin dev
+git pull origin dev --rebase
+git merge origin hotfix/gmail-integration-#7
 git push origin hotfix/gmail-integration-#7
 
 ... Pull Request to dev ...

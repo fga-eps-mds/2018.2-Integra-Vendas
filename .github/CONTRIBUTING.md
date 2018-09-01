@@ -24,7 +24,7 @@ Dev é a branch de homologação. Nela se encontra a versão mais atualizada e e
 #### Nome das Branches
 As branches seguirão o nome de contexto/artefato
 * tema/funcionalidade-issue
-* docs/documento
+* doc/documento
 
 ```
 git checkout -b docs/EAP

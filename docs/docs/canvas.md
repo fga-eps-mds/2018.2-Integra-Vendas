@@ -1,6 +1,6 @@
 ---
 id: canvas
-title: Canvas de Negócios
+title: Canvas de Negócio
 sidebar_label: Canvas
 ---
 

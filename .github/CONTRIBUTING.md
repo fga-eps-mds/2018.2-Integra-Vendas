@@ -58,8 +58,8 @@ Master é a branch de produção. Nela se encontra a versão que estará dispon�
 Dev é a branch de homologação. Nela se encontra a versão mais atualizada e estável do projeto.
 
 #### Nome das Branches
-As branches seguirão o nome de tipo/artefato
-* feature/issue-funcionalidade
+As branches seguirão o nome de tipo/artefato. Para criação de novas features e elaboração de documentos.
+* feature/my-feature
 * doc/documento-visao
 
 ```

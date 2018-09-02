@@ -1,5 +1,5 @@
 ---
-name: Historia de Usuario
+name: História de Usuário
 about: descrição de uma história de usuário
 
 ---

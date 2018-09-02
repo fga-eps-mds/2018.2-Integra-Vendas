@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Abertura": ["tap", "eap", "canvas"],
+    "Abertura": ["tap", "eap", "negocio"],
     "Projeto": ["doc-visao", "doc-arquitetura", "id-visual"],
     "Roadmaps": ["rm-geral", "rm-papeis"]
   },

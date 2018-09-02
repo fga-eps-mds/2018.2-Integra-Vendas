@@ -24,7 +24,7 @@ O diagrama apresenta cada etapa que será seguido para que o aplicativo funcione
 
 ## 2.2 Diagrama React/Redux/Microsserviços
 
-imagem
+![react](assets/diagrama_react.png)
 
 ### React-Native
 
@@ -70,7 +70,7 @@ imagem
 
 ### Front-end
 
-imagem
+![diagrama_pacotes_front](assets/diagrama_pacotes_front.png)
 
 ### Back-end
 

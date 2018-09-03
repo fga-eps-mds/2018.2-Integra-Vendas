@@ -18,13 +18,13 @@ Este documento se aplica à produção do aplicativo iFood, implementado para as
 
 ## 2.1 Diagrama de relações
 
-![relacoes](assets/relacoes.png)
+![relacoes](assets/arquitetura/diagrama_relacoes.png)
 
 O diagrama apresenta cada etapa que será seguido para que o aplicativo funcione, relacionando o front-end com o back-end.
 
 ## 2.2 Diagrama React/Redux/Microsserviços
 
-![react](assets/diagrama_react.png)
+![react](assets/arquitetura/diagrama_react.png)
 
 ### React-Native
 
@@ -41,7 +41,7 @@ Um micro serviço é um componente de alta coesão, baixo acoplamento, autônomo
 
 ## 2.2 Diagrama Django REST Framework
 
-![rest](assets/rest.png)
+![rest](assets/arquitetura/rest.png)
 
 ### Model
 
@@ -85,12 +85,12 @@ imagem
 
 ### Front-end
 
-![diagrama_pacotes_front](assets/diagrama_pacotes_front.png)
+![diagrama_pacotes_front](assets/arquitetura/diagrama_pacotes_front.png)
 
 ### Back-end
 
 
-![diagrama_pacotes_back](assets/diagrama_pacotes_back.png)
+![diagrama_pacotes_back](assets/arquitetura/diagrama_pacotes_back.png)
 
 # 5 Pipeline
 

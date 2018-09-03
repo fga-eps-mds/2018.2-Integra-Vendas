@@ -1,11 +1,11 @@
 ---
-name: Historia de Usuario
+name: História de Usuário
 about: descrição de uma história de usuário
 
 ---
 
 **Descrição**
-Eu como ***persona*** gostaria de ***realizar algo*** de forma que ***alcance um objetivo***
+Eu como ***persona*** gostaria de ***realizar algo*** para ***alcance um objetivo***.
 
 **Critérios de Aceitação**
 - [ ] Deverá ter o campo ...

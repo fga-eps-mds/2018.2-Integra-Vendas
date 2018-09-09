@@ -86,20 +86,41 @@ A etapa de identificação de riscos se encontra tanto no início do projeto qua
 * Usando o *planning poker* a equipe define pontuações para os riscos demonstrando quais são os maiores riscos para o projeto e a equipe na *sprint* em que eles foram pontuados.
 
 ---
-# 3 Técnicas de planejamento
-## 3.1 
+# 3 Ferramentas de planejamento
+## 3.1 Issues
+As *issues* no Github serão utilizadas para representar todas as tarefas que a equipe realizará durante a produção do software. Para a melhor identificação dessas tarefas as *issues* devem ter os seguintes atributos:
+* Nome
+* Descrição
+* *Label*
+* Responsáveis
 
-## 3.2 
+## 3.2 Épicos
+Os Épico provê uma camada extra na hierarquia das Issues definindo um tema que agrupa tarefas que serão realizadas e se comportando como grandes US [[3]](#6-referencias)[[4]](#6-referencias). No desenvolvimento do produto os Épicos terão o objetivo de agrupar US e terão os seguintes atributos:
+* Código: EP## (#: número da EP);
+* Nome: <código> - Eu como <ator> gostaria de <funcionalidade de alto nível> para <valor atribuído para o stakeholder>;
+* Lista de USs atreladas ao Épico.
 
-## 3.3 
+## 3.3 Histórias de Usuário (US)
+As USs são descrições de alto nível de funcionalidades que definem incrementos no produto pela perspectiva dos *stakeholders* [[4]](#6-referencias). As USs serão documentadas nao GitHub como *issues* (seguindo todas as regras definidas anteriormente para *issues*) que obrigatoriamente deverão estar atreladas a Épicos e seguirão um template definido:
+* Código/Nome: US## (#: número da US);
+* Descrição: Eu como <ator> gostaria de <funcionalidade> para <valor atribuído para o *stakeholder*>;
+* Tarefas: Lista de atividades que levam a produção da funcionalidade;
+* Requisitos: Critérios de aceitação.
 
-## 3.4 
+## 3.4 Milestones
+As *Milestones* no GitHub são análogas às *sprints* definindo um período de tempo e documentando no repositório quais atividades serão realizadas em um determinado período [[4]](#6-referencias).
 
-## 3.5 
+## 3.5 Planning Poker
+O *Planning Poker* é um método de estimar *Story Points* (medida relativa de de esforço, complexidade e risco) a partir de comparações de tamanho relativo entre as US [[5]](#6-referencias). No projeto o *planning poker* será usado para estimar tanto as US quanto os riscos em uma determinada *sprint* com o auxílio do aplicativo Scrum Poker Cards [[6]](#6-referencias) que simula as cartas escritas com a sequência de Fibonacci.
 
-## 3.6 
+## 3.6 Kanban
+Para monitorar o trabalho da equipe será utilizado dois quadros de Kanban no *Projects* do GitHub:
+* Quadro de desenvolvimento para manter o controle da produção das US que será dividido em Product Backlog, Sprint Backlog, In Progress, Testing e Done;
+* Quadro geral para manter o controle de todas as outras atividades relacionadas ao produto como produção de documentos, reuniões, treinamentos, estudos e etc. Este quadro será dividido em To do, In progress e Done.
+
 ---
 # 4 Métricas de gerenciamento
+
 
 ---
 # 5 Técnicas de codificação

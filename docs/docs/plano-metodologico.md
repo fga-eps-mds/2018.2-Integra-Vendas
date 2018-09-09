@@ -139,6 +139,10 @@ Os riscos do projeto serão divididos em riscos internos e externos e serão des
 
 ---
 # 5 Técnicas de codificação
+## 5.1 Programação em pares
+A programação em pares é uma prática extraída do *Extreme Programing* (XP) na qual um par de desenvolvedores ficam responsáveis por produzir uma funcionalidade juntos, sendo um o piloto e o outro o co-piloto. Ambos os desenvolvedores devem trabalhar ao mesmo tempo e no mesmo computador de maneira que o piloto codifica e o co-piloto acompanha o trabalho deste. É mandatório que os desenvolvedores invertam seus papéis periodicamente [[7]](#6-referencias).
+
+No decorrer do projeto o *Scrum Master* será responsável por redefinir os pares do Time de Desenvolvimento a cada *sprint* para garantir a homogeneidade da equipe.
 
 ---
 # 6 Referências

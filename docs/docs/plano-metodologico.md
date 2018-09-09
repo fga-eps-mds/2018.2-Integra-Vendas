@@ -120,7 +120,22 @@ Para monitorar o trabalho da equipe será utilizado dois quadros de Kanban no *P
 
 ---
 # 4 Métricas de gerenciamento
+## 4.1 Velocity
+O *velocity* é uma medida de *story points* concluídos em um determinado período de tempo, no caso desse projeto o tempo seria as *sprints* semanais. Essa medida apresenta a taxa de entrega de trabalho pela equipe e isso possibilita estimativas mais acuradas de *story points* que podem ser atribuídos ao time por *sprint* [[4]](#6-referencias).
 
+Inicialmente a estimativa feita pode não ser tão acurada, mas com o passar das *sprits* essa acurácia tende a aumentar.
+
+## 4.2 Burndown
+O *burndown* mostra o trabalho que está completo relacionado com o *velocity* do projeto. O gráfico de *burndown* mostra como as projeto está andando, o que apresenta uma boa noção de quantos *story points* podem ser realizados em uma determinada *sprint* [[4]](#6-referencias).
+
+## 4.3 Quadro de conhecimento
+O quadro de conhecimentos representa como está o conhecimento de cada indivíduo da equipe em tecnologias e métodos que serão chave para o desenvolvimento do projeto. Esse quadro auxilia na identificação dos possíveis riscos internos no projeto e na estimativa inicial de capacidade de trabalho da equipe. A medição dos dados de conhecimento terão as seguintes características:
+* Quando: A medição do conhecimento da equipe será feita no começo do projeto e antes de cada *release*;
+* Como: Entro de cada tópico o nível de conhecimento será pontuado em Baixo - 1, Médio - 3, Alto - 5.
+
+
+## 4.4 Riscos
+Os riscos do projeto serão divididos em riscos internos e externos e serão descritos em tabelas [[2]](#6-referencias). Os riscos serão elicitados e pontuados a cada *sprint*.
 
 ---
 # 5 Técnicas de codificação

@@ -87,7 +87,17 @@ A etapa de identificação de riscos se encontra tanto no início do projeto qua
 
 ---
 # 3 Técnicas de planejamento
+## 3.1 
 
+## 3.2 
+
+## 3.3 
+
+## 3.4 
+
+## 3.5 
+
+## 3.6 
 ---
 # 4 Métricas de gerenciamento
 
@@ -96,3 +106,16 @@ A etapa de identificação de riscos se encontra tanto no início do projeto qua
 
 ---
 # 6 Referências
+[[1]](#6-referencias) SCHWABER, Ken; SUTHERLAND, Jeff. **Um guia definitivo para o Scrum**: As regras do jogo. Scrum Inc, 2013. 19 p.
+
+[[2]](#6-referencias) JUNCKES, Gabriel Dias; MORGADO, Paulo. **Gerência de riscos em desenvolvimento de software**. 2013. Universidade do Sul de Santa Catarina. Disponível em: <https://www.devmedia.com.br/gerencia-de-riscos-em-desenvolvimento-de-software/28506>. Acesso em: 5 set. 2018.
+
+[[3]](#6-referencias) PAQUETTE, Paige. **Working with Epics inside GitHub**: Introducing ZenHub Epics. 2016. Disponível em: <https://www.zenhub.com/blog/working-with-epics-in-github/>. Acesso em: 06 set. 2018.
+
+[[4]](#6-referencias) BUTLER, Matt; PAQUETTE, Paige. **Better So ware & Stronger Teams**: Project Management for GitHub. Zenhub, 2016. Disponível em: <https://www.zenhub.com/github-project-management.pdf>. Acesso em: 04 set. 2018.
+
+[[5]](#6-referencias) BRASILEIRO, Roberto. **Planning Poker**: A melhor maneira de estimar qualquer atividade. 2017. Disponível em: <http://www.metodoagil.com/planning-poker/>. Acesso em: 07 set. 2018.
+
+[[6]](#6-referencias) artArmin. **Scrum Poker Cards**. Disponível em: <https://play.google.com/store/apps/details?id=artarmin.android.scrum.poker>. Acesso em: 07 set. 2018.
+
+[[7]](#6-referencias) MEDEIROS, Manoel Pimentel. **Implementando Pair Programming em sua equipe**: Conhecendo as dificuldades e as vantagens dessa prática XP. 2007. Disponível em: <https://www.devmedia.com.br/implementando-pair-programming-em-sua-equipe/1694>. Acesso em: 8 set. 2018.

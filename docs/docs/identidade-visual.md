@@ -37,6 +37,10 @@ Cada ícone ilustrado na imagem acima representa uma funcionalidade diferente do
 * Carmesim - Configurações
 
 ## 3.1 Paleta
+Para verificar a conformidade da paleta de cores foi utilizado como base as cores derivadas das cores bases pelo Adobe Color (https://color.adobe.com/pt/create/color-wheel/). Algumas cores tiveram os valores alterados comparado a paleta de cor inicial para aumentar a saturação.
+
+![secundary_color](assets/identidade_visual/secundary_color.png)
+
 ## 3.2 Identidade das funcionalidades pelas cores
 
 # 4 Tipografia

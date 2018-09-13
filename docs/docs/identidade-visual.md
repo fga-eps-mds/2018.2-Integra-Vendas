@@ -15,6 +15,27 @@ O Guia de identidade visual apresenta convenções para o *design* das telas da 
 ## 2.2 Logo e cores
 
 # 3 Paleta de cores
+As cores foram definidas a partir da análise da logo da FGA e de fotos aéreas do campus. As cores coletadas foram comparadas junto as suas cores complementares para a criação da paleta primária de cores do aplicativo.
+
+![estudo_identidade_visual](assets/identidade_visual/estudo_identidade_visual.png)
+
+![estudo_identidade_visual](assets/identidade_visual/primary_colors.png)
+
+A partir das cores escolhidas foi feito um gradiente entre elas para entender como elas transacionam e a partir da transição foram identificadas as cinco cores que são usadas para definir a identidade de cada funcionalidade. Os ícones de cada funcionalidade são do estilo Material e foram extraídos do banco de ícones Icons8 (https://icons8.com.br/icon/new-icons/material).
+
+![gradient_palette](assets/identidade_visual/gradient_palette.png)
+
+![palette](assets/identidade_visual/palette.png)
+
+![icons_in_palette](assets/identidade_visual/icons_in_palette.png)
+
+Cada ícone ilustrado na imagem acima representa uma funcionalidade diferente do aplicativo, sendo eles respectivamente:
+* Verde Lima - Eventos
+* Verde Jade - Vendas
+* Azul Turquesa - Indicação de locais
+* Roxo - Proteção do carro
+* Carmesim - Configurações
+
 ## 3.1 Paleta
 ## 3.2 Identidade das funcionalidades pelas cores
 

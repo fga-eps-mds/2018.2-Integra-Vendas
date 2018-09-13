@@ -21,7 +21,7 @@ As cores foram definidas a partir da análise da logo da FGA e de fotos aéreas 
 
 ![estudo_identidade_visual](assets/identidade_visual/primary_colors.png)
 
-A partir das cores escolhidas foi feito um gradiente entre elas para entender como elas transacionam e a partir da transição foram identificadas as cinco cores que são usadas para definir a identidade de cada funcionalidade. Os ícones de cada funcionalidade são do estilo Material e foram extraídos do banco de ícones Icons8 (https://icons8.com.br/icon/new-icons/material).
+A partir das cores escolhidas foi feito um gradiente entre elas para entender como elas transacionam e a partir da transição foram identificadas as cinco cores que são usadas para definir a identidade de cada funcionalidade. Os ícones de cada funcionalidade são do estilo Material e foram extraídos do banco de ícones Icons8 [[1]](#5-referencias).
 
 ![gradient_palette](assets/identidade_visual/gradient_palette.png)
 
@@ -37,10 +37,14 @@ Cada ícone ilustrado na imagem acima representa uma funcionalidade diferente do
 * Carmesim - Configurações
 
 ## 3.1 Paleta
-Para verificar a conformidade da paleta de cores foi utilizado como base as cores derivadas das cores bases pelo Adobe Color (https://color.adobe.com/pt/create/color-wheel/). Algumas cores tiveram os valores alterados comparado a paleta de cor inicial para aumentar a saturação.
+Para verificar a conformidade da paleta de cores foi utilizado como base as cores derivadas das cores bases pelo Adobe Color [[2]](#5-referencias). Algumas cores tiveram os valores alterados comparado a paleta de cor inicial para aumentar a saturação.
 
 ![secundary_color](assets/identidade_visual/secundary_color.png)
 
 ## 3.2 Identidade das funcionalidades pelas cores
 
 # 4 Tipografia
+
+# 5 Referências
+[[1]](#5-referencias) **Icons8**. Disponível em: <https://icons8.com.br/icon/new-icons/material>. Acesso em: 20 ago. 2018.
+[[2]](#5-referencias) **Adobe Color CC**. Disponível em: <https://color.adobe.com/pt/create/color-wheel/>. Acesso em: 20 ago. 2018.

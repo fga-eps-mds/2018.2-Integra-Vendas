@@ -42,9 +42,13 @@ Para verificar a conformidade da paleta de cores foi utilizado como base as core
 ![secundary_color](assets/identidade_visual/secundary_color.png)
 
 ## 3.2 Identidade das funcionalidades pelas cores
+Cada funcionalidade será identificada por uma cor para melhorar a experiência de usuário. Ao selecionar um ícone na *Tab Bar* esse se acenderá com sua cor de identificação e o usuário terá acesso às telas da funcionalidade escolhida, que também estarão caracterizadas com as suas cores de identidade como mostra o exemplo abaixo.
+
+![app_exemples](assets/identidade_visual/app_exemples.png)
 
 # 4 Tipografia
 
 # 5 Referências
 [[1]](#5-referencias) **Icons8**. Disponível em: <https://icons8.com.br/icon/new-icons/material>. Acesso em: 20 ago. 2018.
+
 [[2]](#5-referencias) **Adobe Color CC**. Disponível em: <https://color.adobe.com/pt/create/color-wheel/>. Acesso em: 20 ago. 2018.

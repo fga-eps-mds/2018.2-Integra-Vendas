@@ -37,14 +37,6 @@ sidebar_label: Sprint 3
 
 ## Riscos Externos
 |Risco externo|Medidas|Pontuação|
-|:-------------|:-------|:-------:|
-|--------------|--------|---------|
-|--------------|--------|---------|
-|--------------|--------|---------|
-|--------------|--------|---------|
-|--------------|--------|---------|
-|--------------|--------|---------|
-|--------------|--------|---------|
-|--------------|--------|---------|
-|--------------|--------|---------|
-|--------------|--------|---------|
+|:------------|:------|:-------:|
+|Produto não atende a necessidade do cliente|<ul> <li>Apresentar o produto para o cliente em toda sprint que tiver entrega de valor;</li> <li>Testar usabilidade do produto com o cliente frequentemente.</li> </ul>|34|
+|Mudança abrupta do escopo| |5|

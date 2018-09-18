@@ -4,6 +4,4 @@ title: Roadmap Geral
 sidebar_label: Roadmap Geral
 ---
 
-## Roadmap Geral
-
-*Roadmap bonitão*
+![roadmap_geral](assets/roadmap-geral.png)

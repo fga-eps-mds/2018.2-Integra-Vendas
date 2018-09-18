@@ -77,9 +77,9 @@ Para o desenvolvimento deste projeto serão ultilizadas as seguintes tecnologias
 
 # 4 Visão de Implementação
 
-## 4.1 Modelagem de dados
+## 4.1 Diagrama de classes e serviços
 
-imagem
+![diagrama_classes_e_servicos](assets/arquitetura/diagrama_classes_e_servicos.png)
 
 ## 4.2 Diagrama de Pacotes
 

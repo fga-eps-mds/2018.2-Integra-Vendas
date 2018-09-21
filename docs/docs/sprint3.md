@@ -47,7 +47,7 @@ sidebar_label: Sprint 3
 5. Ambiente de desenvolvimento estável;
 6. A equipe de desenvolvimento ganhou muito conhecimento no desenvolvimento do projeto;
 7. Alguns membros da equipe de desenvolvimento gostaram de programar com pares;
-8. Sinergia entre os membros da equipe;
+8. Sinergia entre os membros da equipe.
 
 ## Pontos de melhoria
 1. A configuração dos ambientes de desenvolvimento estão lentas;
@@ -65,7 +65,7 @@ sidebar_label: Sprint 3
 1. Os horários das reuniões foram respeitados;
 2. Tema bem defino e claro para todos os membros da equipe;
 3. Entendimento melhor da cominicação da API com o *front-end*;
-4. Reuniões ficaram o o objetivo mais claro, mas ainda há perda de tempo no decorrer da reunião;
+4. Reuniões ficaram o o objetivo mais claro, mas ainda há perda de tempo no decorrer da reunião.
 
 -------------------------------------------------------------------------------
 # Métricas

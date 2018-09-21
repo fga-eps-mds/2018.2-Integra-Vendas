@@ -1,10 +1,10 @@
 {
   "docs": {
-    "Abertura": ["tap", "eap", "canvas"],
-    "Projeto": ["doc-visao", "doc-arquitetura", "id-visual"],
-    "Roadmaps": ["rm-geral", "rm-devops", "rm-arquitetura"]
+    "Abertura": ["tap", "eap", "negocio"],
+    "Projeto": ["plano-metodologico", "doc-visao", "doc-arquitetura", "id-visual"],
+    "Roadmaps": ["rm-geral", "rm-papeis"]
   },
   "Sprints": {
-    "Sprints": ["sprint0", "sprint1", "sprint2"]
+    "Sprints": ["sprint0", "sprint1", "sprint2", "sprint3", "sprint4"]
   }
 }

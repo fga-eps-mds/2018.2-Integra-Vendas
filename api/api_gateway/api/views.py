@@ -15,8 +15,8 @@ import requests
 @api_view(["POST"])
 def delete_product(request):
     try:
-        requests.post('http://192.168.0.5:8002/api/delete_product', data= request.data)
-        return Response(status=HTTP_200_OK)
+        response = Response(requests.post('http://IP:8002/api/delete_product', data= request.data))
+        return response
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)

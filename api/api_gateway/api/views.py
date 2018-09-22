@@ -6,6 +6,7 @@ from rest_framework.status import (
     HTTP_200_OK,
     HTTP_404_NOT_FOUND,
     HTTP_400_BAD_REQUEST,
+    HTTP_500_INTERNAL_SERVER_ERROR
 )
 from rest_framework.response import Response
 import requests
@@ -13,5 +14,9 @@ import requests
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
-    response = Response(requests.post('http://IP:8002/api/delete_product', data= request.data))
-    return response
+    try:
+        requests.post('http://192.168.0.5:8002/api/delete_product', data= request.data)
+        return Response(status=HTTP_200_OK)
+    except:
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)

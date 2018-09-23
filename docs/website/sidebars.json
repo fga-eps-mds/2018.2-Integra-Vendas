@@ -1,8 +1,9 @@
 {
   "docs": {
     "Abertura": ["tap", "eap", "negocio"],
-    "Projeto": ["plano-metodologico", "doc-visao", "doc-arquitetura", "id-visual"],
-    "Roadmaps": ["rm-geral", "rm-papeis"]
+    "Projeto": ["plano-metodologico", "doc-visao", "doc-arquitetura"],
+    "Roadmaps": ["rm-geral", "rm-papeis"],
+    "Design": ["id-visual", "baixa-fidelidade", "alta-fidelidade"]
   },
   "Sprints": {
     "Sprints": ["sprint0", "sprint1", "sprint2", "sprint3", "sprint4"]

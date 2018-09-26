@@ -27,7 +27,7 @@ sidebar_label: Sprint 2
 2. Todos os membros estiveram presentes em todas as reuniões;
 3. Os trinamentos foram proficuos;
 4. Boa organização e divisão das tarefas;
-5. Time bem integrado e com boa comunicação;
+5. Time bem integrado e com boa comunicação.
 
 ## Pontos de melhoria
 1. Falta de pontualidade nas reuniões;

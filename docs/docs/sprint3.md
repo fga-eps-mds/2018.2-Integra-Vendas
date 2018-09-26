@@ -40,7 +40,7 @@ sidebar_label: Sprint 3
 1. Apoio de Devops com o Docker;
 2. Comunicações entre os membros da equipe;
 3. Ajuda dos integrantes de EPS;
-4. Toda q equipe é proativa e participativa;
+4. Toda a equipe é proativa e participativa;
 5. Ambiente de desenvolvimento estável;
 6. A equipe de desenvolvimento ganhou muito conhecimento no desenvolvimento do projeto;
 7. Alguns membros da equipe de desenvolvimento gostaram de programar com pares;
@@ -65,6 +65,15 @@ sidebar_label: Sprint 3
 4. Reuniões ficaram o o objetivo mais claro, mas ainda há perda de tempo no decorrer da reunião.
 
 -------------------------------------------------------------------------------
+# Revisão da Sprint
+* A US04 entregou valor, pois preencheu todos os critérios de aceitação. No entanto, gerou a TS01 para o desenvolvimento de testes unitários das funcionalidades implementadas.
+* A US07 entregou valor, pois preencheu todos os critérios de aceitação. No entanto, gerou a TS02 para o desenvolvimento de testes unitários das funcionalidades implementadas.
+* A US08 não preencheu todos os critérios de aceitação.
+* A US10 não preencheu todos os critérios de aceitação.
+* A US01 não preencheu todos os critérios de aceitação.
+* A US02 não começou a ser desenvolvida.
+
+-------------------------------------------------------------------------------
 # Métricas
 ## Horas durante a sprint
 ![tempo-mds-3](assets/sprints/tempo-mds-3.png)
@@ -76,5 +85,7 @@ sidebar_label: Sprint 3
 ![total-horas-td-3](assets/sprints/total-horas-td-3.png)
 
 ## Velocity
+![velocity-3](assets/sprints/velocity-3.png)
 
 ## Burndown
+![burndown-3](assets/sprints/burndown-3.png)

@@ -5,14 +5,11 @@ sidebar_label: Sprint 3
 ---
 
 # Planejamento da Sprint
-|Membro|
-|----|
-|[André Pinto](https://github.com/orgs/fga-eps-mds/people/andrelucax)|
-|[Dâmaso Pereira](https://github.com/orgs/fga-eps-mds/people/juniopereirab)|
-|[Gustavo Lima](https://github.com/orgs/fga-eps-mds/people/gustavolima00)|
-|[Leonardo Medeiros](https://github.com/orgs/fga-eps-mds/people/leomedeiros1)|
-|[Shayane Alcântara](https://github.com/orgs/fga-eps-mds/people/shayanealcantara)|
-|[Welison Almeida](https://github.com/orgs/fga-eps-mds/people/WelisonR)|
+|Par|História|Pontos|
+|---|:------:|:----:|
+|[André Pinto](https://github.com/orgs/fga-eps-mds/people/andrelucax) e [Welison Almeida](https://github.com/orgs/fga-eps-mds/people/WelisonR)|US04 e US07|29|
+|[Gustavo Lima](https://github.com/orgs/fga-eps-mds/people/gustavolima00) e [Dâmaso Pereira](https://github.com/orgs/fga-eps-mds/people/juniopereirab)|US08 e US10|29|
+|[Shayane Alcântara](https://github.com/orgs/fga-eps-mds/people/shayanealcantara) e [Leonardo Medeiros](https://github.com/orgs/fga-eps-mds/people/leomedeiros1)|US01 e US02|16|
 
 -------------------------------------------------------------------------------
 # Riscos
@@ -69,3 +66,15 @@ sidebar_label: Sprint 3
 
 -------------------------------------------------------------------------------
 # Métricas
+## Horas durante a sprint
+![tempo-mds-3](assets/sprints/tempo-mds-3.png)
+![tempo-eps-3](assets/sprints/tempo-eps-3.png)
+![tempo-geral-3](assets/sprints/tempo-geral-3.png)
+
+## Horas totais
+![total-horas-3](assets/sprints/total-horas-3.png)
+![total-horas-td-3](assets/sprints/total-horas-td-3.png)
+
+## Velocity
+
+## Burndown

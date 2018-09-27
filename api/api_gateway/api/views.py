@@ -10,12 +10,15 @@ from rest_framework.status import (
 )
 from rest_framework.response import Response
 import requests
+from django.conf import settings
+
 
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
+
     try:
-        response = Response(requests.post('http://IP/api/delete_product', data= request.data))
+        response = Response(requests.post(settings.PRODUCTS + '/api/delete_product', data= request.data))
         return response
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor.'},
@@ -24,7 +27,7 @@ def delete_product(request):
 @api_view(["POST"])
 def create_product(request):
     try:
-        response = Response(requests.post('http://IP/api/create_product/', data= request.data))
+        response = Response(requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data))
         return response
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor.'},

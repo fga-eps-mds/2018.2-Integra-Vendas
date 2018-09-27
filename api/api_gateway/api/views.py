@@ -32,3 +32,12 @@ def create_product(request):
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["POST"])
+def list_user_products(request):
+    try:
+        response = Response(requests.post(settings.PRODUCTS + '/api/list_user_products', data=request.data))
+        return response
+    except:
+        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)

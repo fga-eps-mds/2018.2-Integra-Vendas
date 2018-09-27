@@ -21,7 +21,7 @@ def delete_product(request):
         response = Response(requests.post(settings.PRODUCTS + '/api/delete_product', data= request.data))
         return response
     except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor.'},
+        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(["POST"])
@@ -30,5 +30,5 @@ def create_product(request):
         response = Response(requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data))
         return response
     except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor.'},
+        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)

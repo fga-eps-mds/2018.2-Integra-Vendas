@@ -11,17 +11,15 @@ from rest_framework.status import (
 from rest_framework.response import Response
 import requests
 import json
-
-host_ip = 'http://192.168.0.10'
-login_microservice_port = ':8000'
-order_microservice_port = ':8001'
-product_microservice_port = ':8002'
+from django.conf import settings
 
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
+    
     try:
-        response = Response(requests.post(host_ip + product_microservice_port + '/api/delete_product', data= request.data))
+        response = Response(requests.post(settings.PRODUCTS + '/api/delete_product', data= request.data))
+
         return response
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
@@ -30,7 +28,7 @@ def delete_product(request):
 @api_view(["POST"])
 def create_order(request):
     try:
-        response = Response(requests.post(host_ip + order_microservice_port + '/api/create_order', data=request.data))
+        response = Response(requests.post(settings.ORDER + '/api/create_order', data=request.data))
         return response
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
@@ -39,7 +37,7 @@ def create_order(request):
 @api_view(["POST"])
 def orders_screen(request):
     user_id = request.data.get('user_id')
-    user_products = requests.post(host_ip + product_microservice_port + '/api/user_products', data={'user_id':user_id})
+    user_products = requests.post(settings.PRODUCTS + '/api/user_products', data={'user_id':user_id})
     #Convert to JSon
     user_products_response = Response(data=json.loads(user_products.content))
 
@@ -47,7 +45,7 @@ def orders_screen(request):
     all_user_orders = []
 
     for product in user_products_response.data:
-        product_orders = requests.post(host_ip + order_microservice_port + '/api/user_orders', data={'product_id':product['id']})
+        product_orders = requests.post(settings.ORDER + '/api/user_orders', data={'product_id':product['id']})
         orders = json.loads(product_orders.content)
         for order in orders:
             if(order['closed'] == False):

@@ -27,9 +27,20 @@ def delete_product(request):
 
 @api_view(["POST"])
 def create_order(request):
+
     try:
-        response = Response(requests.post(settings.ORDER + '/api/create_order', data=request.data))
-        return response
+        print("passou aqui 1")
+        order = requests.post(settings.ORDER + '/api/create_order', data=request.data)
+        try:
+            order_response = Response(data=json.loads(order.content))
+            print(order_response.data)
+            response = Response(data=order_response.data)
+            print("passou aqui 4")
+            return Response(data=response.data)
+        #Convert to JSon
+        except:
+            return Response(order)
+
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)

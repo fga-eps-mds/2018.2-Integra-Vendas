@@ -16,7 +16,6 @@ from django.conf import settings
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
-
     try:
         response = Response(requests.post(settings.PRODUCTS + '/api/delete_product', data= request.data))
 
@@ -53,6 +52,17 @@ def create_product(request):
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["POST"])
+def list_user_products(request):
+    fk_vendor = request.data.get('fk_vendor')
+    
+    try:
+        response = requests.post(settings.PRODUCTS + '/api/list_user_products', data={'fk_vendor':fk_vendor})
+        return Response(data=json.loads(response.content))
+    except:
+        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
+                            status=HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(["POST"])
 def orders_screen(request):

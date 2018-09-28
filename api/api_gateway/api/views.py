@@ -11,12 +11,11 @@ from rest_framework.status import (
 from rest_framework.response import Response
 import requests
 from django.conf import settings
-
+import json
 
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
-
     try:
         response = Response(requests.post(settings.PRODUCTS + '/api/delete_product', data= request.data))
         return response
@@ -35,9 +34,11 @@ def create_product(request):
 
 @api_view(["POST"])
 def list_user_products(request):
+    fk_vendor = request.data.get('fk_vendor')
+    response = requests.post(settings.PRODUCTS + '/api/list_user_products', data={'fk_vendor':fk_vendor})
+    
     try:
-        response = Response(requests.post(settings.PRODUCTS + '/api/list_user_products', data=request.data))
-        return response
+        return Response(data=json.loads(response.content))
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+                            status=HTTP_500_INTERNAL_SERVER_ERROR)

@@ -27,17 +27,19 @@ def delete_product(request):
 
 @api_view(["POST"])
 def create_order(request):
-
+    token = request.data.get('token')
+    auth = verify_token(token)
+    
+    if 'token' not in auth.data:
+        return Response({'error': 'Erro de autenticacao'}, HTTP_403_FORBIDDEN)
+        
     try:
-        print("passou aqui 1")
         order = requests.post(settings.ORDER + '/api/create_order', data=request.data)
         try:
             order_response = Response(data=json.loads(order.content))
             print(order_response.data)
             response = Response(data=order_response.data)
-            print("passou aqui 4")
             return Response(data=response.data)
-        #Convert to JSon
         except:
             return Response(order)
 
@@ -73,3 +75,10 @@ def orders_screen(request):
 
     response = Response(data=all_user_orders)
     return response
+
+def verify_token(token):
+    if(token == None):
+        return Response({'error': 'Erro de autenticacao, token vazio'},HTTP_400_BAD_REQUEST)
+        
+    response = requests.post(settings.LOGIN + '/api-token-verify/', data={'token':token})
+    return Response(data=json.loads(response.content), status=HTTP_200_OK)

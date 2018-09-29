@@ -16,30 +16,38 @@ from django.conf import settings
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
 
     try:
-        response = Response(requests.post(settings.PRODUCTS + '/api/delete_product/', data= request.data))
-
-        return response
+        response = requests.post(settings.PRODUCTS + '/api/delete_product/', data= request.data)
+        try:
+            response_json = json.loads(response.content)
+            return Response(data=response_json)
+        except:
+            return Response(response)
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(["POST"])
 def create_order(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
 
     try:
-        print("passou aqui 1")
-        order = requests.post(settings.ORDER + '/api/create_order/', data=request.data)
+        response = requests.post(settings.ORDER + '/api/create_order/', data=request.data)
         try:
-            order_response = Response(data=json.loads(order.content))
-            print(order_response.data)
-            response = Response(data=order_response.data)
-            print("passou aqui 4")
-            return Response(data=response.data)
-        #Convert to JSon
+            #Convert to JSon
+            response_json = data=json.loads(response.content)
+            return Response(data=response_json)
+
         except:
-            return Response(order)
+            return Response(response)
 
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
@@ -47,16 +55,26 @@ def create_order(request):
 
 @api_view(["POST"])
 def create_product(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
+
     try:
-        response = Response(requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data))
-        return response
+        response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
+        try:
+            #Convert to JSon
+            response_json = data=json.loads(response.content)
+            return Response(data=response_json)
+
+        except:
+            return Response(response)
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(["POST"])
 def orders_screen(request):
-
     ## Verificação do token
     verify = verify_token(request.data)
     if not verify:
@@ -81,7 +99,7 @@ def orders_screen(request):
     return response
 
 def verify_token(data_request):
-    
+
     if not 'token' in data_request:
         return False #Erro de token vazio
     try:

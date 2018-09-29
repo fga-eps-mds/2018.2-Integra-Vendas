@@ -53,4 +53,25 @@ sidebar_label: Sprint 4
 4. Todos os ambientes de desenvolvimento estão configurados para o time de desenvolvimento trabalhar.
 
 -------------------------------------------------------------------------------
+# Revisão da Sprint
+* A [US01](https://github.com/fga-eps-mds/2018.2-iFood/issues/36) entregou valor, pois preencheu todos os critérios de aceitação. No entanto, gerou a [TS04](https://github.com/fga-eps-mds/2018.2-iFood/issues/82) para o desenvolvimento de testes unitários das funcionalidades implementadas.
+* A [TS01](https://github.com/fga-eps-mds/2018.2-iFood/issues/78) foi feita por completo.
+* A [TS02](https://github.com/fga-eps-mds/2018.2-iFood/issues/79) foi feita por completo.
+* A [US08](https://github.com/fga-eps-mds/2018.2-iFood/issues/46) não preencheu todos os critérios de aceitação.
+
+-------------------------------------------------------------------------------
 # Métricas
+## Horas durante a sprint
+![tempo-mds-4](assets/sprints/tempo-mds-4.png)
+![tempo-eps-4](assets/sprints/tempo-eps-4.png)
+![tempo-geral-4](assets/sprints/tempo-geral-4.png)
+
+## Horas totais
+![total-horas-4](assets/sprints/total-horas-4.png)
+![total-horas-td-4](assets/sprints/total-horas-td-4.png)
+
+## Velocity
+![velocity-4](assets/sprints/velocity-4.png)
+
+## Burndown
+![burndown-4](assets/sprints/burndown-4.png)

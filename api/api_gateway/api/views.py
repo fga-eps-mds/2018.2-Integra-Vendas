@@ -18,7 +18,7 @@ from django.conf import settings
 def delete_product(request):
 
     try:
-        response = Response(requests.post(settings.PRODUCTS + '/api/delete_product', data= request.data))
+        response = Response(requests.post(settings.PRODUCTS + '/api/delete_product/', data= request.data))
 
         return response
     except:
@@ -30,7 +30,7 @@ def create_order(request):
 
     try:
         print("passou aqui 1")
-        order = requests.post(settings.ORDER + '/api/create_order', data=request.data)
+        order = requests.post(settings.ORDER + '/api/create_order/', data=request.data)
         try:
             order_response = Response(data=json.loads(order.content))
             print(order_response.data)
@@ -57,7 +57,7 @@ def create_product(request):
 @api_view(["POST"])
 def orders_screen(request):
     user_id = request.data.get('user_id')
-    user_products = requests.post(settings.PRODUCTS + '/api/user_products', data={'user_id':user_id})
+    user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data={'user_id':user_id})
     #Convert to JSon
     user_products_response = Response(data=json.loads(user_products.content))
 
@@ -65,7 +65,7 @@ def orders_screen(request):
     all_user_orders = []
 
     for product in user_products_response.data:
-        product_orders = requests.post(settings.ORDER + '/api/user_orders', data={'product_id':product['id']})
+        product_orders = requests.post(settings.ORDER + '/api/user_orders/', data={'product_id':product['id']})
         orders = json.loads(product_orders.content)
         for order in orders:
             if(order['closed'] == False):

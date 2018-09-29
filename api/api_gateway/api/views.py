@@ -32,12 +32,12 @@ def create_order(request):
         print("passou aqui 1")
         order = requests.post(settings.ORDER + '/api/create_order', data=request.data)
         try:
+            #Convert to JSon
             order_response = Response(data=json.loads(order.content))
             print(order_response.data)
             response = Response(data=order_response.data)
             print("passou aqui 4")
             return Response(data=response.data)
-        #Convert to JSon
         except:
             return Response(order)
 
@@ -48,7 +48,7 @@ def create_order(request):
 @api_view(["POST"])
 def create_product(request):
     try:
-        response = Response(requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data))
+        response = Response(requests.post(settings.PRODUCTS + '/api/create_product', data= request.data))
         return response
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
@@ -73,3 +73,23 @@ def orders_screen(request):
 
     response = Response(data=all_user_orders)
     return response
+
+
+@api_view(["POST"])
+def product_detail(request):
+
+    try:
+        print("passou aqui 1")
+        product = requests.post(settings.PRODUCTS + '/api/product_detail', data=request.data)
+        try:
+            #Convert to JSon
+            product_response = Response(data=json.loads(product.content))
+            print(product_response.data)
+            response = Response(data=product_response.data)
+            return Response(data=response.data)
+        except:
+            return Response(product)
+
+    except:
+        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)

@@ -74,15 +74,24 @@ def create_product(request):
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(["POST"])
-def list_user_products(request):
-    fk_vendor = request.data.get('fk_vendor')
+def all_products(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
 
     try:
-        response = requests.post(settings.PRODUCTS + '/api/list_user_products', data={'fk_vendor':fk_vendor})
-        return Response(data=json.loads(response.content))
+        response = requests.post(settings.PRODUCTS + '/api/all_products/', data= request.data)
+        try:
+            #Convert to JSon
+            response_json = data=json.loads(response.content)
+            return Response(data=response_json)
+
+        except:
+            return Response(response)
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
-                            status=HTTP_500_INTERNAL_SERVER_ERROR)
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(["POST"])
 def orders_screen(request):

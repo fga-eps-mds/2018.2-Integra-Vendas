@@ -93,6 +93,22 @@ def all_products(request):
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
 
+
+@api_view(["POST"])
+def my_products_screen(request):
+    user_id = request.data.get('user_id')
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
+
+    try:
+        user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data={'user_id':user_id})
+        return Response(data=json.loads(user_products.content))
+    except:
+        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+
 @api_view(["POST"])
 def orders_screen(request):
     ## Verificação do token
@@ -122,6 +138,7 @@ def verify_token(data_request):
 
     if not 'token' in data_request:
         return False #Erro de token vazio
+
     try:
         token = data_request['token']
         response = requests.post(settings.LOGIN + '/api/token-verify/', data={'token':token})

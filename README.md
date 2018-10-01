@@ -1,8 +1,8 @@
 # Integra - Vendas
 
 ![license mit](https://img.shields.io/badge/license-MIT-blue.svg) 
-![build docs](https://travis-ci.com/fga-eps-mds/2018.2-iFood.png?branch=master)
-![docusaurus](https://img.shields.io/badge/doc-Docusaurus-yellow.svg)
+[![Build Status](https://travis-ci.com/fga-eps-mds/2018.2-iFood.svg?branch=master)](https://travis-ci.com/fga-eps-mds/2018.2-iFood)
+[![docusaurus](https://img.shields.io/badge/doc-Docusaurus-blue.svg)](https://fga-eps-mds.github.io/2018.2-iFood/)
 [![pipeline status](https://gitlab.com/integra-vendas/api-gateway/badges/master/pipeline.svg)](https://gitlab.com/integra-vendas/api-gateway/commits/master)
 [![codecov](https://codecov.io/gh/fga-eps-mds/2018.2-iFood/branch/master/graph/badge.svg)](https://codecov.io/gh/fga-eps-mds/2018.2-iFood)
 

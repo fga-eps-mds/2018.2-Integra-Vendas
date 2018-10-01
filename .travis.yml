@@ -39,6 +39,4 @@ jobs:
       name: "Updating test coverage"
       script:
         - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then cd api && sh run-tests.sh; fi'
-        - ls
-        - ls api/api_gateway/
-        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then cd api/api_gateway/ && codecov -t ${CODECOV_TOKEN}; fi'
+        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then cd api_gateway && codecov -t ${CODECOV_TOKEN}; fi'

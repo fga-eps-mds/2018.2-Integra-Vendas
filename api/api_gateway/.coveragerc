@@ -1,4 +1,4 @@
 [run]
 omit = 
-    product_microservice/*
+    api_gateway/*
     manage.py

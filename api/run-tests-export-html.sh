@@ -1,3 +1,3 @@
 sh run-tests.sh
-cd product_microservice
+cd api/api_gateway
 coverage html -i

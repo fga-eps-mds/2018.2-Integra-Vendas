@@ -1,8 +1,10 @@
 FROM python:3
 ENV PYTHONUNBUFFERED 1
 
-RUN mkdir /app
-WORKDIR /app
-ADD requirements.txt /app/
+RUN mkdir /code
+WORKDIR /code
 
-RUN pip install --upgrade pip && pip install -r requirements.txt
+ADD ./api_gateway /code/
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements/dev.txt

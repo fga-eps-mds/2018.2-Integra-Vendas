@@ -1,0 +1,4 @@
+[run]
+omit = 
+    api_gateway/*
+    manage.py

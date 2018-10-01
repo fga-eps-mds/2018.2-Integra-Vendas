@@ -1,0 +1,16 @@
+image: docker:stable
+
+services:
+  - docker:dind
+  - docker:python:3
+
+before_script:
+  - docker info
+
+publish:
+  only:
+    - master
+    - merge-requests
+  stage: build
+  script:
+    - cd api && sh run-publish-docker.sh

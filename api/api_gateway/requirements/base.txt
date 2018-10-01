@@ -1,3 +1,4 @@
 Django==2.0.5
 djangorestframework==3.8.2
-nameko==2.11.0
+python-decouple==3.1
+requests==2.19.1

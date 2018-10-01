@@ -34,5 +34,4 @@ sh run-django.sh
 
 * [Microserviço login](https://github.com/fga-eps-mds/2018.2-FGAPP-login)
 * [Microserviço produto](https://github.com/fga-eps-mds/2018.2-FGAPP-produto)
-* [Microserviço vendedor](https://github.com/fga-eps-mds/2018.2-FGAPP-vendedor)
 * [Microserviço vendas](https://github.com/fga-eps-mds/2018.2-FGAPP-vendas)

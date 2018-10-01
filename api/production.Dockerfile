@@ -2,10 +2,12 @@ FROM python:3
 ENV PYTHONUNBUFFERED 1
 
 WORKDIR /code
-ADD requirements.txt /code
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+
+ADD VERSION .
 ADD ./api_gateway /code
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements/prod.txt
 
 RUN python manage.py makemigrations && \
     python manage.py migrate

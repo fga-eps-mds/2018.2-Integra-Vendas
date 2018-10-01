@@ -1,0 +1,4 @@
+[run]
+omit = 
+    product_microservice/*
+    manage.py

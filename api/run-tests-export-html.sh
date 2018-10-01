@@ -1,3 +1,3 @@
 sh run-tests.sh
-cd api/api_gateway
+cd api_gateway
 coverage html -i

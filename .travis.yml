@@ -6,7 +6,7 @@ python:
 cache: pip
 
 install:
-  - pip install -r product_microservice/requirements/dev.txt
+  - pip install -r api/api_gateway/requirements/dev.txt
 
 virtualenv:
   system_site_packages: true

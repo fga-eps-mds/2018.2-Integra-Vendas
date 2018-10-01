@@ -25,7 +25,7 @@ jobs:
   include:
     - stage: "Tests"
       name: "Unit Tests"
-      script: sh run-tests.sh
+      script: cd api && sh run-tests.sh
       
     - stage: publish-docs
       before_install:
@@ -38,5 +38,5 @@ jobs:
     - stage: test-coverage
       name: "Updating test coverage"
       script:
-        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh run-tests.sh; fi'
-        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then cd product_microservice && codecov -t ${CODECOV_TOKEN}; fi'
+        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then cd api && sh run-tests.sh; fi'
+        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then cd api/api_gateway && codecov -t ${CODECOV_TOKEN}; fi'

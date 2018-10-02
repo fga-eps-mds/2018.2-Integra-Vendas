@@ -142,7 +142,25 @@ Os riscos do projeto serão divididos em riscos internos e externos e serão des
 ## 5.1 Programação em pares
 A programação em pares é uma prática extraída do *Extreme Programing* (XP) na qual um par de desenvolvedores ficam responsáveis por produzir uma funcionalidade juntos, sendo um o piloto e o outro o co-piloto. Ambos os desenvolvedores devem trabalhar ao mesmo tempo e no mesmo computador de maneira que o piloto codifica e o co-piloto acompanha o trabalho deste. É mandatório que os desenvolvedores invertam seus papéis periodicamente [[7]](#6-referencias).
 
-No decorrer do projeto o *Scrum Master* será responsável por redefinir os pares do Time de Desenvolvimento a cada *sprint* para garantir a homogeneidade da equipe.
+Ao decorrer do projeto o *Scrum Master* será responsável por redefinir os pares do Time de Desenvolvimento a cada *sprint* para garantir a homogeneidade da equipe. No entando, a partir da primeira release os pares serão distribuidos aleatoriamente uma vez que a maturidade do Time de Desenvolvimento estará garantida.
+
+O quadro de pareamento será o seguinte:
+|  Sprints  |        Par 1       |        Par 2       | Par 3              |
+|:---------:|:------------------:|:------------------:|--------------------|
+| sprint 3  |   André e Welison  |  Gustavo e Dâmaso  | Shayene e Leonardo |
+| sprint 4  |   André e Gustavo  |  Leonardo e Dâmaso | Shayene e Welison  |
+| sprint 5  |  André e Leonardo  |  Welison e Dâmaso  | Shayene e Gustavo  |
+| sprint 6  | Leonardo e Gustavo | André e Welison    | Shayene e Dâmaso   |
+| sprint 7  | André e Dâmaso     | Leonardo e Welison | Gustavo e Shayene  |
+| sprint 8  | André e Gustavo    | Welison e Dâmaso   | Shayene e Leonardo |
+| sprint 9  | André e Shayene    | Gustavo e Welison  | Leonardo e Dâmaso  |
+| sprint 10 | André e Leonardo   | Shayene e Welison  | Gustavo e Dâmaso   |
+| sprint 11 | André e Welison    | Gustavo e Leonardo | Shayene e Dâmaso   |
+| sprint 12 | André e Dâmaso     | Leonardo e Welison | Gustavo e Shayene  |
+| sprint 13 | André e Gustavo    | Welison e Dâmaso   | Shayene e Leonardo |
+| sprint 14 | André e Shayene    | Gustavo e Welison  | Leonardo e Dâmaso  |
+| sprint 15 | André e Leonardo   | Shayene e Welison  | Gustavo e Dâmaso   |
+| sprint 16 | André e Welison    | Gustavo e Leonardo | Shayene e Dâmaso   |
 
 ---
 # 6 Referências

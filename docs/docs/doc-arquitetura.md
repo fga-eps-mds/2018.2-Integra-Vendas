@@ -94,4 +94,4 @@ Para o desenvolvimento deste projeto serão ultilizadas as seguintes tecnologias
 
 # 5 Pipeline de deploy dos microsserviços
 
-![diagrama_pacotes_back](assets/arquitetura/pipeline_back.png)
+![pipeline_back](assets/arquitetura/pipeline_back.png)

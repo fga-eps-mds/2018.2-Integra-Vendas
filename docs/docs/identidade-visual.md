@@ -44,7 +44,11 @@ Para verificar a conformidade da paleta de cores foi utilizado como base as core
 ## 3.2 Identidade das funcionalidades pelas cores
 Cada funcionalidade será identificada por uma cor para melhorar a experiência de usuário. Ao selecionar um ícone na *Tab Bar* esse se acenderá com sua cor de identificação e o usuário terá acesso às telas da funcionalidade escolhida, que também estarão caracterizadas com as suas cores de identidade como mostra o exemplo abaixo.
 
+### Exemplo v1
 ![app_exemples](assets/identidade_visual/app_exemples.png)
+
+### Exemplo v2
+![app_exemples_v2](assets/identidade_visual/app_exemples_v2.png)
 
 # 4 Tipografia
 

@@ -3,7 +3,7 @@ id: roi
 title: Retorno Sobre Investimento
 sidebar_label: ROI
 ---
-#### Custos
+### Custos
 Início de desenvolvimento: 4 meses.
 
 |Recursos|Preço Unitário|Quantidade|Preço Total|
@@ -38,8 +38,7 @@ O ROI é previsto para 39% em três anos.
 ### Payback Simples
 O ganho total em 32 meses (3 anos descontando 4 meses de desenvolvimento e validações) sendo de R$ 550.00,00, sendo uma média mensal de ganho de R$ 17.187,50. O Payback Simples, calculado como Valor Investido/Ganho no Período seria o seguinte resultado.
 
-|Meses|Ganho|Média de Ganho Mensal|Payback|
+|Meses|Ganho|Média de Ganho Mensal|Ganh Total|Payback|
+|-----|-----|---------------------|----------|-------|
 |32|R$ 550.000|R$ 17.187,50|R$ 396.750,00|396.750,00/17.187,50 = 23,08 meses|
-
-### Considerações
 

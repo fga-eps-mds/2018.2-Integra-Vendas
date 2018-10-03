@@ -6,4 +6,4 @@ sidebar_label: EAP
 
 ## Estrutura Analítica de Projeto
 
-![EAP](assets/eap.jpg)
+![EAP](assets/eap/eap.jpg)

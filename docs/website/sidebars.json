@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Abertura": ["tap", "eap", "negocio", "roi"],
+    "Abertura": ["tap", "eap", "canvas", "roi", "evm"],
     "Projeto": ["plano-metodologico", "doc-visao", "doc-arquitetura"],
     "Roadmaps": ["rm-geral", "rm-papeis"],
     "Design": ["id-visual", "baixa-fidelidade", "alta-fidelidade"]

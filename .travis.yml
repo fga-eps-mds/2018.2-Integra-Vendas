@@ -13,30 +13,9 @@ virtualenv:
 
 stages:
   - test
-  - name: publish-docs
-    if: branch = master
-  - name: test-coverage
-    if: branch = master
-  - name: docker-image-update
-    if: branch = master
-
 
 jobs:
   include:
     - stage: "Tests"
       name: "Unit Tests"
       script: cd api && sh run-tests.sh
-      
-    - stage: publish-docs
-      before_install:
-        - docker pull lucascst/gh-pages-docker-travis
-      services:
-        - docker
-      script:
-        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh run-publish-pages.sh; fi'
-      
-    - stage: test-coverage
-      name: "Updating test coverage"
-      script:
-        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then cd api && sh run-tests.sh; fi'
-        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then cd api_gateway && codecov -t ${CODECOV_TOKEN}; fi'

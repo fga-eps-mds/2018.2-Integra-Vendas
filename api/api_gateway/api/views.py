@@ -58,7 +58,7 @@ def create_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
     if not verify:
-         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
@@ -78,7 +78,7 @@ def all_products(request):
     ## Verificação do token
     verify = verify_token(request.data)
     if not verify:
-         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/all_products/', data= request.data)
@@ -100,7 +100,7 @@ def my_products_screen(request):
     ## Verificação do token
     verify = verify_token(request.data)
     if not verify:
-         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
 
     try:
         user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data={'user_id':user_id})
@@ -114,10 +114,14 @@ def orders_screen(request):
     ## Verificação do token
     verify = verify_token(request.data)
     if not verify:
-         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
 
+    try:
+        user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data=request.data)
+    except:
+        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)
 
-    user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data=request.data)
     #Convert to JSon
     user_products_response = Response(data=json.loads(user_products.content))
 
@@ -125,7 +129,11 @@ def orders_screen(request):
     all_user_orders = []
 
     for product in user_products_response.data:
-        product_orders = requests.post(settings.ORDER + '/api/user_orders/', data={'product_id':product['id']})
+        try:
+            product_orders = requests.post(settings.ORDER + '/api/user_orders/', data={'product_id':product['id']})
+        except:
+            return Response({'error': 'Não foi possível se comunicar com o servidor.'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)
         orders = json.loads(product_orders.content)
         for order in orders:
             if(order['closed'] == False):

@@ -50,12 +50,18 @@ A *sprint* é um período de tempo definido durante o qual é produzida uma vers
 ## 2.2 Daily Meeting
 As *daily meetings* são a documentação do trabalho diário dos membros da equipe que serão utilizados para registrar o progresso do desenvolvimento do produto e observar as dificuldades encontradas pelos membros. A daily meeting terá as seguintes características:
 * Duração: Máximo 10 minutos;
-* Ocorrerão todos os dias às 14 horas;
 * Serão estruturadas em três tópicos a serem respondidos:
 	* "O que foi feito?"
 	* "O que será feito?"
 	* "Quais foram as dificuldades?"
-* Devido a dificuldade da equipe de se encontrar diariamente para fazer um reunião presencial, as *daily meetings* serão registradas em um canal de texto nomeado "#daily" no Discord.
+
+Para verificar qual seria o melhor horário para fazer as *dilies meetings* durante a semana, foi feito um mapa de calor da disponibilidade da equipe.
+
+![quadro-disponibilidade](assets/metodologia/quadro-disponibilidade.png)
+
+Verificando o quadro de disponibilidade foi definido com a equipe as seguintes características:
+* As *dailies meetings* presenciais acontecerão nas segundas, terças e quintas às 18 horas;
+* Para suprir a falta de encontros presenciais, nos outros dias as *dailies meetings* serão documentadas em um canal de texto nomeado "#daily" no Discord.
 
 ## 2.3 Revisão da Sprint
 Uma reunião informal para validar o incremento do produto produzido na *sprint* atual e adaptar o *backlog* do produto se necessário [[1]](#6-referencias). No caso do deste processo de desenvolvimento nem todos os *stakeholders* estarão presentes na revisão do incremento do produto, pois a parte interessada analisará o produto em outro momento. A Revisão da *Sprint* terá as seguintes características:

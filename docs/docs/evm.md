@@ -4,6 +4,6 @@ title: EVM
 sidebar_label: EVM
 ---
 
-## EVM - Gerenciamento de Valor Agregado
+## Release 1
 
 ![EVM Primeira Relese](assets/evm1.png)

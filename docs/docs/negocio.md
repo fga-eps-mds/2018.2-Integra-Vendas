@@ -30,4 +30,4 @@ Jonas tem 19 anos, estudante quarto semestre da do curso de engenharia aeroespac
 
 ## Canvas de Modelo de Negócios
 
-![Canvas de Modelo de Negócios](assets/BMCanvas.jpg)
+![Canvas de Modelo de Negócios](assets/bmcanvas.png)

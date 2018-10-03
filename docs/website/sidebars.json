@@ -2,7 +2,7 @@
   "docs": {
     "Abertura": ["tap", "eap", "canvas", "roi", "evm"],
     "Projeto": ["plano-metodologico", "doc-visao", "doc-arquitetura"],
-    "Roadmaps": ["rm-geral", "rm-papeis"],
+    "Roadmaps": ["rm-geral", "rm-papeis", "rm-produto"],
     "Design": ["id-visual", "baixa-fidelidade", "alta-fidelidade"]
   },
   "Sprints": {

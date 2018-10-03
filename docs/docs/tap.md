@@ -82,5 +82,3 @@ Valores fixos mensais se alongam por 4 meses que seria o prazo do projeto.
 ### Orientadora
 [Carla Silva Rocha Aguiar](https://github.com/RochaCarla)
 
-##  Referências
-

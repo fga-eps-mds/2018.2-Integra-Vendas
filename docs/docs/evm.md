@@ -6,4 +6,4 @@ sidebar_label: EVM
 
 ## Release 1
 
-![EVM Primeira Relese](assets/evm1.png)
+![EVM Primeira Relese](assets/evm/evm1.png)

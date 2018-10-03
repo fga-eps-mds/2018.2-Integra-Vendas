@@ -50,12 +50,18 @@ A *sprint* é um período de tempo definido durante o qual é produzida uma vers
 ## 2.2 Daily Meeting
 As *daily meetings* são a documentação do trabalho diário dos membros da equipe que serão utilizados para registrar o progresso do desenvolvimento do produto e observar as dificuldades encontradas pelos membros. A daily meeting terá as seguintes características:
 * Duração: Máximo 10 minutos;
-* Ocorrerão todos os dias às 14 horas;
 * Serão estruturadas em três tópicos a serem respondidos:
 	* "O que foi feito?"
 	* "O que será feito?"
 	* "Quais foram as dificuldades?"
-* Devido a dificuldade da equipe de se encontrar diariamente para fazer um reunião presencial, as *daily meetings* serão registradas em um canal de texto nomeado "#daily" no Discord.
+
+Para verificar qual seria o melhor horário para fazer as *dilies meetings* durante a semana, foi feito um mapa de calor da disponibilidade da equipe.
+
+![quadro-disponibilidade](assets/metodologia/quadro-disponibilidade.png)
+
+Verificando o quadro de disponibilidade foi definido com a equipe as seguintes características:
+* As *dailies meetings* presenciais acontecerão nas segundas, terças e quintas às 18 horas;
+* Para suprir a falta de encontros presenciais, nos outros dias as *dailies meetings* serão documentadas em um canal de texto nomeado "#daily" no Discord.
 
 ## 2.3 Revisão da Sprint
 Uma reunião informal para validar o incremento do produto produzido na *sprint* atual e adaptar o *backlog* do produto se necessário [[1]](#6-referencias). No caso do deste processo de desenvolvimento nem todos os *stakeholders* estarão presentes na revisão do incremento do produto, pois a parte interessada analisará o produto em outro momento. A Revisão da *Sprint* terá as seguintes características:
@@ -142,7 +148,25 @@ Os riscos do projeto serão divididos em riscos internos e externos e serão des
 ## 5.1 Programação em pares
 A programação em pares é uma prática extraída do *Extreme Programing* (XP) na qual um par de desenvolvedores ficam responsáveis por produzir uma funcionalidade juntos, sendo um o piloto e o outro o co-piloto. Ambos os desenvolvedores devem trabalhar ao mesmo tempo e no mesmo computador de maneira que o piloto codifica e o co-piloto acompanha o trabalho deste. É mandatório que os desenvolvedores invertam seus papéis periodicamente [[7]](#6-referencias).
 
-No decorrer do projeto o *Scrum Master* será responsável por redefinir os pares do Time de Desenvolvimento a cada *sprint* para garantir a homogeneidade da equipe.
+Ao decorrer do projeto o *Scrum Master* será responsável por redefinir os pares do Time de Desenvolvimento a cada *sprint* para garantir a homogeneidade da equipe. No entando, a partir da primeira release os pares serão distribuidos aleatoriamente uma vez que a maturidade do Time de Desenvolvimento estará garantida.
+
+O quadro de pareamento será o seguinte:
+|  Sprints  |        Par 1       |        Par 2       | Par 3              |
+|:---------:|:------------------:|:------------------:|--------------------|
+| sprint 3  |   André e Welison  |  Gustavo e Dâmaso  | Shayene e Leonardo |
+| sprint 4  |   André e Gustavo  |  Leonardo e Dâmaso | Shayene e Welison  |
+| sprint 5  |  André e Leonardo  |  Welison e Dâmaso  | Shayene e Gustavo  |
+| sprint 6  | Leonardo e Gustavo | André e Welison    | Shayene e Dâmaso   |
+| sprint 7  | André e Dâmaso     | Leonardo e Welison | Gustavo e Shayene  |
+| sprint 8  | André e Gustavo    | Welison e Dâmaso   | Shayene e Leonardo |
+| sprint 9  | André e Shayene    | Gustavo e Welison  | Leonardo e Dâmaso  |
+| sprint 10 | André e Leonardo   | Shayene e Welison  | Gustavo e Dâmaso   |
+| sprint 11 | André e Welison    | Gustavo e Leonardo | Shayene e Dâmaso   |
+| sprint 12 | André e Dâmaso     | Leonardo e Welison | Gustavo e Shayene  |
+| sprint 13 | André e Gustavo    | Welison e Dâmaso   | Shayene e Leonardo |
+| sprint 14 | André e Shayene    | Gustavo e Welison  | Leonardo e Dâmaso  |
+| sprint 15 | André e Leonardo   | Shayene e Welison  | Gustavo e Dâmaso   |
+| sprint 16 | André e Welison    | Gustavo e Leonardo | Shayene e Dâmaso   |
 
 ---
 # 6 Referências

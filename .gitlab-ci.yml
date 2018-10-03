@@ -7,10 +7,64 @@ services:
 before_script:
   - docker info
 
-publish:
+stages:
+  - publish-docs
+  - test
+  - publish
+  - deploy
+
+# github pages
+publish-pages:
   only:
     - master
-    - merge-requests
-  stage: build
+  stage: publish-docs
   script:
-    - cd api && sh run-publish-docker.sh
+    - sh run-publish-pages.sh
+
+unit-tests:
+  image: python:3
+  before_script:
+    - pip install -r api/api_gateway/requirements/dev.txt
+  stage: tests
+  script:
+    - cd api && sh run-tests.sh
+
+publish-codecov:
+  image: python:3
+  before_script:
+    - pip install -r api/api_gateway/requirements/dev.txt
+  only:
+    - master
+  stage: publish
+  dependencies:
+    - unit-tests
+  script:
+    - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
+
+publish-image-production:
+  only:
+    - master
+  stage: publish
+  script:
+    - cd api && sh run-publish-docker.sh production
+
+publish-image-staging:
+  only:
+    - dev
+  stage: publish
+  script:
+    - cd api && sh run-publish-docker.sh staging
+
+deploy-production:
+  only:
+    - master
+  stage: deploy
+  script:
+    - echo DEPLOY_PRODUCTION
+
+deploy-staging:
+  only:
+    - dev
+  stage: deploy
+  script:
+    - echo DEPLOY_STAGING

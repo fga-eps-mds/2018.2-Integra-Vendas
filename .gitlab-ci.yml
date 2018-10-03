@@ -1,27 +1,9 @@
-image: docker:stable
-
-services:
-  - docker:dind
-  - docker:python:3
-
-before_script:
-  - docker info
-
 stages:
-  - publish-docs
   - test
   - publish
   - deploy
 
-# github pages
-publish-pages:
-  only:
-    - master
-  stage: publish-docs
-  script:
-    - sh run-publish-pages.sh
-
-unit-tests:
+unit tests:
   image: python:3
   before_script:
     - pip install -r api/api_gateway/requirements/dev.txt
@@ -29,7 +11,7 @@ unit-tests:
   script:
     - cd api && sh run-tests.sh
 
-publish-codecov:
+publish codecov:
   image: python:3
   before_script:
     - pip install -r api/api_gateway/requirements/dev.txt
@@ -37,32 +19,53 @@ publish-codecov:
     - master
   stage: publish
   dependencies:
-    - unit-tests
+    - unit tests
   script:
     - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
-publish-image-production:
+# github pages
+publish pages:
+  image: docker:stable
+  only:
+    - master
+  stage: publish
+  script:
+    - sh run-publish-pages.sh
+
+publish image to production:
+  image: docker:stable
+  services:
+    - docker:dind
+    - docker:python:3
+  before_script:
+    - docker info
   only:
     - master
   stage: publish
   script:
     - cd api && sh run-publish-docker.sh production
 
-publish-image-staging:
+publish image to staging:
+  image: docker:stable
+  services:
+    - docker:dind
+    - docker:python:3
+  before_script:
+    - docker info
   only:
     - dev
   stage: publish
   script:
     - cd api && sh run-publish-docker.sh staging
 
-deploy-production:
+deploy to production:
   only:
     - master
   stage: deploy
   script:
     - echo DEPLOY_PRODUCTION
 
-deploy-staging:
+deploy to staging:
   only:
     - dev
   stage: deploy

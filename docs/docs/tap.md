@@ -11,7 +11,7 @@ O iFoodFGA é um aplicativo que auxilia a conexão entre vendedores de sobremesa
 ## Propósito e Justificativa
 O iFoodFGA tem o objetivo de facilitar a forma como os vendedores atingem os clientes para poderem ter vendas com mais eficiência e eficácia.
 
-Os vendedores de sobremesas gastam um valioso tempo passando em todas as mesas, no horário do almoço, fazendo com que não consigam se concentrar em clientes que estejam mais dispostos a comprar, não só tendo um alto custo de tempo, como também de extensas movimentações repetitivas entre as mesas, que podem incomodar estudantes que não pretendem comprar o produto ou fazendo-os se irritarem se passado repedidamente vendedores em suas mesas.
+Os vendedores de gastam um valioso tempo passando em todas as mesas, no horário do almoço, fazendo com que não consigam se concentrar em clientes que estejam mais dispostos a comprar, não só tendo um alto custo de tempo, como também de extensas movimentações repetitivas entre as mesas, que podem incomodar estudantes que não pretendem comprar o produto ou fazendo-os se irritarem se passado repedidamente vendedores em suas mesas.
 
 ## Objetivos
 
@@ -48,13 +48,15 @@ Valores fixos mensais se alongam por 4 meses que seria o prazo do projeto.
 
 |Recursos|Preço Unitário|Quantidade|Preço Total|
 |--------|--------------|----------|-----------|
-|Desenvolvedores|R$ 2400,00 mensais|6|R$ 57.600,00|
-|Equipe Fullstack|R$ 2400,00 mensais|4|R$ 38.400,00|
+|Desenvolvedores Júnior|R$ 3.800,00 mensais|6|R$ 152.000,00|
+|Equipe Fullstack|R$ 5.700,00 mensais|4|R$ 91.200,00|
 |Notebooks|R$ 3.000,00|10|R$ 30.000,00|
-|Internet Banda Larga 15mb mensal|R$ 120,00| 10 | R$ 4.800,00|
-|Energia mensal|R$ 140,00|10|R$ 5.600,00|
-|Custo estimado|-|-|R$ 136.400,00|
-|Custo estimado + 15% de taxa de risco|-|-|R$ 156.860,00|
+|Espaço Coworking para 10 pessoas|R$ 8.000,00 mensal|4|R$ 32.000,00|
+|Internet Banda Larga 15mb mensal Cedida pelo Co Working|-| - | --|
+|Energia mensal Cedida pelo Co Working|R$ 140,00|10|R$ 5.600,00|
+|Marketing Digital|R$ 10.000,00|1|R$ 10.000,00|
+|Custo estimado|-|-|R$ 345.000,00|
+|Custo estimado + 15% de taxa de risco|-|-|R$ 396.750,00|
 
 ## Stakeholders
 

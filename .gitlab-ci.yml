@@ -45,18 +45,18 @@ publish image to production:
   script:
     - cd api && sh run-publish-docker.sh production
 
-publish image to staging:
-  image: docker:stable
-  services:
-    - docker:dind
-    - docker:python:3
-  before_script:
-    - docker info
-  only:
-    - dev
-  stage: publish
-  script:
-    - cd api && sh run-publish-docker.sh staging
+# publish image to staging:
+#   image: docker:stable
+#   services:
+#     - docker:dind
+#     - docker:python:3
+#   before_script:
+#     - docker info
+#   only:
+#     - dev
+#   stage: publish
+#   script:
+#     - cd api && sh run-publish-docker.sh staging
 
 deploy to production:
   only:
@@ -67,11 +67,11 @@ deploy to production:
     - sh install-kubectl.sh
     - sh run-deploy.sh production
 
-deploy to staging:
-  only:
-    - dev
-  stage: deploy
-  script:
-    - cd api
-    - sh install-kubectl.sh
-    - sh run-deploy.sh staging
+# deploy to staging:
+#   only:
+#     - dev
+#   stage: deploy
+#   script:
+#     - cd api
+#     - sh install-kubectl.sh
+#     - sh run-deploy.sh staging

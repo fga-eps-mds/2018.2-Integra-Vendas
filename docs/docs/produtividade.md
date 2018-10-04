@@ -13,6 +13,6 @@ sidebar_label: Produtividade
 ![mds_tempo_sprints_barra](assets/metricas/mds_tempo_sprints_barra.png)
 
 # Velocity
-
+![velocity](assets/metricas/velocity.png)
 
 # Burndown

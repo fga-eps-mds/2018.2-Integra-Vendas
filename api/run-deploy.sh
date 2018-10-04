@@ -1,4 +1,3 @@
-# PROJECT_NAME
 # CONTAINER_NAME
 # PREFIX
 # IMAGE
@@ -27,7 +26,9 @@ else
     category='latest'
 fi
 
+echo ${PREFIX}/${IMAGE}:${prefix_version}${version}
+
 image_versioned=${PREFIX}/${IMAGE}:${prefix_version}${version}
 
-kubectl set image deployment/$PROJECT_NAME $CONTAINER_NAME=$image_versioned -n $namespace
-kubectl rollout status deployment/$PROJECT_NAME -n $namespace
+kubectl set image deployment/$CONTAINER_NAME $CONTAINER_NAME=$image_versioned -n $namespace
+kubectl rollout status deployment/$CONTAINER_NAME -n $namespace

@@ -11,5 +11,8 @@ if [ -z "$KUBE_CONFIG" ]; then
     exit 1
 fi
 
+mkdir $HOME/.kube
+export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
+
 #configure kubectl
 echo $KUBE_CONFIG | base64 -d > $HOME/.kube/config

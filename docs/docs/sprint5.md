@@ -12,20 +12,6 @@ sidebar_label: Sprint 5
 |[André Pinto](https://github.com/orgs/fga-eps-mds/people/andrelucax) e [Leonardo Medeiros](https://github.com/orgs/fga-eps-mds/people/leomedeiros1)|US10 e US06|18|
 
 -------------------------------------------------------------------------------
-# Riscos
-## Riscos Internos
-|Risco interno|Medidas|Pontuação|
-|:------------|:------|:-------:|
-| | | |
-| | | |
-
-## Riscos Externos
-|Risco externo|Medidas|Pontuação|
-|:------------|:------|:-------:|
-| | | |
-| | | |
-
--------------------------------------------------------------------------------
 # Retrospectiva da Sprint
 ## Pontos positivos
 1. Equipe proativa;

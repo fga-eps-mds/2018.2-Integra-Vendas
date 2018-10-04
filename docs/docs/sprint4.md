@@ -13,20 +13,6 @@ sidebar_label: Sprint 4
 |[Welison Almeida](https://github.com/orgs/fga-eps-mds/people/WelisonR) e [Shayane Alcântara](https://github.com/orgs/fga-eps-mds/people/shayanealcantara)|US08|21|
 
 -------------------------------------------------------------------------------
-# Riscos
-## Riscos Internos
-|Risco interno|Medidas|Pontuação|
-|:------------|:------|:-------:|
-| | | |
-| | | |
-
-## Riscos Externos
-|Risco externo|Medidas|Pontuação|
-|:------------|:------|:-------:|
-| | | |
-| | | |
-
--------------------------------------------------------------------------------
 # Retrospectiva da Sprint
 ## Pontos positivos
 1. A equipe se sentiu mais produtiva, pois entregou mais pontos na sprint;

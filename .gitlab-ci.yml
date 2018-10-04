@@ -40,7 +40,7 @@ publish image to production:
   before_script:
     - docker info
   only:
-    - master
+    - tags
   stage: publish
   script:
     - cd api && sh run-publish-docker.sh production
@@ -60,14 +60,18 @@ publish image to staging:
 
 deploy to production:
   only:
-    - master
+    - tags
   stage: deploy
   script:
-    - echo DEPLOY_PRODUCTION
+    - cd api
+    - sh install-kubectl.sh
+    - sh run-deploy.sh production
 
 deploy to staging:
   only:
     - dev
   stage: deploy
   script:
-    - echo DEPLOY_STAGING
+    - cd api
+    - sh install-kubectl.sh
+    - sh run-deploy.sh staging

@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Mercadão da FGA', // Title for your website.
-  tagline: 'Um website para documentação do Mercadão da FGA',
+  title: 'Integra Vendas', // Title for your website.
+  tagline: 'Documentação do Projeto Integra Vendas',
 
   url: 'https://fga-eps-mds.github.io/2018.2-iFood/', // Your website URL
   baseUrl: '/2018.2-iFood/', // Base URL for your project */
@@ -38,24 +38,24 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'eap', label: 'Docs'},
+    {doc: 'tap', label: 'Docs'},
     {doc: 'sprint0', label: 'Sprints'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    // {page: 'help', label: 'Help'},
+    // {blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
-  favicon: 'img/favicon.png',
+  // headerIcon: 'img/docusaurus.svg',
+  // footerIcon: 'img/docusaurus.svg',
+  // favicon: 'img/favicon.png',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#2E8555',
-    secondaryColor: '#205C3B',
+    primaryColor: '#0EAC6F',
+    secondaryColor: '#08623F',
   },
 
   /* Custom fonts for website */
@@ -73,7 +73,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Integra Vendas`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

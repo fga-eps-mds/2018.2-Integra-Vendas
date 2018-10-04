@@ -92,12 +92,6 @@ Para o desenvolvimento deste projeto serão ultilizadas as seguintes tecnologias
 
 ![diagrama_pacotes_back](assets/arquitetura/diagrama_pacotes_back.png)
 
-# 5 Pipeline
+# 5 Pipeline de deploy dos microsserviços
 
-## APP
-
-imagem
-
-## Micro serviços
-
-imagem
+![pipeline_back](assets/arquitetura/pipeline_back.png)

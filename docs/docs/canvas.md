@@ -1,9 +1,7 @@
 ---
 id: canvas
-title: Canvas de Negócio
+title: Canvas de Modelo de Negócios
 sidebar_label: Canvas
 ---
 
-## Canvas
-
-*Canvas bonitão*
+![Canvas de Modelo de Negócios](assets/canvas/bmcanvas.png)

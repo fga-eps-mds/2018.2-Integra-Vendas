@@ -1,25 +1,5 @@
 set -e
 
-if [ -z "$PREFIX" ]; then
-    echo 'PREFIX variable is not set'
-    exit 1
-fi
-
-if [ -z "$IMAGE" ]; then
-    echo 'IMAGE variable is not set'
-    exit 1
-fi
-
-if [ -z "$DC_USER" ]; then
-    echo 'DC_USER variable is not set'
-    exit 1
-fi
-
-if [ -z "$DC_PASS" ]; then
-    echo 'DC_PASS variable is not set'
-    exit 1
-fi
-
 version=`cat VERSION`
 echo "version: $version"
 
@@ -48,6 +28,29 @@ echo 'building images...'
 echo "latest   \t-> ${image_latest}"
 echo "versioned\t-> ${image_versioned}"
 
+
+if [ -z "$PREFIX" ]; then
+    echo 'PREFIX variable is not set'
+    echo "${PREFIX2} variable is not set"
+    exit 1
+fi
+
+if [ -z "$IMAGE" ]; then
+    echo 'IMAGE variable is not set'
+    exit 1
+fi
+
+if [ -z "$DC_USER" ]; then
+    echo 'DC_USER variable is not set'
+    exit 1
+fi
+
+if [ -z "$DC_PASS" ]; then
+    echo 'DC_PASS variable is not set'
+    exit 1
+fi
+
+# build
 docker build -t $image_latest -f production.Dockerfile .
 
 # tag it

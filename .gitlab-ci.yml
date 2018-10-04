@@ -21,11 +21,15 @@ publish codecov:
   dependencies:
     - unit tests
   script:
-    - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
+    - cd api && sh run-tests.sh
+    - cd api_gateway && codecov -t ${CODECOV_TOKEN}
 
 # github pages
 publish pages:
   image: docker:stable
+  services:
+    - docker:dind
+    - docker:python:3
   only:
     - master
   stage: publish
@@ -40,7 +44,7 @@ publish image to production:
   before_script:
     - docker info
   only:
-    - master
+    - tags
   stage: publish
   script:
     - cd api && sh run-publish-docker.sh production
@@ -59,15 +63,21 @@ publish image to staging:
     - cd api && sh run-publish-docker.sh staging
 
 deploy to production:
+  image: python:3
   only:
-    - master
+    - tags
   stage: deploy
   script:
-    - echo DEPLOY_PRODUCTION
+    - cd api
+    - sh install-kubectl.sh
+    - sh run-deploy.sh production
 
 deploy to staging:
+  image: python:3
   only:
     - dev
   stage: deploy
   script:
-    - echo DEPLOY_STAGING
+    - cd api
+    - sh install-kubectl.sh
+    - sh run-deploy.sh staging

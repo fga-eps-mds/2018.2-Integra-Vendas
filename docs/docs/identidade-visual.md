@@ -46,7 +46,10 @@ Cada funcionalidade será identificada por uma cor para melhorar a experiência 
 
 # 3 Tipografia
 
-# 4 Referências
+# 4 Interface
+Para a padronização do design dos componentes do aplicativo foi acordado entre os grupos que será utilizado o [Native Base](https://nativebase.io/), que é uma biblioteca de componentes UI *open source*. Essa biblioteca produz o design tanto para Android quanto para iOS se baseando no mesmo JavaScript.
+
+# 5 Referências
 [[1]](#5-referencias) **Icons8**. Disponível em: <https://icons8.com.br/icon/new-icons/material>. Acesso em: 20 ago. 2018.
 
 [[2]](#5-referencias) **Adobe Color CC**. Disponível em: <https://color.adobe.com/pt/create/color-wheel/>. Acesso em: 20 ago. 2018.

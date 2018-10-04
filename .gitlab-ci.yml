@@ -26,6 +26,9 @@ publish codecov:
 # github pages
 publish pages:
   image: docker:stable
+  services:
+    - docker:dind
+    - docker:python:3
   only:
     - master
   stage: publish

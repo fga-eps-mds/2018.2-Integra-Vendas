@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fga-eps-mds.github.io/2018.2-iFood//2018.2-iFood/blog</id>
-    <title>Mercadão da FGA Blog</title>
+    <title>Integra Vendas Blog</title>
     <updated>2017-10-24T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://fga-eps-mds.github.io/2018.2-iFood//2018.2-iFood/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest Mercadão da FGA news and events.</subtitle>
-    <logo>https://fga-eps-mds.github.io/2018.2-iFood//2018.2-iFood/img/docusaurus.svg</logo>
-    <rights>Copyright © 2018 Your Name or Your Company Name</rights>
+    <subtitle>The best place to stay up-to-date with the latest Integra Vendas news and events.</subtitle>
+    <logo>https://fga-eps-mds.github.io/2018.2-iFood//2018.2-iFood/undefined</logo>
+    <rights>Copyright © 2018 Integra Vendas</rights>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>
         <id>https://fga-eps-mds.github.io/2018.2-iFood//2018.2-iFood/blog/2017/10/24/new-version-1.0.0.html</id>

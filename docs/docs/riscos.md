@@ -24,3 +24,12 @@ sidebar_label: Riscos
 |:------------|:------|:------:|:------:|:------:|:------:|:------:|
 |Produto não atende a necessidade do cliente|<ul> <li>Apresentar o produto para o cliente em toda sprint que tiver entrega de valor;</li> <li>Testar usabilidade do produto com o cliente frequentemente.</li> </ul>|34|34|34|34|34|
 |Mudança abrupta do escopo| |5|5|1|0|0|
+
+# Burndown dos Riscos
+## Pontuação total
+|Sprint 2|Sprint 3|Sprint 4|Sprint 5|Sprint 6|
+|:------:|:------:|:------:|:------:|:------:|
+|339|258|265|191|144|
+
+## Gráfico de Burndown
+![burndown_riscos](assets/metricas/burndown_riscos.png)

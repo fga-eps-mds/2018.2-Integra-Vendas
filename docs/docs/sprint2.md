@@ -4,23 +4,6 @@ title: Sprint 2 - 25/08 - 01/09
 sidebar_label: Sprint 2
 ---
 
-# Planejamento da Sprint
-
--------------------------------------------------------------------------------
-# Riscos
-## Riscos Internos
-|Risco interno|Medidas|Pontuação|
-|:------------|:------|:-------:|
-| | | |
-| | | |
-
-## Riscos Externos
-|Risco externo|Medidas|Pontuação|
-|:------------|:------|:-------:|
-| | | |
-| | | |
-
--------------------------------------------------------------------------------
 # Retrospectiva da Sprint
 ## Pontos positivos
 1. Time compromissado e proativo;
@@ -42,8 +25,3 @@ sidebar_label: Sprint 2
 3. Conversar com a Carla para agilizar a definição do tema;
 4. Estudar os pontos mais críticos da arquitetura e documentar no documento de arquitetura;
 5. Definir palta das reuniões com antecedência para ajudar a guiar as atividades durante elas.
-
-## Melhorias
-
--------------------------------------------------------------------------------
-# Métricas

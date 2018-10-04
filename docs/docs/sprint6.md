@@ -7,20 +7,6 @@ sidebar_label: Sprint 6
 # Planejamento da Sprint
 
 -------------------------------------------------------------------------------
-# Riscos
-## Riscos Internos
-|Risco interno|Medidas|Pontuação|
-|:------------|:------|:-------:|
-| | | |
-| | | |
-
-## Riscos Externos
-|Risco externo|Medidas|Pontuação|
-|:------------|:------|:-------:|
-| | | |
-| | | |
-
--------------------------------------------------------------------------------
 # Retrospectiva da Sprint
 ## Pontos positivos
 1. 

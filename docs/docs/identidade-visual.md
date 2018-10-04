@@ -45,7 +45,7 @@ Cada funcionalidade será identificada por uma cor para melhorar a experiência 
 ![app_exemples_v2_mini](assets/identidade_visual/app_exemples_v2_mini.png)
 
 # 3 Tipografia
-
+A tipografia será dividida em tipografia da identidade do produto e a tipografia utilizada no produto em sí. Para a identidade do produto foi definida a fonte Grand Hotel. A tipografia utilizada na produção do aplicativo será a tipografia padrão para Android do [Native Base](https://nativebase.io/).
 
 # 4 Interface
 Para a padronização do design dos componentes do aplicativo foi acordado entre os grupos que será utilizado o [Native Base](https://nativebase.io/), que é uma biblioteca de componentes UI *open source*. Essa biblioteca produz o design tanto para Android quanto para iOS se baseando no mesmo JavaScript.

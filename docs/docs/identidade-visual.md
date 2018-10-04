@@ -46,6 +46,7 @@ Cada funcionalidade será identificada por uma cor para melhorar a experiência 
 
 # 3 Tipografia
 
+
 # 4 Interface
 Para a padronização do design dos componentes do aplicativo foi acordado entre os grupos que será utilizado o [Native Base](https://nativebase.io/), que é uma biblioteca de componentes UI *open source*. Essa biblioteca produz o design tanto para Android quanto para iOS se baseando no mesmo JavaScript.
 

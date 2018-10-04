@@ -12,7 +12,6 @@ if [ -z "$KUBE_CONFIG" ]; then
 fi
 
 mkdir $HOME/.kube
-mkdir $HOME/.kube/config
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
 
 #configure kubectl

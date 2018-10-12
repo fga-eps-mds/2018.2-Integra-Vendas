@@ -1,7 +1,7 @@
 from django.urls import path
 from django.conf.urls import url
 from api import views
-from .views import create_product, delete_product, create_order, orders_screen, all_products, my_products_screen, get_product
+from .views import create_product, delete_product, create_order, orders_screen, all_products, my_products_screen, get_product, get_name
 
 urlpatterns = [
     path('api/create_product/', create_product),
@@ -11,4 +11,5 @@ urlpatterns = [
     path('api/orders_screen/', orders_screen),
     path('api/my_products_screen/', my_products_screen),
     path('api/get_product/', get_product),
+    path('api/get_name/', get_name),
 ]

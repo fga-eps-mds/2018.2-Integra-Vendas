@@ -1,10 +1,15 @@
 default:
-	docker build . -t docker-django:api-gateway
-	docker run --rm -p 5000:5000 -v `pwd`:"/app" -w "/app" --name api-gateway -it docker-django:api-gateway bash
+	docker-compose build
+	docker-compose up
 
 run:
-	docker build . -t docker-django:api-gateway
-	docker run --rm -p 5000:5000 -v `pwd`:"/app" -w "/app" --net=backend --name api-gateway -d docker-django:api-gateway bash -c "sh run-django.sh"
+	echo NEED_UPDATE
 
 enter:
-	docker exec -ti api-gateway bash
+	docker-compose exec web bash
+
+test:
+	docker-compose exec web bash -c "cd api_gateway && python manage.py test"
+
+production:
+	docker-compose -f docker-compose-production.yml up

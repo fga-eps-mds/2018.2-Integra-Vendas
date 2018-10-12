@@ -37,7 +37,7 @@ def create_order(request):
     ## Verificação do token
     verify = verify_token(request.data)
     if not verify:
-         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
 
     try:
         response = requests.post(settings.ORDER + '/api/create_order/', data=request.data)
@@ -156,4 +156,41 @@ def verify_token(data_request):
     except:
         return False #Erro inesperado
 
-    return True #Token correto
+    return True #Token cor
+
+@api_view(["POST"])
+def get_product(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+
+    try:
+        response = requests.post(settings.PRODUCTS + '/api/get_product/', data= request.data)
+        try:
+            response_json = json.loads(response.content)
+            return Response(data=response_json)
+        except:
+            return Response(response)
+    except:
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(["POST"])
+def get_name(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+
+    try:
+        response = requests.post(settings.LOGIN + '/api/users/get_name/', data= request.data)
+        try:
+            response_json = json.loads(response.content)
+            return Response(data=response_json)
+        except:
+            return Response(response)
+    except:
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)

@@ -13,5 +13,5 @@ urlpatterns = [
     path('api/get_product/', get_product),
     path('api/get_name/', get_name),
     path('api/set_name/', set_name),
-    path('api/update_email', update_email),
+    path('api/update_email/', update_email),
 ]

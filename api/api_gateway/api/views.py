@@ -194,3 +194,39 @@ def get_name(request):
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["POST"])
+def set_name(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+
+    try:
+        response = requests.post(settings.LOGIN + '/api/users/set_name/', data= request.data)
+        try:
+            response_json = json.loads(response.content)
+            return Response(data=response_json)
+        except:
+            return Response(response)
+    except:
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["POST"])
+def update_email(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+
+    try:
+        response = requests.post(settings.LOGIN + '/api/users/update_email/', data= request.data)
+        try:
+            response_json = json.loads(response.content)
+            return Response(data=response_json)
+        except:
+            return Response(response)
+    except:
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)

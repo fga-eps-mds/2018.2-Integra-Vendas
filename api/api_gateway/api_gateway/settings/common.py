@@ -103,6 +103,5 @@ STATIC_URL = '/static/'
 ## .env file
 ## Microservices path
 LOGIN = config('LOGIN_PATH', default='http://login-microservice:8000')
-ORDER = config('ORDER_PATH', default='http://order-microservice:8001')
-PRODUCTS = config('PRODUCTS_PATH', default='http://product-microservice:8002')
-DEBUG = config('DEBUG', default=True, cast=bool)
+ORDER = config('ORDER_PATH', default='http://order-microservice:8000')
+PRODUCTS = config('PRODUCTS_PATH', default='http://product-microservice:8000')

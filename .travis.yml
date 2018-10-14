@@ -1,4 +1,6 @@
 # .travis.yml
+sudo: required
+
 language: python
 python:
   - "3.4"
@@ -12,10 +14,29 @@ virtualenv:
   system_site_packages: true
 
 stages:
-  - test
+  - Staging Tests
+  - Production Tests
+
+services:
+  - docker
+
+env:
+  - DOCKER_COMPOSE_VERSION=1.4.2
+
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
 
 jobs:
   include:
-    - stage: "Tests"
-      name: "Unit Tests"
-      script: cd api && sh run-tests.sh
+    - stage: "Staging Tests"
+      name: "Unit Integrated Tests"
+      # if: branch = dev
+      script: make staging-integration-tests
+
+    - stage: "Production Tests"
+      name: "Unit Integrated Tests"
+      if: branch = master
+      script: make production-integration-tests

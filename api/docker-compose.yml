@@ -1,10 +1,6 @@
-version: '3.6'
+version: '3.3'
 
 services:
-  db:
-    image: postgres:10.1-alpine
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
   web:
     build: .
     command: bash -c "sh run-django.sh"
@@ -17,3 +13,8 @@ services:
 
 volumes:
   postgres_data:
+
+# ports - 5000:8000 
+# host:container
+#    host:5000
+#    container:8000

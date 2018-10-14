@@ -21,7 +21,7 @@ services:
   - docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=1.4.2
+  - DOCKER_COMPOSE_VERSION=1.22.0
 
 before_install:
   - sudo rm /usr/local/bin/docker-compose
@@ -33,7 +33,7 @@ jobs:
   include:
     - stage: "Staging Tests"
       name: "Unit Integrated Tests"
-      # if: branch = dev
+      if: branch = dev
       script: make staging-integration-tests
 
     - stage: "Production Tests"

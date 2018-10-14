@@ -26,7 +26,7 @@ def status(request):
         }
     #Get order microservice version
     try:
-        response = requests.get(settings.PRODUCTS)
+        response = requests.get(settings.ORDER)
         order_json=response.json()
     except:
         order_json={

@@ -16,8 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
-from api_gateway import views
-from .views import status
+from .version_helper import status
 
 urlpatterns = [
     path('admin/', admin.site.urls),

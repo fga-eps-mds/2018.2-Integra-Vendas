@@ -8,11 +8,6 @@ services:
       - .:/code
     ports:
       - 5000:8000
-    depends_on:
-      - db
-
-volumes:
-  postgres_data:
 
 # ports - 5000:8000 
 # host:container

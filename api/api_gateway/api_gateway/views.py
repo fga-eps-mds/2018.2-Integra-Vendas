@@ -1,29 +1,46 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import requests
+from django.conf import settings
 
 @api_view(['GET'])
 def status(request):
-    version=file_get_contents("../VERSION")
-    print (version)
+    api_version=file_get_contents("../VERSION")
+    ##Get login microservice version
+    try:
+        response = requests.get(settings.LOGIN)
+        login_json=response.json()
+    except:
+        login_json={
+            "name": "login-microservice",
+            "online": False,
+        }
+    #Get product microservice version
+    try:
+        response = requests.get(settings.PRODUCTS)
+        product_json=response.json()
+    except:
+        product_json={
+            "name": "product-microservice",
+            "online": False,
+        }
+    #Get order microservice version
+    try:
+        response = requests.get(settings.PRODUCTS)
+        order_json=response.json()
+    except:
+        order_json={
+            "name": "order-microservice",
+            "online": False,
+        }
+
     return Response({
     "name":"api-gateway",
-    "version":version,
+    "version":api_version,
     "services":[
-        {
-            "name": "login-microservice",
-            "online": True,
-            "version": "0.1"
-        },
-        {
-            "name": "product-microservice",
-            "online": True,
-            "version": "0.1"
-        },
-        {
-            "name": "order-microservice",
-            "online": False
-        }
+        login_json,
+        product_json,
+        order_json,
     ],
 })
 

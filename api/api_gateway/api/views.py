@@ -12,14 +12,15 @@ from rest_framework.response import Response
 import requests
 import json
 from django.conf import settings
+from .login_helper import verify_token
 
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/delete_product/', data= request.data)
@@ -36,8 +37,8 @@ def delete_product(request):
 def create_order(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.ORDER + '/api/create_order/', data=request.data)
@@ -57,8 +58,8 @@ def create_order(request):
 def create_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
@@ -77,8 +78,8 @@ def create_product(request):
 def all_products(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/all_products/', data= request.data)
@@ -99,8 +100,8 @@ def my_products_screen(request):
     user_id = request.data.get('user_id')
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data={'user_id':user_id})
@@ -113,8 +114,8 @@ def my_products_screen(request):
 def orders_screen(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data=request.data)
@@ -142,28 +143,12 @@ def orders_screen(request):
     response = Response(data=all_user_orders)
     return response
 
-def verify_token(data_request):
-
-    if not 'token' in data_request:
-        return False #Erro de token vazio
-
-    try:
-        token = data_request['token']
-        response = requests.post(settings.LOGIN + '/api/token-verify/', data={'token':token})
-        token_response = json.loads(response.content)
-        if not 'token' in token_response:
-            return False #Erro de token incorreto
-    except:
-        return False #Erro inesperado
-
-    return True #Token cor
-
 @api_view(["POST"])
 def get_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/get_product/', data= request.data)
@@ -181,8 +166,8 @@ def get_product(request):
 def get_name(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.LOGIN + '/api/users/get_name/', data= request.data)

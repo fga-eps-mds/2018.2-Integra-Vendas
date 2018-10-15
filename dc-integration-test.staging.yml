@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+  api:
+    build: api
+    container_name: api-gateway
+    command: bash -c "bash"
+    ports:
+      - 5000:8000
+    depends_on:
+      - login
+      - order
+      - product
+    stdin_open: true
+    tty: true
+
+  login:
+    container_name: login-microservice
+    image: integravendas/login-microservice:latest
+    ports:
+      - 8000:8000
+
+  order:
+    container_name: order-microservice
+    image: integravendas/order-microservice:latest
+    ports:
+      - 8001:8000
+
+  product:
+    container_name: product-microservice
+    image: integravendas/product-microservice:latest
+    ports:
+      - 8002:8000

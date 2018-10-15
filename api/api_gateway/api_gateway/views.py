@@ -2,6 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import requests
 from django.conf import settings
+from .file_helper import file_get_contents
 
 @api_view(['GET'])
 def status(request):
@@ -43,7 +44,3 @@ def status(request):
         order_json,
     ],
 })
-
-def file_get_contents(filename):
-    with open(filename) as f:
-        return f.read()

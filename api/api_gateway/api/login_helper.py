@@ -16,8 +16,7 @@ def verify_token(data_request):
     try:
         token = data_request['token']
         response = requests.post(settings.LOGIN + '/api/token-verify/', data={'token':token})
-        response_json = json.loads(response.content)
-        if not 'token' in response_json:
+        if not 'token' in response.json():
             return Response({'error': 'Falha na autenticação'},
                                     status=HTTP_403_FORBIDDEN) #Erro de token incorreto
     except:

@@ -24,11 +24,7 @@ def delete_product(request):
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/delete_product/', data= request.data)
-        try:
-            response_json = json.loads(response.content)
-            return Response(data=response_json)
-        except:
-            return Response(response)
+        return Response(data=response.json(), status=response.status_code)
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -42,14 +38,7 @@ def create_order(request):
 
     try:
         response = requests.post(settings.ORDER + '/api/create_order/', data=request.data)
-        try:
-            #Convert to JSon
-            response_json = data=json.loads(response.content)
-            return Response(data=response_json)
-
-        except:
-            return Response(response)
-
+        return Response(data=response.json(), status=response.status_code)
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -63,13 +52,8 @@ def create_product(request):
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
-        try:
-            #Convert to JSon
-            response_json = data=json.loads(response.content)
-            return Response(data=response_json)
+        return Response(data=response.json(), status=response.status_code)
 
-        except:
-            return Response(response)
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -83,13 +67,8 @@ def all_products(request):
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/all_products/', data= request.data)
-        try:
-            #Convert to JSon
-            response_json = data=json.loads(response.content)
-            return Response(data=response_json)
+        return Response(data=response.json(), status=response.status_code)
 
-        except:
-            return Response(response)
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -105,7 +84,8 @@ def my_products_screen(request):
 
     try:
         user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data={'user_id':user_id})
-        return Response(data=json.loads(user_products.content))
+        return Response(data=user_products.json(), status=user_products.status_code)
+
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -124,24 +104,23 @@ def orders_screen(request):
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
 
     #Convert to JSon
-    user_products_response = Response(data=json.loads(user_products.content))
+    if user_products.status_code != 200:
+        return Response(data=user_products.json(), status=user_products.status_code)
 
     #List to store all user orders
     all_user_orders = []
-
-    for product in user_products_response.data:
+    for product in user_products.json():
         try:
             product_orders = requests.post(settings.ORDER + '/api/user_orders/', data={'product_id':product['id']})
         except:
             return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
-        orders = json.loads(product_orders.content)
+        orders = product_orders.json()
         for order in orders:
             if(order['closed'] == False):
                 all_user_orders.append(order)
 
-    response = Response(data=all_user_orders)
-    return response
+    return Response(data=all_user_orders, status=HTTP_200_OK)
 
 @api_view(["POST"])
 def get_product(request):
@@ -152,11 +131,8 @@ def get_product(request):
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/get_product/', data= request.data)
-        try:
-            response_json = json.loads(response.content)
-            return Response(data=response_json)
-        except:
-            return Response(response)
+        return Response(data=response.json(), status=response.status_code)
+
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -171,11 +147,8 @@ def get_name(request):
 
     try:
         response = requests.post(settings.LOGIN + '/api/users/get_name/', data= request.data)
-        try:
-            response_json = json.loads(response.content)
-            return Response(data=response_json)
-        except:
-            return Response(response)
+        return Response(data=response.json(), status=response.status_code)
+
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)

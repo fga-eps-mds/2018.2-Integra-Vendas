@@ -100,6 +100,13 @@ As *issues* no Github serão utilizadas para representar todas as tarefas que a 
 * *Label*
 * Responsáveis
 
+### 3.1.1 Labels
+As labels serão dividídas por identificadores para garantir que todas as características das issues serão definidas.
+0 - Papel responsável;
+1 - Tecnologia abordada;
+2 - Assunto relacionado;
+3 - Característica da issue.
+
 ## 3.2 Épicos
 Os Épico provê uma camada extra na hierarquia das Issues definindo um tema que agrupa tarefas que serão realizadas e se comportando como grandes US [[3]](#7-referencias)[[4]](#7-referencias). No desenvolvimento do produto os Épicos terão o objetivo de agrupar US e terão os seguintes atributos:
 * Código: EP## (#: número da EP);

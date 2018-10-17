@@ -12,22 +12,19 @@ from rest_framework.response import Response
 import requests
 import json
 from django.conf import settings
+from .login_helper import verify_token
 
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticacao'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/delete_product/', data= request.data)
-        try:
-            response_json = json.loads(response.content)
-            return Response(data=response_json)
-        except:
-            return Response(response)
+        return Response(data=response.json(), status=response.status_code)
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -36,19 +33,12 @@ def delete_product(request):
 def create_order(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.ORDER + '/api/create_order/', data=request.data)
-        try:
-            #Convert to JSon
-            response_json = data=json.loads(response.content)
-            return Response(data=response_json)
-
-        except:
-            return Response(response)
-
+        return Response(data=response.json(), status=response.status_code)
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -57,18 +47,13 @@ def create_order(request):
 def create_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
-        try:
-            #Convert to JSon
-            response_json = data=json.loads(response.content)
-            return Response(data=response_json)
+        return Response(data=response.json(), status=response.status_code)
 
-        except:
-            return Response(response)
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -77,18 +62,13 @@ def create_product(request):
 def all_products(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/all_products/', data= request.data)
-        try:
-            #Convert to JSon
-            response_json = data=json.loads(response.content)
-            return Response(data=response_json)
+        return Response(data=response.json(), status=response.status_code)
 
-        except:
-            return Response(response)
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -99,12 +79,13 @@ def my_products_screen(request):
     user_id = request.data.get('user_id')
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data={'user_id':user_id})
-        return Response(data=json.loads(user_products.content))
+        return Response(data=user_products.json(), status=user_products.status_code)
+
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -113,8 +94,8 @@ def my_products_screen(request):
 def orders_screen(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data=request.data)
@@ -123,55 +104,35 @@ def orders_screen(request):
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
 
     #Convert to JSon
-    user_products_response = Response(data=json.loads(user_products.content))
+    if user_products.status_code != 200:
+        return Response(data=user_products.json(), status=user_products.status_code)
 
     #List to store all user orders
     all_user_orders = []
-
-    for product in user_products_response.data:
+    for product in user_products.json():
         try:
             product_orders = requests.post(settings.ORDER + '/api/user_orders/', data={'product_id':product['id']})
         except:
             return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
-        orders = json.loads(product_orders.content)
+        orders = product_orders.json()
         for order in orders:
             if(order['closed'] == False):
                 all_user_orders.append(order)
 
-    response = Response(data=all_user_orders)
-    return response
-
-def verify_token(data_request):
-
-    if not 'token' in data_request:
-        return False #Erro de token vazio
-
-    try:
-        token = data_request['token']
-        response = requests.post(settings.LOGIN + '/api/token-verify/', data={'token':token})
-        token_response = json.loads(response.content)
-        if not 'token' in token_response:
-            return False #Erro de token incorreto
-    except:
-        return False #Erro inesperado
-
-    return True #Token cor
+    return Response(data=all_user_orders, status=HTTP_200_OK)
 
 @api_view(["POST"])
 def get_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/get_product/', data= request.data)
-        try:
-            response_json = json.loads(response.content)
-            return Response(data=response_json)
-        except:
-            return Response(response)
+        return Response(data=response.json(), status=response.status_code)
+
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -181,16 +142,13 @@ def get_product(request):
 def get_name(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.LOGIN + '/api/users/get_name/', data= request.data)
-        try:
-            response_json = json.loads(response.content)
-            return Response(data=response_json)
-        except:
-            return Response(response)
+        return Response(data=response.json(), status=response.status_code)
+
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)

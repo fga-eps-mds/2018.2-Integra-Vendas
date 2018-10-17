@@ -24,7 +24,12 @@ def delete_product(request):
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/delete_product/', data= request.data)
-        return Response(data=response.json(), status=response.status_code)
+        try:
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
+        except:
+            return Response(response)
+
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -38,7 +43,12 @@ def create_order(request):
 
     try:
         response = requests.post(settings.ORDER + '/api/create_order/', data=request.data)
-        return Response(data=response.json(), status=response.status_code)
+        try:
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
+        except:
+            return Response(response)
+
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -52,7 +62,11 @@ def create_product(request):
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
-        return Response(data=response.json(), status=response.status_code)
+        try:
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
+        except:
+            return Response(response)
 
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
@@ -67,7 +81,12 @@ def all_products(request):
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/all_products/', data= request.data)
-        return Response(data=response.json(), status=response.status_code)
+        try:
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
+        except:
+            return Response(response)
+
 
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
@@ -83,9 +102,12 @@ def my_products_screen(request):
          return verify
 
     try:
-        user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data={'user_id':user_id})
-        return Response(data=user_products.json(), status=user_products.status_code)
-
+        response = requests.post(settings.PRODUCTS + '/api/user_products/', data={'user_id':user_id})
+        try:
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
+        except:
+            return Response(response)
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -131,7 +153,12 @@ def get_product(request):
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/get_product/', data= request.data)
-        return Response(data=response.json(), status=response.status_code)
+        try:
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
+        except:
+            return Response(response)
+
 
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
@@ -147,7 +174,12 @@ def get_name(request):
 
     try:
         response = requests.post(settings.LOGIN + '/api/users/get_name/', data= request.data)
-        return Response(data=response.json(), status=response.status_code)
+        try:
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
+        except:
+            return Response(response)
+
 
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},

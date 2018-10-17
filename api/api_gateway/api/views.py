@@ -166,4 +166,19 @@ def set_order_status(request):
         return Response(response.json())
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+                            status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["POST"])
+def edit_product(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if not verify:
+         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+
+    try:
+        response = requests.post(settings.PRODUCTS + '/api/edit_product/', data= request.data)
+        try:
+            response_json = json.loads(response.content)
+            return Response(data=response_json)
+        except:
+            return Response(response)

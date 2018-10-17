@@ -74,6 +74,8 @@ Para o desenvolvimento deste projeto serão ultilizadas as seguintes tecnologias
 - Django REST Framework: Utilizado para construção de API's e micro serviços;
 - RabbitMQ: Barramento de mensagens entre os micro serviços e o aplicativo;
 - PostgreSQL: Banco de Dados relacional;
+- Cloudnary: Serviço de armazenamento de imagens
+- Expo push notifications: Serviço para implantar notificações no app
 
 # 4 Visão de Implementação
 

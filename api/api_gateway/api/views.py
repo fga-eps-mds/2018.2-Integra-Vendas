@@ -157,14 +157,14 @@ def get_name(request):
 def set_name(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+        return verify
 
     try:
         response = requests.post(settings.LOGIN + '/api/users/set_name/', data= request.data)
         try:
-            response_json = json.loads(response.content)
-            return Response(data=response_json)
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
         except:
             return Response(response)
     except:
@@ -175,14 +175,14 @@ def set_name(request):
 def update_email(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+        return verify
 
     try:
         response = requests.post(settings.LOGIN + '/api/users/update_email/', data= request.data)
         try:
-            response_json = json.loads(response.content)
-            return Response(data=response_json)
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
         except:
             return Response(response)
     except:

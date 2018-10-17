@@ -53,6 +53,7 @@ def create_product(request):
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
+        print("passei no request")
         return Response(data=response.json(), status=response.status_code)
 
     except:
@@ -182,3 +183,6 @@ def edit_product(request):
             return Response(data=response_json)
         except:
             return Response(response)
+    except:
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
+                            status=HTTP_500_INTERNAL_SERVER_ERROR)

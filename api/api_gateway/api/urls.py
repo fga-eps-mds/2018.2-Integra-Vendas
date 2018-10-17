@@ -2,7 +2,7 @@ from django.urls import path
 from django.conf.urls import url
 from api import views
 from .views import create_product, delete_product, create_order, orders_screen, all_products, my_products_screen, get_product, get_name, set_order_status, edit_product
-===
+
 urlpatterns = [
     path('api/create_product/', create_product),
     path('api/all_products/', all_products),

@@ -35,7 +35,7 @@ sidebar_label: Sprint 6
 * A [US15](https://github.com/fga-eps-mds/2018.2-iFood/issues/113) não atendeu todos os critérios de aceitação, pois faltou tratar a label de nome.
 -------------------------------------------------------------------------------
 # Métricas
-<!-- ## Horas durante a sprint
+## Horas durante a sprint
 ![tempo-mds-6](assets/sprints/tempo-mds-6.png)
 ![tempo-eps-6](assets/sprints/tempo-eps-6.png)
 ![tempo-geral-6](assets/sprints/tempo-geral-6.png)
@@ -48,4 +48,4 @@ sidebar_label: Sprint 6
 ![velocity-6](assets/sprints/velocity-6.png)
 
 ## Burndown
-![burndown-6](assets/sprints/burndown-6.png) -->
+![burndown-6](assets/sprints/burndown-6.png)

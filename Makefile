@@ -1,3 +1,6 @@
+default:
+	cd api && make
+
 run:
 	cd api && make run
 

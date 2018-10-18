@@ -14,13 +14,39 @@ sidebar_label: Sprint 6
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint
 ## Pontos positivos
-1. 
+1. A arquitetura está ajudando muito no desenvolvimento;
+2. Rendimento da equipe está muito bom;
+3. A equipe está bem integrada;
+4. Os membros têm se mostrados responsáveis para desempenhar suas atividades;
+5. Compartilhamento de conhecimento entre os membros da equipe;
+6. Apoio do PO;
+7. O aplicativo já está usável demonstrando os avanços da equipe;
+8. Equipe está confortável em trabalhar com as tecnologias novas;
+9. Apesar de discussões a equipe conseguiu se resolver bem.
 
 ## Pontos de melhoria
-1. 
+1. Diminuir desentendimentos na equipe;
+2. Existe membros que estão desmotivados;
+3. Reuniões presenciais de desenvolvimento não estão sendo muito produtivas;
+4. Critérios de aceitação não estão claros o bastante;
+5. O controle de riscos está fraco;
+6. Falha na avaliação de conhecimento;
+7. O código do front precisa de refatoração;
+8. Membros estão falhando de comunicar dificuldades individuais;
+9. Organização do trabalho de EPS deveria ser mais organizado.
+
 
 ## Medidas a serem tomadas
-1. 
+1. Não falar de política. Comunicar caso a pessoa se sinta mal em alguma discussão;
+2. Focar suporte aos membros e reintegra-los na equipe. Além disso focar no aspecto de distribuição de conhecimento do pair programming;
+3. Deixar facultativo participar das reuniões gerais de desenvolvimento;
+4. Revisar os critérios de aceitação;
+5. Desatrasar burndown e pontuação de riscos;
+6. Fazer análise de conhecimento por spirnt a partir da release 2;
+7. Integrar a refatoração no desenvolvimento do código;
+8. Melhor comunicação com a gerência de problemas individuais e mais comunicação sobre assuntos sensíveis;
+9. Roadmap mais efetivo.
+
 
 ## Melhorias
 1. 

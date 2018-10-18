@@ -40,10 +40,10 @@ sidebar_label: Sprint 4
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint
-* A [US01](https://github.com/fga-eps-mds/2018.2-iFood/issues/36) entregou valor, pois preencheu todos os critérios de aceitação. No entanto, gerou a [TS04](https://github.com/fga-eps-mds/2018.2-iFood/issues/82) para o desenvolvimento de testes unitários das funcionalidades implementadas.
-* A [TS01](https://github.com/fga-eps-mds/2018.2-iFood/issues/78) foi feita por completo.
-* A [TS02](https://github.com/fga-eps-mds/2018.2-iFood/issues/79) foi feita por completo.
-* A [US08](https://github.com/fga-eps-mds/2018.2-iFood/issues/46) não preencheu todos os critérios de aceitação.
+* A [US01](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/36) entregou valor, pois preencheu todos os critérios de aceitação. No entanto, gerou a [TS04](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/82) para o desenvolvimento de testes unitários das funcionalidades implementadas.
+* A [TS01](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/78) foi feita por completo.
+* A [TS02](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/79) foi feita por completo.
+* A [US08](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/46) não preencheu todos os critérios de aceitação.
 
 -------------------------------------------------------------------------------
 # Métricas

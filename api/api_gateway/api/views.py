@@ -206,14 +206,14 @@ def edit_product(request):
 @api_view(["POST"])
 def buyer_orders(request):
     ## Verificação do token
-    #verify = verify_token(request.data)
-    #if verify.status_code != 200:
-    #     return verify
+    verify = verify_token(request.data)
+    if verify.status_code != 200:
+         return verify
 
     try:
         response = requests.post(settings.ORDER + '/api/buyer_orders/', data=request.data)
         return Response(data=response.json(), status=response.status_code)
-        
+
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)

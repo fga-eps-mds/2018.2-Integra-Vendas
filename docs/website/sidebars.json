@@ -4,7 +4,8 @@
     "Projeto": ["plano-metodologico", "doc-visao", "doc-arquitetura"],
     "Métricas": ["riscos", "produtividade", "conhecimento"],
     "Roadmaps": ["rm-geral", "rm-papeis", "rm-produto"],
-    "Design": ["id-visual", "baixa-fidelidade", "alta-fidelidade"]
+    "Design": ["id-visual", "baixa-fidelidade", "alta-fidelidade"],
+    "Devops": ["devops-ambiente", "devops-cicd"]
   },
   "Sprints": {
     "Sprints": ["sprint0", "sprint1", "sprint2", "sprint3", "sprint4", "sprint5", "sprint6", "sprint7"]

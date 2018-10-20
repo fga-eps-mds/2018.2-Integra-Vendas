@@ -24,13 +24,13 @@ const siteConfig = {
   title: 'Integra Vendas', // Title for your website.
   tagline: 'Documentação do Projeto Integra Vendas',
 
-  url: 'https://fga-eps-mds.github.io/2018.2-iFood/', // Your website URL
-  baseUrl: '/2018.2-iFood/', // Base URL for your project */
+  url: 'https://fga-eps-mds.github.io/2018.2-Integra-Vendas/', // Your website URL
+  baseUrl: '/2018.2-Integra-Vendas/', // Base URL for your project */
   // Localhost
   // baseUrl: '/', // Base URL for your project */
 
   // Used for publishing and more
-  projectName: '2018.2-iFood',
+  projectName: '2018.2-Integra-Vendas',
   organizationName: 'fga-eps-mds',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...

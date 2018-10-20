@@ -48,11 +48,11 @@ sidebar_label: Sprint 5
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint
-* A [US08](https://github.com/fga-eps-mds/2018.2-iFood/issues/46) foi feita por completo.
-* A [US02](https://github.com/fga-eps-mds/2018.2-iFood/issues/40) foi feita por completo.
-* A [US11](https://github.com/fga-eps-mds/2018.2-iFood/issues/83) foi feita por completo.
-* A [US10](https://github.com/fga-eps-mds/2018.2-iFood/issues/48) não preencheu todos os critérios de aceitação.
-* A [US06](https://github.com/fga-eps-mds/2018.2-iFood/issues/44) foi feita por completo.
+* A [US08](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/46) foi feita por completo.
+* A [US02](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/40) foi feita por completo.
+* A [US11](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/83) foi feita por completo.
+* A [US10](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/48) não preencheu todos os critérios de aceitação.
+* A [US06](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/44) foi feita por completo.
 -------------------------------------------------------------------------------
 # Métricas
 ![tempo-mds-5](assets/sprints/tempo-mds-5.png)

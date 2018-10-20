@@ -36,6 +36,11 @@ jobs:
       if: branch = dev
       script: make staging-integration-tests
 
+    - stage: "Publish codecov"
+      name: "Publishing test coverage"
+      # if: branch = dev
+      script: sh publish-codecov.sh dc-integration-test.staging.yml
+
     - stage: "Production Tests"
       name: "Unit Integrated Tests"
       if: branch = master

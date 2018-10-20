@@ -34,9 +34,12 @@ jobs:
     - stage: "Staging Tests"
       name: "Unit Integrated Tests"
       if: branch = dev
-      script: make staging-integration-tests
+      script:
+        - make integration-tests file=dc-integration-test.staging.yml
 
-    - stage: "Production Tests"
-      name: "Unit Integrated Tests"
+    - stage: "Test Production and publish codecov"
+      name: "Publishing test coverage"
       if: branch = master
-      script: make production-integration-tests
+      script:
+        - make integration-tests file=dc-integration-test.production.yml
+        - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}

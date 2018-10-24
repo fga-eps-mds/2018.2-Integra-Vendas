@@ -14,6 +14,7 @@ import json
 from django.conf import settings
 from .login_helper import verify_token
 
+ORDER_CLOSED = 1
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
@@ -139,7 +140,7 @@ def orders_screen(request):
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
         orders = product_orders.json()
         for order in orders:
-            if(order['closed'] == False):
+            if(order['status'] != ORDER_CLOSED):
                 all_user_orders.append(order)
 
     return Response(data=all_user_orders, status=HTTP_200_OK)
@@ -186,6 +187,20 @@ def get_name(request):
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(["POST"])
+def set_order_status(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if verify.status_code != 200:
+         return verify
+
+    try:
+        response = requests.post(settings.ORDER + '/api/set_order_status/', data= request.data)
+        return Response(response.json())
+    except:
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
+                            status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["POST"])
 def edit_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
@@ -200,8 +215,7 @@ def edit_product(request):
         except:
             return Response(response)
     except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},status=HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(["POST"])
 def buyer_orders(request):
@@ -215,5 +229,4 @@ def buyer_orders(request):
         return Response(data=response.json(), status=response.status_code)
 
     except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},status=HTTP_500_INTERNAL_SERVER_ERROR)

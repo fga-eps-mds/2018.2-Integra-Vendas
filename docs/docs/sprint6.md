@@ -49,7 +49,11 @@ sidebar_label: Sprint 6
 
 
 ## Melhorias
-1. 
+1. Resolução de conflitos internos;
+2. Reavaliação das atividades de acordo com o tempo na semana para resolver os problemas de falta de tempo;
+3. Documento de arquitetura está seguindo as necessidades da equipe;
+4. Rediscussão da política de pareamento para focar no compartilhamento de conhecimento;
+5. A equipe está seguindo a ordem de prioridade para o desenvolvimento das histórias.
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint

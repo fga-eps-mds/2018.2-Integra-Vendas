@@ -31,12 +31,15 @@ before_install:
 
 jobs:
   include:
-    - stage: "Staging Tests"
+    - stage: "Integration Tests"
       name: "Unit Integrated Tests"
-      if: branch = dev
-      script: make staging-integration-tests
+      script:
+        - make integration-tests file=dc-integration-test.staging.yml
+        - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
-    - stage: "Production Tests"
-      name: "Unit Integrated Tests"
+    - stage: "Integration Tests with Production images"
+      name: "Publishing test coverage"
       if: branch = master
-      script: make production-integration-tests
+      script:
+        - make integration-tests file=dc-integration-test.production.yml
+        - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}

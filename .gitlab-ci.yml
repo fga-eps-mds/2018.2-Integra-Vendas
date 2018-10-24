@@ -3,27 +3,6 @@ stages:
   - publish
   - deploy
 
-unit tests:
-  image: python:3.5.6-slim-stretch
-  before_script:
-    - pip install -r api/api_gateway/requirements/dev.txt
-  stage: test
-  script:
-    - cd api && sh run-tests.sh
-
-publish codecov:
-  image: python:3.5.6-slim-stretch
-  before_script:
-    - pip install -r api/api_gateway/requirements/dev.txt
-  only:
-    - master
-  stage: publish
-  dependencies:
-    - unit tests
-  script:
-    - cd api && sh run-tests.sh
-    - cd api_gateway && codecov -t ${CODECOV_TOKEN}
-
 # github pages
 publish pages:
   image: docker:stable

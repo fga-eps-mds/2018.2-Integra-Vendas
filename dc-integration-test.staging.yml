@@ -4,9 +4,7 @@ services:
   api:
     build: api
     container_name: api-gateway
-    command: bash -c "sh run-tests.sh"
-    volumes:
-      - ./api:/code
+    command: bash -c "bash"
     ports:
       - 5000:8000
     depends_on:

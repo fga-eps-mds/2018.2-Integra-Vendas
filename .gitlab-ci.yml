@@ -62,9 +62,15 @@ deploy to production:
 #     - sh run-deploy.sh staging
 
 deploy to heroku:
+  before_script:
+    - echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
+    - wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add -
+    - apt-get update
+    - apt-get install -y heroku-toolbelt
+    - gem install dpl
   stage: deploy
   script:
-  - gem install dpl
-  - cd api/api_gateway && dpl --provider=heroku --app=integra-vendas-api-gateway --api-key=$HEROKU_DEV_KEY
+    - cd api && heroku config:set VERSION=$(cat VERSION) -a integra-vendas-api-gateway --api-key=$HEROKU_DEV_KEY
+    - cd api_gateway && dpl --provider=heroku --app=integra-vendas-api-gateway --api-key=$HEROKU_DEV_KEY
   only:
-  - dev
+    - dev

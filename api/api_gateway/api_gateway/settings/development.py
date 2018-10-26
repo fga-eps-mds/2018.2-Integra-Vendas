@@ -1,4 +1,5 @@
 from api_gateway.settings.common import *
+from api_gateway.file_helper import file_get_contents
 
 SECRET_KEY = 'mlcq%tp1&*4k@l*s%nef41*2r6*r+zejfip_dv*0$(&#!jt3pj'
 
@@ -11,3 +12,4 @@ DATABASES = {
     }
 }
 
+VERSION = file_get_contents("../VERSION")

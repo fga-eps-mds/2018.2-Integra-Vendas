@@ -2,11 +2,10 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import requests
 from django.conf import settings
-from .file_helper import file_get_contents
 
 @api_view(['GET'])
 def status(request):
-    api_version=file_get_contents("../VERSION")
+    
     ##Get login microservice version
     try:
         response = requests.get(settings.LOGIN)
@@ -37,7 +36,7 @@ def status(request):
 
     return Response({
     "name":"api-gateway",
-    "version":api_version,
+    "version":settings.VERSION,
     "services":[
         login_json,
         product_json,

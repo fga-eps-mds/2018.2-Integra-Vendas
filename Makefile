@@ -5,7 +5,6 @@ run:
 	cd api && make run
 
 integration-tests:
-	docker-compose -f ${file} build
 	docker-compose -f ${file} up -d
 	echo "Running Integration Tests"
 	docker exec api-gateway bash -c "bash ./check-services.sh && sh run-tests.sh"

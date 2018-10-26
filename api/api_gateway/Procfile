@@ -1,2 +1,2 @@
-release: python manage.py makemigrations && python manage.py migrate --noinput && echo "VERSION=$(cat ../VERSION)" >> ../.env
+release: python manage.py makemigrations && python manage.py migrate --noinput
 web: gunicorn api_gateway.wsgi --log-file -

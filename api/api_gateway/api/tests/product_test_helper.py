@@ -1,7 +1,7 @@
 from django.conf import settings
 import requests
 
-def create_product(name, fk_vendor, price, photo, description, token):
+def create_product(name = None, fk_vendor = None, price = None, photo = None, description = None, token = None):
 
     data = {
         'fk_vendor': fk_vendor,

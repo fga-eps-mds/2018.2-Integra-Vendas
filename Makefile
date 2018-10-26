@@ -24,3 +24,9 @@ backend:
 	sh remove-all-containers.sh || true
 	docker-compose -f dc-backend-production.yml build
 	docker-compose -f dc-backend-production.yml up 
+
+build-staging:
+	docker-compose -f dc-integration-test.staging.yml build
+
+build-production:
+	docker-compose -f dc-integration-test.production.yml build

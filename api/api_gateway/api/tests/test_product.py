@@ -5,7 +5,7 @@ import json
 
 default_name = "test1234"
 default_fk_vendor = 1
-default_price = '10.0'
+default_price = 10.0
 default_photo = 'www.google.com'
 default_description = 'description'
 default_product_id = 1
@@ -103,7 +103,7 @@ class ProductTest(TestCase):
 
         self.assertEqual(response3.status_code, 200)
 
-    def test_all_products_with_invalid_params(self):
+    def test_product_deletion_with_invalid_params(self):
         data = {
             'fk_vendor': default_fk_vendor,
             'product_id': default_product_id,
@@ -116,7 +116,7 @@ class ProductTest(TestCase):
     def test_my_products_screen_with_valid_params(self):
         # product from user 1
         email = 'teste127@teste.com'
-        
+
         responseJson = registrate_new_user(email)
         loginResponseJson = login_user(email)
 
@@ -141,4 +141,46 @@ class ProductTest(TestCase):
         data = {'user_id': default_fk_vendor, 'token': None}
         response = self.client.post('/api/my_products_screen/', data=data)
 
+        self.assertEqual(response.status_code, 403)
+
+    def test_get_product_with_valid_params(self):
+        email = 'teste002@teste.com'
+
+        responseJson = registrate_new_user(email)
+        loginResponseJson = login_user(email)
+
+        fk_vendor = loginResponseJson["user"]["pk"]
+        login_token = loginResponseJson["token"]
+
+        data = create_product(default_name, fk_vendor, default_price, default_photo, default_description, login_token)
+        response = self.client.post('/api/create_product/', data=data)
+
+        data2 = {'user_id': fk_vendor,'token': login_token}
+        response2 = self.client.post('/api/my_products_screen/', data=data2)
+        print(response2)
+
+        data3 = {
+            'product_id': response2.data[0]["id"],
+            'token': login_token
+        }
+
+        response3 = self.client.post('/api/get_product/', data=data3)
+        print(response3.json())
+        print(response3.data)
+
+        self.assertEqual(response3.data["fk_vendor"], data['fk_vendor'])
+        self.assertEqual(response3.data["name"], data['name'])
+        self.assertEqual(response3.data["price"], data['price'])
+        self.assertEqual(response3.data["photo"], data['photo'])
+        self.assertEqual(response3.data["description"], data['description'])
+        self.assertEqual(response3.status_code, 200)
+
+
+    def test_get_product_with_invalid_params(self):
+        data = {
+            'product_id': default_product_id,
+            'token': None
+        }
+
+        response = self.client.post('/api/get_product/', data=data)
         self.assertEqual(response.status_code, 403)

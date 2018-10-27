@@ -142,3 +142,50 @@ class ProductTest(TestCase):
         response = self.client.post('/api/my_products_screen/', data=data)
 
         self.assertEqual(response.status_code, 403)
+
+
+    def test_edit_product_with_valid_params(self):
+        email = 'teste128@teste.com'
+        
+        responseJson = registrate_new_user(email)
+        loginResponseJson = login_user(email)
+
+        fk_vendor = loginResponseJson["user"]["pk"]
+        login_token = loginResponseJson["token"]
+
+        data = create_product(default_name, fk_vendor, default_price, default_photo, default_description, login_token)
+        response = self.client.post('/api/create_product/', data=data)
+
+        # retriving user products
+        data2 = {'user_id': fk_vendor,'token': login_token}
+        response2 = self.client.post('/api/my_products_screen/', data=data2)
+
+        data3 = {
+            'product_id': response2.data[0]["id"],
+            'name': 'Newname',
+            'price': '1.0',
+            'photo': 'www.teste.com',
+            'description': 'desc',
+            'token': login_token
+        }
+        response3 = self.client.post('/api/edit_product/', data=data3)
+
+
+        data4 = {'user_id': fk_vendor,'token': login_token}
+        response4 = self.client.post('/api/my_products_screen/', data=data4)
+
+        self.assertEqual(response4.data[0]["name"], data3["name"])
+        self.assertEqual(response3.status_code, 200)
+
+    def test_edit_product_with_invalid_params(self):
+        data = {
+            'product_id': default_product_id,
+            'name': default_name,
+            'price': default_price,
+            'photo': default_photo,
+            'description': default_description,
+            'token': None
+        }
+        response1 = self.client.post('/api/edit_product/', data=data)
+
+        self.assertEqual(response1.status_code, 403)

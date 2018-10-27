@@ -204,8 +204,8 @@ def set_order_status(request):
 def edit_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
-    if not verify:
-         return Response({'error': 'Falha na autenticação'}, HTTP_403_FORBIDDEN)
+    if verify.status_code != 200:
+        return verify
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/edit_product/', data= request.data)

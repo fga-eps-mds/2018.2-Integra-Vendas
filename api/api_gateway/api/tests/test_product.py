@@ -157,7 +157,6 @@ class ProductTest(TestCase):
 
         data2 = {'user_id': fk_vendor,'token': login_token}
         response2 = self.client.post('/api/my_products_screen/', data=data2)
-        print(response2)
 
         data3 = {
             'product_id': response2.data[0]["id"],
@@ -165,8 +164,6 @@ class ProductTest(TestCase):
         }
 
         response3 = self.client.post('/api/get_product/', data=data3)
-        print(response3.json())
-        print(response3.data)
 
         self.assertEqual(response3.data["fk_vendor"], data['fk_vendor'])
         self.assertEqual(response3.data["name"], data['name'])

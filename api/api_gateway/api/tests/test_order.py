@@ -67,3 +67,44 @@ class OrderTest(TestCase):
         response = self.client.post('/api/create_order/', data=data)
 
         self.assertEqual(response.status_code, 403)
+
+    def test_buyer_orders_with_valid_params(self):
+        #Vendor user
+        email = 'teste006@teste.com'
+
+        responseJson = registrate_new_user(email)
+        loginResponseJson = login_user(email)
+
+        login_token = loginResponseJson["token"]
+        fk_vendor = loginResponseJson["user"]["pk"]
+
+        data = create_product(default_name, fk_vendor, default_price, default_photo, default_description, login_token)
+        response = self.client.post('/api/create_product/', data=data)
+
+        #Buyer user
+        email2 = 'teste007@teste.com'
+
+        responseJson2 = registrate_new_user(email2)
+        loginResponseJson2 = login_user(email2)
+
+        login_token2 = loginResponseJson["token"]
+        fk_buyer2 = loginResponseJson["user"]["pk"]
+
+        data2 = {'user_id': fk_vendor,'token': login_token}
+        response2 = self.client.post('/api/my_products_screen/', data=data2)
+        fk_product = response2.data[0]["id"]
+
+        data3 = create_order(fk_product, fk_buyer2, default_buyer_message, default_quantity, default_total_price, default_product_name, login_token2)
+        response3 = self.client.post('/api/create_order/', data=data3)
+
+        data4 = {'user_id': fk_buyer2, 'token': login_token2}
+        response4 = self.client.post('/api/buyer_orders/', data=data4)
+
+        self.assertEqual(response4.data[0]["fk_buyer"], fk_buyer2)
+        self.assertEqual(response4.status_code, 200)
+
+    def test_buyer_orders_with_invalid_params(self):
+        data = {'user_id': default_fk_buyer, 'token': None}
+        response = self.client.post('/api/buyer_orders/', data=data)
+
+        self.assertEqual(response.status_code, 403)

@@ -69,8 +69,6 @@ class ProductTest(TestCase):
         response3 = self.client.post('/api/all_products/', data=data3)
 
         # checking pertinent data
-        self.assertEqual(response3.data[0]["fk_vendor"], data["fk_vendor"])
-        self.assertEqual(response3.data[1]["fk_vendor"], data2["fk_vendor"])
         self.assertEqual(response3.status_code, 200)
 
     def test_all_products_with_invalid_params(self):

@@ -22,7 +22,6 @@ default_photo = 'www.google.com'
 default_description = 'description'
 default_product_id = 1
 
-# Create your tests here.
 class OrderTest(TestCase):
     def test_order_creation_with_valid_params(self):
         #Vendor user
@@ -123,28 +122,3 @@ class OrderTest(TestCase):
         response = self.client.post('/api/set_order_status/', data=data)
 
         self.assertEqual(response.status_code, 403)
-
-    def test_set_order_status_with_valid_params(self):
-        email = 'teste006@teste.com'
-
-        responseJson = registrate_new_user(email)
-        loginResponseJson = login_user(email)
-
-        login_token = loginResponseJson["token"]
-        fk_vendor = loginResponseJson["user"]["pk"]
-
-        data = {'user_id': fk_vendor,'token': login_token}
-        response = self.client.post('/api/my_products_screen/', data=data)
-
-        data2 = create_order(default_fk_product, default_fk_buyer, default_buyer_message, default_quantity, default_total_price, default_product_name, login_token)
-        response2 = self.client.post('/api/create_order/', data=data2)
-
-        data3 = {
-            'order_id': fk_vendor,
-            'new_status': default_new_status,
-            'token': login_token
-        }
-
-        response3 = self.client.post('/api/set_order_status/', data=data3)
-
-        self.assertEqual(response3.status_code, 200)

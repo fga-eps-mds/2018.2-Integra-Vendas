@@ -8,8 +8,6 @@
 
 * [Documentação do Projeto Integra Vendas](https://fga-eps-mds.github.io/2018.2-Integra-Vendas/)
 
-* [Documentação do App Integra](https://fga-eps-mds.github.io/2018.2-FGAPP-FrontEnd)
-
 
 Vendas é um módulo do projeto Integra, que contempla a venda e troca de produtos dentro do ambiente acadêmico da UnB Faculdade Gama.
 
@@ -35,3 +33,6 @@ sh run-django.sh
 * [Microserviço login](https://github.com/fga-eps-mds/2018.2-FGAPP-login)
 * [Microserviço produto](https://github.com/fga-eps-mds/2018.2-FGAPP-produto)
 * [Microserviço vendas](https://github.com/fga-eps-mds/2018.2-FGAPP-vendas)
+* [Microserviço notificação](https://github.com/integra-vendas/Notification-Microservice)
+
+* [Front End](https://github.com/fga-eps-mds/2018.2-FGAPP-FrontEnd)

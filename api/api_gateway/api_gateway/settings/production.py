@@ -1,8 +1,5 @@
 from api_gateway.settings.common import *
 
-import django
-django.setup()
-
 DEBUG = False
 
 SECRET_KEY = os.environ.get('SECRET_KEY')

@@ -16,6 +16,8 @@ services:
       - .:/code
     depends_on:
       - db
+    environment:
+      - DJANGO_SETTINGS_MODULE=api_gateway.settings.production-test
 
 volumes:
   postgres_data:

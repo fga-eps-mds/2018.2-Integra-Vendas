@@ -62,9 +62,11 @@ deploy to production:
 #     - sh run-deploy.sh staging
 
 deploy to heroku:
+  before_script:
+    - gem install dpl
   stage: deploy
   script:
-  - gem install dpl
-  - cd api/api_gateway && dpl --provider=heroku --app=integra-vendas-api-gateway --api-key=$HEROKU_DEV_KEY
+    - sh heroku-helper.sh
+    - cd api/api_gateway && dpl --provider=heroku --app=integra-vendas-api-gateway --api-key=$HEROKU_DEV_KEY
   only:
-  - dev
+    - dev

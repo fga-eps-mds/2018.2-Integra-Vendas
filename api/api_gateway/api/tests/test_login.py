@@ -26,8 +26,5 @@ class LoginTest(TestCase):
         login_token = loginResponseJson["token"]
         user = loginResponseJson["user"]
 
-        registration_token = responseJson['token']
-
         self.assertEqual(user["email"], email)
-        self.assertEqual(registration_token, login_token)
 

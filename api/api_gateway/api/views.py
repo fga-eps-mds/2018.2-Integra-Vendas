@@ -17,6 +17,24 @@ from .login_helper import verify_token
 ORDER_CLOSED = 1
 # Create your views here.
 @api_view(["POST"])
+def save_user_token(request):
+    ## Verificação do token
+    verify = verify_token(request.data)
+    if verify.status_code != 200:
+         return verify
+
+    try:
+        response = requests.post(settings.NOTIFICATION + '/api/save_user_token/', data= request.data)
+        try:
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
+        except:
+            return Response(response)
+    except:
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["POST"])
 def delete_product(request):
     ## Verificação do token
     verify = verify_token(request.data)

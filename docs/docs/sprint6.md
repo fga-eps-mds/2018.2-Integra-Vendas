@@ -7,9 +7,9 @@ sidebar_label: Sprint 6
 # Planejamento da Sprint
 |Par|História|Pontos|
 |---|:------:|:----:|
-|[Gustavo Lima](https://github.com/orgs/fga-eps-mds/people/gustavolima00) e [Leonardo Medeiros](https://github.com/orgs/fga-eps-mds/people/leomedeiros1)|US10 e TS07|26|
-|[Dâmaso Pereira](https://github.com/orgs/fga-eps-mds/people/juniopereirab) e [Shayane Alcântara](https://github.com/orgs/fga-eps-mds/people/shayanealcantara)|US13 e US15|21|
-|[André Pinto](https://github.com/orgs/fga-eps-mds/people/andrelucax) e [Welison Almeida](https://github.com/orgs/fga-eps-mds/people/WelisonR)|US14 e TS05|21|
+|[Gustavo Lima](https://github.com/gustavolima00) e [Leonardo Medeiros](https://github.com/leomedeiros1)|US10 e TS07|26|
+|[Dâmaso Pereira](https://github.com/juniopereirab) e [Shayane Alcântara](https://github.com/shayanealcantara)|US13 e US15|21|
+|[André Pinto](https://github.com/andrelucax) e [Welison Almeida](https://github.com/WelisonR)|US14 e TS05|21|
 
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint

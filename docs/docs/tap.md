@@ -63,21 +63,21 @@ Valores fixos mensais se alongam por 4 meses que seria o prazo do projeto.
 ### Engenharia de Produto de Software
 |Membro|Papel|
 |----|----|
-|[Lucas Costa](https://github.com/orgs/fga-eps-mds/people/lucasca73)|DevOps|
-|[Lucas Pereira](https://github.com/orgs/fga-eps-mds/people/lugope)|Scrum Master|
-|[Ricardo Canela](https://github.com/orgs/fga-eps-mds/people/ricardocanela)|Arquiteto de Software|
-|[Wesley Araujo](https://github.com/orgs/fga-eps-mds/people/wparaujo)|Product Owner|
+|[Lucas Costa](https://github.com/lucasca73)|DevOps|
+|[Lucas Pereira](https://github.com/lugope)|Scrum Master|
+|[Ricardo Canela](https://github.com/ricardocanela)|Arquiteto de Software|
+|[Wesley Araujo](https://github.com/wparaujo)|Product Owner|
 
 ### Desenvolvedores
 
 |Membro|
 |----|
-|[André Pinto](https://github.com/orgs/fga-eps-mds/people/andrelucax)|
-|[Dâmaso Pereira](https://github.com/orgs/fga-eps-mds/people/juniopereirab)|
-|[Gustavo Lima](https://github.com/orgs/fga-eps-mds/people/gustavolima00)|
-|[Leonardo Medeiros](https://github.com/orgs/fga-eps-mds/people/leomedeiros1)|
-|[Shayane Alcântara](https://github.com/orgs/fga-eps-mds/people/shayanealcantara)|
-|[Welison Almeida](https://github.com/orgs/fga-eps-mds/people/WelisonR)|
+|[André Pinto](https://github.com/andrelucax)|
+|[Dâmaso Pereira](https://github.com/juniopereirab)|
+|[Gustavo Lima](https://github.com/gustavolima00)|
+|[Leonardo Medeiros](https://github.com/leomedeiros1)|
+|[Shayane Alcântara](https://github.com/shayanealcantara)|
+|[Welison Almeida](https://github.com/WelisonR)|
 
 ### Orientadora
 [Carla Silva Rocha Aguiar](https://github.com/RochaCarla)

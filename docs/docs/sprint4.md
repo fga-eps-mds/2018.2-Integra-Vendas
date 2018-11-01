@@ -8,9 +8,9 @@ sidebar_label: Sprint 4
 
 |Par|História|Pontos|
 |---|:------:|:----:|
-|[Gustavo Lima](https://github.com/orgs/fga-eps-mds/people/gustavolima00) e [André Pinto](https://github.com/orgs/fga-eps-mds/people/andrelucax)|US01|21|
-|[Leonardo Medeiros](https://github.com/orgs/fga-eps-mds/people/leomedeiros1) e [Dâmaso Pereira](https://github.com/orgs/fga-eps-mds/people/juniopereirab)|TS01 e TS02|13|
-|[Welison Almeida](https://github.com/orgs/fga-eps-mds/people/WelisonR) e [Shayane Alcântara](https://github.com/orgs/fga-eps-mds/people/shayanealcantara)|US08|21|
+|[Gustavo Lima](https://github.com/gustavolima00) e [André Pinto](https://github.com/andrelucax)|US01|21|
+|[Leonardo Medeiros](https://github.com/leomedeiros1) e [Dâmaso Pereira](https://github.com/juniopereirab)|TS01 e TS02|13|
+|[Welison Almeida](https://github.com/WelisonR) e [Shayane Alcântara](https://github.com/shayanealcantara)|US08|21|
 
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint

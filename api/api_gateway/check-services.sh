@@ -16,6 +16,7 @@ declare -a services=(
                     "http://login-microservice:8000" 
                     "http://product-microservice:8000"
                     "http://order-microservice:8000"
+                    "http://notification-microservice:8000"
                     )
 
 for s in "${services[@]}"

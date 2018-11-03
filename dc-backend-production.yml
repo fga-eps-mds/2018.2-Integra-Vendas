@@ -1,0 +1,50 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres:10.1-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  api:
+    container_name: api-gateway
+    build:
+      context: ./api
+      dockerfile: production.Dockerfile
+    ports:
+      - 5000:8000
+    environment:
+      - DJANGO_SETTINGS_MODULE=api_gateway.settings.production-test
+    depends_on:
+      - db
+      - login
+      - order
+      - product
+    
+
+  login:
+    container_name: login-microservice
+    image: integravendas/login-microservice:latest
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+
+  order:
+    container_name: order-microservice
+    image: integravendas/order-microservice:latest
+    depends_on:
+      - db
+    ports:
+      - 8001:8000
+
+  product:
+    container_name: product-microservice
+    image: integravendas/product-microservice:latest
+    depends_on:
+      - db
+    ports:
+      - 8002:8000
+
+volumes:
+  postgres_data:

@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  web:
+    build: .
+    container_name: "api-gateway"
+    command: bash -c "sh run-django.sh"
+    volumes:
+      - .:/code
+    ports:
+      - 5000:8000
+    networks:
+      - api-backend
+
+networks:
+  api-backend:
+    external:
+      name: api-backend
+
+# ports - 5000:8000 
+# host:container
+#    host:5000
+#    container:8000

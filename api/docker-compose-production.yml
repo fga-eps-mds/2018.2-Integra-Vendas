@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: production.Dockerfile
-    command: bash -c "gunicorn --bind 0.0.0.0:8000 api_gateway.wsgi --log-file -"
+    command: bash -c "sleep 3; while !</dev/tcp/db/5432; do sleep 1; done;gunicorn --bind 0.0.0.0:8000 api_gateway.wsgi --log-file -"
     ports:
       - 5000:8000
     volumes:

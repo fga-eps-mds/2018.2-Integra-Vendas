@@ -21,7 +21,7 @@ declare -a services=(
 
 for s in "${services[@]}"
 do
-    retries=120
+    retries=500
     while [ "$(curl --write-out %{http_code} --silent --output /dev/null ${s})" == "000" ]
     do
         echo "✘ ${s} not connected"

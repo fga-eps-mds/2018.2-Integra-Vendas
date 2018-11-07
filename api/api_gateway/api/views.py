@@ -17,6 +17,8 @@ from .login_helper import verify_token
 import cloudinary.uploader
 
 ORDER_CLOSED = 1
+DEFAULT_PRODUCT_IMAGE = 'https://res.cloudinary.com/integraappfga/image/upload/v1541537829/senk2odnxamopwlkmyoq.png'
+
 # Create your views here.
 @api_view(["POST"])
 def delete_product(request):
@@ -61,24 +63,28 @@ def create_product(request):
     ## Verificação do token
     verify = verify_token(request.data)
     if verify.status_code != 200:
-         return verify
+        return verify
 
-    photo = request.data.get("photo")
-    try:
-        photo_url = upload_image(photo)
-        request.data["photo"] = photo_url
-    except:
-        return Response({'error': 'Não foi possível fazer o upload da imagem.'},
-                                status=HTTP_503_SERVICE_UNAVAILABLE)
+    # Transforming request to python dictionary to treat photo
+    product = request.data.dict()
+    photo = product.get("photo")
+    if (photo != None):
+        try:
+            photo_url = upload_image(product["photo"])
+            product.update({'photo': photo_url})
+        except:
+            return Response({'error': 'Não foi possível fazer o upload da imagem.'},
+                                    status=HTTP_503_SERVICE_UNAVAILABLE)
+    else:
+        product.update({'photo': DEFAULT_PRODUCT_IMAGE})
 
     try:
-        response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
+        response = requests.post(settings.PRODUCTS + '/api/create_product/', data=product)
         try:
             response_json = response.json()
             return Response(data=response_json, status=response.status_code)
         except:
             return Response(response)
-
     except:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
@@ -249,8 +255,5 @@ def upload_image(photo):
             ]
         )
         photo_url = upload_photo['url']
-    else:
-        default_image = 'https://res.cloudinary.com/integraappfga/image/upload/v1541537829/senk2odnxamopwlkmyoq.png'
-        photo_url = default_image
 
     return photo_url

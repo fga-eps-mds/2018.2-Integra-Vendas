@@ -21,11 +21,11 @@ declare -a services=(
 
 for s in "${services[@]}"
 do
-    retries=60
+    retries=120
     while [ "$(curl --write-out %{http_code} --silent --output /dev/null ${s})" == "000" ]
     do
         echo "✘ ${s} not connected"
-        sleep 1
+        sleep 2
         echo "retry: $((--retries))"
         if [ $retries == 0 ]
         then

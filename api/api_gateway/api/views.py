@@ -6,13 +6,15 @@ from rest_framework.status import (
     HTTP_200_OK,
     HTTP_404_NOT_FOUND,
     HTTP_400_BAD_REQUEST,
-    HTTP_500_INTERNAL_SERVER_ERROR
+    HTTP_500_INTERNAL_SERVER_ERROR,
+    HTTP_503_SERVICE_UNAVAILABLE
 )
 from rest_framework.response import Response
 import requests
 import json
 from django.conf import settings
 from .login_helper import verify_token
+import cloudinary.uploader
 
 ORDER_CLOSED = 1
 # Create your views here.
@@ -60,6 +62,14 @@ def create_product(request):
     verify = verify_token(request.data)
     if verify.status_code != 200:
          return verify
+
+    photo = request.data.get("photo")
+    try:
+        photo_url = upload_image(photo)
+        request.data["photo"] = photo_url
+    except:
+        return Response({'error': 'Não foi possível fazer o upload da imagem.'},
+                                status=HTTP_503_SERVICE_UNAVAILABLE)
 
     try:
         response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
@@ -230,3 +240,17 @@ def buyer_orders(request):
 
     except:
         return Response({'error': 'Nao foi possivel se comunicar com o servidor'},status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+def upload_image(photo):
+    if (photo != None):
+        upload_photo = cloudinary.uploader.upload(photo, 
+            transformation = [
+                {'width': 600, 'height': 350, 'crop': 'fit'}, 
+            ]
+        )
+        photo_url = upload_photo['url']
+    else:
+        default_image = 'https://res.cloudinary.com/integraappfga/image/upload/v1541537829/senk2odnxamopwlkmyoq.png'
+        photo_url = default_image
+
+    return photo_url

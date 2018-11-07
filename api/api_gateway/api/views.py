@@ -223,8 +223,21 @@ def edit_product(request):
     if verify.status_code != 200:
         return verify
 
+    # Transforming request to python dictionary to treat photo
+    product = request.data.dict()
+    photo = product.get("photo")
+    if (photo != None):
+        try:
+            photo_url = upload_image(product["photo"])
+            product.update({'photo': photo_url})
+        except:
+            return Response({'error': 'Não foi possível fazer o upload da imagem.'},
+                                    status=HTTP_503_SERVICE_UNAVAILABLE)
+
+    # If there is no photo in request just do not send it to the microservice
+
     try:
-        response = requests.post(settings.PRODUCTS + '/api/edit_product/', data= request.data)
+        response = requests.post(settings.PRODUCTS + '/api/edit_product/', data=product)
         try:
             response_json = json.loads(response.content)
             return Response(data=response_json)

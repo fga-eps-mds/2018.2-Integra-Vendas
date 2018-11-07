@@ -38,6 +38,6 @@ services:
 
   notification:
     container_name: notification-microservice
-    image: integravendas/notification-microservice:latest-stable
+    image: integravendas/notification-microservice:latest
     ports:
       - 8003:8000

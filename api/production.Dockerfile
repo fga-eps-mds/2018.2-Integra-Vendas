@@ -7,8 +7,9 @@ WORKDIR /code/api_gateway
 RUN pip install --upgrade pip
 RUN pip install -r requirements/prod.txt
 
-RUN apt-get update
-RUN apt-get install curl libcurl3 libcurl3-dev -y
+RUN mkdir -p /usr/share/man/man1 && mkdir -p /usr/share/man/man7
+RUN apt-get update && apt-get install -f -y postgresql-client curl libcurl3 libcurl3-dev
+
 
 EXPOSE 8000
 

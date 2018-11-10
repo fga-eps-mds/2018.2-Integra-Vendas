@@ -1,5 +1,3 @@
 -r base.txt
 codecov
 coverage
-pylint
-pylint-django

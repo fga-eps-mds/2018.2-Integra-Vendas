@@ -17,6 +17,7 @@ services:
       - login
       - order
       - product
+      - notification
     stdin_open: true
     tty: true
 
@@ -43,6 +44,14 @@ services:
       - db
     ports:
       - 8002:8000
+  
+  notification:
+    container_name: notification-microservice
+    image: integravendas/notification-microservice:latest-stable
+    depends_on:
+      - db
+    ports:
+      - 8003:8000
 
 volumes:
   postgres_data:

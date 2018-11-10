@@ -35,6 +35,15 @@ def status(request):
             "online": False,
         }
 
+    try:
+        response = requests.get(settings.NOTIFICATION, timeout=general_timeout)
+        notification_json=response.json()
+    except:
+        notification_json={
+            "name": "notification-microservice",
+            "online": False,
+        }
+
     return Response({
     "name":"api-gateway",
     "version":settings.VERSION,
@@ -42,5 +51,6 @@ def status(request):
         login_json,
         product_json,
         order_json,
+        notification_json,
     ],
 })

@@ -16,15 +16,16 @@ declare -a services=(
                     "http://login-microservice:8000" 
                     "http://product-microservice:8000"
                     "http://order-microservice:8000"
+                    "http://notification-microservice:8000"
                     )
 
 for s in "${services[@]}"
 do
-    retries=60
+    retries=500
     while [ "$(curl --write-out %{http_code} --silent --output /dev/null ${s})" == "000" ]
     do
         echo "✘ ${s} not connected"
-        sleep 1
+        sleep 2
         echo "retry: $((--retries))"
         if [ $retries == 0 ]
         then

@@ -1,4 +1,3 @@
-# .travis.yml
 sudo: required
 
 language: python
@@ -13,32 +12,39 @@ install:
 virtualenv:
   system_site_packages: true
 
-stages:
-  - Staging Tests
-  - Production Tests
+stages: 
+  - integration-tests
+  - check-container
 
 services:
   - docker
 
-env:
-  - DOCKER_COMPOSE_VERSION=1.22.0
-
-before_install:
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
-
 jobs:
   include:
-    - stage: "Integration Tests"
-      name: "Unit Integrated Tests"
+    - stage: check-container
+      sudo: required
+      services:
+        - docker
+      name: "Checking Production Container Run"
+      script:
+        - cd api && make check-docker-production
+
+    - stage: check-container
+      sudo: required
+      services:
+        - docker
+      name: "Checking Development Container Run"
+      script:
+        - cd api && make check-docker-dev
+
+    - stage: integration-tests
+      name: "Staging Integration"
       script:
         - make integration-tests file=dc-integration-test.staging.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
-    - stage: "Integration Tests with Production images"
-      name: "Publishing test coverage"
+    - stage: integration-tests
+      name: "Production Integration"
       if: branch = master
       script:
         - make integration-tests file=dc-integration-test.production.yml

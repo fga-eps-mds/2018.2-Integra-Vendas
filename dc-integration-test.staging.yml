@@ -14,6 +14,7 @@ services:
       - login
       - order
       - product
+      - notification
     stdin_open: true
     tty: true
 
@@ -34,3 +35,9 @@ services:
     image: integravendas/product-microservice:latest
     ports:
       - 8002:8000
+
+  notification:
+    container_name: notification-microservice
+    image: integravendas/notification-microservice:latest
+    ports:
+      - 8003:8000

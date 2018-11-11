@@ -25,7 +25,7 @@ sidebar_label: Sprint 7
 * 
 -------------------------------------------------------------------------------
 # Métricas
-<!-- ## Horas durante a sprint
+## Horas durante a sprint
 ![tempo-mds-7](assets/sprints/tempo-mds-7.png)
 ![tempo-eps-7](assets/sprints/tempo-eps-7.png)
 ![tempo-geral-7](assets/sprints/tempo-geral-7.png)
@@ -38,4 +38,4 @@ sidebar_label: Sprint 7
 ![velocity-7](assets/sprints/velocity-7.png)
 
 ## Burndown
-![burndown-7](assets/sprints/burndown-7.png) -->
+![burndown-7](assets/sprints/burndown-7.png)

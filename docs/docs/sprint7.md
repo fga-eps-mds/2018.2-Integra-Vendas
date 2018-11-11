@@ -5,6 +5,11 @@ sidebar_label: Sprint 7
 ---
 
 # Planejamento da Sprint
+|Par|História|Pontos|
+|---|:------:|:----:|
+|[André Pinto](https://github.com/andrelucax) e [Dâmaso Pereira](https://github.com/juniopereirab)|US15, TS04 e *TS08*|16 + *13*|
+|[Leonardo Medeiros](https://github.com/leomedeiros1) e [Welison Almeida](https://github.com/WelisonR)|TS09|13|
+|[Gustavo Lima](https://github.com/gustavolima00) e [Shayane Alcântara](https://github.com/shayanealcantara)|TS06|21|
 
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint
@@ -22,7 +27,11 @@ sidebar_label: Sprint 7
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint
-* 
+* A [TS08](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/154) foi uma história extra do que estava planejado no *sprint backlog* e foi feita por completo.
+* A [US15](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/113) foi feita por completo.
+* A [TS04](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/82) foi feita por completo.
+* A [TS09](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/156) foi feita por completo.
+* A [TS06](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/109) foi feita por completo.
 -------------------------------------------------------------------------------
 # Métricas
 ## Horas durante a sprint

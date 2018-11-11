@@ -27,7 +27,11 @@ sidebar_label: Sprint 8
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint
-* 
+* A [US03](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/41) foi feita por completo.
+* A [US12](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/84) foram produzidas as funcionalidades no back-end mas não foi feito o front-end. A dupla responsável pela história não conseguiu fazer o pareamento durante a sprint.
+* A [US16](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/85) foi feita por completo.
+* A [US05](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/43) todos os critérios de aceitação foram feitos, mas faltaram os testes das funcionalidades.
+
 -------------------------------------------------------------------------------
 # Métricas
 ## Horas durante a sprint

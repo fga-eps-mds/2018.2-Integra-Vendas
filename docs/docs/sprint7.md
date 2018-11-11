@@ -14,16 +14,32 @@ sidebar_label: Sprint 7
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint
 ## Pontos positivos
-1. 
+1. Ambiente de homologação;
+2. Sprint foi produtiva e teve todo o backlog feito;
+3. Ótima comunicação;
+4. Equipe unida e integrantes se ajudam nas dificuldades;
+5. Boa entrega técnica na Release 1;
+6. Equipe comprometida;
+7. O design do app está lindo.
 
 ## Pontos de melhoria
-1. 
+1. PRs acumulados atrasando o trabalho;
+2. O desenvolvimento deveria estar mais alinhado com os outros grupos;
+3. A apresentação não esteve no mesmo nível do trabalho produzido;
+4. Comunicação no git.
 
 ## Medidas a serem tomadas
-1. 
+1. Dividir um tempo só para a análise de PRs;
+2. Fazer reunião de integração;
+3. Organizar melhor a apresentação da R2;
+4. Melhorar templates e labels das issues e comunicação dentro da issues.
 
 ## Melhorias
-1. 
+1. Todos os desentendimentos foram resolvidos;
+2. União da equipe após as dificuldades;
+3. As reuniões de desenvolvimento não estão sendo mais feitas assim o desenvolvimento está mais alinhado com as características da equipe;
+4. Os critérios de aceitação estão mais significativos para a equipe;
+5. Cultura de refatoração enquanto se produz o código;
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint

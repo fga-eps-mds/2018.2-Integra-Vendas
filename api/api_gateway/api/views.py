@@ -165,7 +165,7 @@ def orders_screen(request):
     #List to store all user orders
     all_user_orders = get_product_orders(user_products.json())
 
-    if all_user_orders.status_code != 200:
+    if all_user_orders == 500:
         return Response(data=all_user_orders.json(), status=all_user_orders.status_code)
     return Response(data=all_user_orders, status=HTTP_200_OK)
 
@@ -174,8 +174,7 @@ def get_user_products(data):
         user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data=data)
         return user_products
     except:
-        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+        return 500
 
 def get_product_orders(user_products):
     all_user_orders = []

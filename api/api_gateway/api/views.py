@@ -166,7 +166,8 @@ def orders_screen(request):
     all_user_orders = get_product_orders(user_products.json())
 
     if all_user_orders == 500:
-        return Response(data=all_user_orders.json(), status=all_user_orders.status_code)
+        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
+                            status=HTTP_500_INTERNAL_SERVER_ERROR)
     return Response(data=all_user_orders, status=HTTP_200_OK)
 
 def get_user_products(data):

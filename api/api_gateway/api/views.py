@@ -156,19 +156,30 @@ def orders_screen(request):
     if verify.status_code != 200:
          return verify
 
-    try:
-        user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data=request.data)
-    except:
-        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+    user_products = get_user_products(request.data)
 
     #Convert to JSon
     if user_products.status_code != 200:
         return Response(data=user_products.json(), status=user_products.status_code)
 
     #List to store all user orders
+    all_user_orders = get_product_orders(user_products.json())
+
+    if all_user_orders.status_code != 200:
+        return Response(data=all_user_orders.json(), status=all_user_orders.status_code)
+    return Response(data=all_user_orders, status=HTTP_200_OK)
+
+def get_user_products(data):
+    try:
+        user_products = requests.post(settings.PRODUCTS + '/api/user_products/', data=data)
+        return user_products
+    except:
+        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
+                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+
+def get_product_orders(user_products):
     all_user_orders = []
-    for product in user_products.json():
+    for product in user_products:
         try:
             product_orders = requests.post(settings.ORDER + '/api/user_orders/', data={'product_id':product['id']})
         except:
@@ -179,7 +190,7 @@ def orders_screen(request):
             if(order['status'] != ORDER_CLOSED):
                 all_user_orders.append(order)
 
-    return Response(data=all_user_orders, status=HTTP_200_OK)
+    return all_user_orders
 
 @api_view(["POST"])
 def get_product(request):

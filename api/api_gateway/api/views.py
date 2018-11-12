@@ -163,7 +163,7 @@ def orders_screen(request):
         return Response(data=user_products.json(), status=user_products.status_code)
 
     #List to store all user orders
-    all_user_orders = get_product_orders(user_products.json())
+    all_user_orders = get_user_orders(user_products.json())
 
     if all_user_orders == 500:
         return Response({'error': 'Não foi possível se comunicar com o servidor.'},
@@ -177,8 +177,7 @@ def get_user_products(data):
     except:
         return 500
 
-def get_product_orders(user_products):
-    all_user_orders = []
+def get_user_orders(user_products):
     for product in user_products:
         try:
             product_orders = requests.post(settings.ORDER + '/api/user_orders/', data={'product_id':product['id']})
@@ -186,10 +185,14 @@ def get_product_orders(user_products):
             return Response({'error': 'Não foi possível se comunicar com o servidor.'},
                                 status=HTTP_500_INTERNAL_SERVER_ERROR)
         orders = product_orders.json()
-        for order in orders:
-            if(order['status'] != ORDER_CLOSED):
-                all_user_orders.append(order)
+        all_user_orders = get_product_orders(orders)
+    return all_user_orders
 
+def get_product_orders(orders):
+    all_user_orders = []
+    for order in orders:
+        if(order['status'] != ORDER_CLOSED):
+            all_user_orders.append(order)
     return all_user_orders
 
 @api_view(["POST"])

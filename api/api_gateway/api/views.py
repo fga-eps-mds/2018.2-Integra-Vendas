@@ -18,136 +18,63 @@ ORDER_CLOSED = 1
 # Create your views here.
 @api_view(["POST"])
 def save_user_token(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
-
-    try:
-        response = requests.post(settings.NOTIFICATION + '/api/save_user_token/', data= request.data)
-        try:
-            response_json = response.json()
-            return Response(data=response_json, status=response.status_code)
-        except:
-            return Response(response)
-    except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+    url = settings.NOTIFICATION + '/api/save_user_token/'
+    return default_response(url, request)
 
 @api_view(["POST"])
 def send_push_message(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
-
-    try:
-        response = requests.post(settings.NOTIFICATION + '/api/send_push_message/', data= request.data)
-        try:
-            response_json = response.json()
-            return Response(data=response_json, status=response.status_code)
-        except:
-            return Response(response)
-    except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+    url = settings.NOTIFICATION + '/api/send_push_message/'
+    return default_response(url, request)
 
 @api_view(["POST"])
 def delete_product(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
-
-    try:
-        response = requests.post(settings.PRODUCTS + '/api/delete_product/', data= request.data)
-        try:
-            response_json = response.json()
-            return Response(data=response_json, status=response.status_code)
-        except:
-            return Response(response)
-
-    except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+    url = settings.PRODUCTS + '/api/delete_product/'
+    return default_response(url, request)
 
 @api_view(["POST"])
 def create_order(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
-
-    try:
-        response = requests.post(settings.ORDER + '/api/create_order/', data=request.data)
-        try:
-            response_json = response.json()
-            return Response(data=response_json, status=response.status_code)
-        except:
-            return Response(response)
-
-    except:
-        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+    url = settings.ORDER + '/api/create_order/'
+    return default_response(url, request)
 
 @api_view(["POST"])
 def create_product(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
-
-    try:
-        response = requests.post(settings.PRODUCTS + '/api/create_product/', data= request.data)
-        try:
-            response_json = response.json()
-            return Response(data=response_json, status=response.status_code)
-        except:
-            return Response(response)
-
-    except:
-        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+    url = settings.PRODUCTS + '/api/create_product/'
+    return default_response(url, request)
 
 @api_view(["POST"])
 def all_products(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
-
-    try:
-        response = requests.post(settings.PRODUCTS + '/api/all_products/', data= request.data)
-        try:
-            response_json = response.json()
-            return Response(data=response_json, status=response.status_code)
-        except:
-            return Response(response)
-
-
-    except:
-        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
-
+    url = settings.PRODUCTS + '/api/all_products/'
+    return default_response(url, request)
 
 @api_view(["POST"])
 def my_products_screen(request):
-    user_id = request.data.get('user_id')
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
+    url = settings.PRODUCTS + '/api/user_products/'
+    return default_response(url, request)
 
-    try:
-        response = requests.post(settings.PRODUCTS + '/api/user_products/', data={'user_id':user_id})
-        try:
-            response_json = response.json()
-            return Response(data=response_json, status=response.status_code)
-        except:
-            return Response(response)
-    except:
-        return Response({'error': 'Não foi possível se comunicar com o servidor.'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
+@api_view(["POST"])
+def get_product(request):
+    url = settings.PRODUCTS + '/api/get_product/'
+    return default_response(url, request)
+
+@api_view(["POST"])
+def get_name(request):
+    url = settings.LOGIN + '/api/users/get_name/'
+    return default_response(url, request)
+
+@api_view(["POST"])
+def set_order_status(request):
+    url = settings.ORDER + '/api/set_order_status/'
+    return default_response(url, request)
+
+@api_view(["POST"])
+def edit_product(request):
+    url = settings.PRODUCTS + '/api/edit_product/'
+    return default_response(url, request)
+
+@api_view(["POST"])
+def buyer_orders(request):
+    url = settings.ORDER + '/api/buyer_orders/'
+    return default_response(url, request)
 
 @api_view(["POST"])
 def orders_screen(request):
@@ -194,89 +121,18 @@ def get_product_orders(orders):
         if(order['status'] != ORDER_CLOSED):
             all_user_orders.append(order)
     return all_user_orders
-
-@api_view(["POST"])
-def get_product(request):
-    ## Verificação do token
+    
+def default_response(url, request):
     verify = verify_token(request.data)
     if verify.status_code != 200:
          return verify
 
     try:
-        response = requests.post(settings.PRODUCTS + '/api/get_product/', data= request.data)
+        response = requests.post(url, data= request.data)
         try:
             response_json = response.json()
             return Response(data=response_json, status=response.status_code)
         except:
             return Response(response)
-
-
     except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
-
-
-@api_view(["POST"])
-def get_name(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
-
-    try:
-        response = requests.post(settings.LOGIN + '/api/users/get_name/', data= request.data)
-        try:
-            response_json = response.json()
-            return Response(data=response_json, status=response.status_code)
-        except:
-            return Response(response)
-
-
-    except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
-                                status=HTTP_500_INTERNAL_SERVER_ERROR)
-
-@api_view(["POST"])
-def set_order_status(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
-
-    try:
-        response = requests.post(settings.ORDER + '/api/set_order_status/', data= request.data)
-        return Response(response.json())
-    except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},
-                            status=HTTP_500_INTERNAL_SERVER_ERROR)
-
-@api_view(["POST"])
-def edit_product(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-        return verify
-
-    try:
-        response = requests.post(settings.PRODUCTS + '/api/edit_product/', data= request.data)
-        try:
-            response_json = json.loads(response.content)
-            return Response(data=response_json)
-        except:
-            return Response(response)
-    except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},status=HTTP_500_INTERNAL_SERVER_ERROR)
-
-@api_view(["POST"])
-def buyer_orders(request):
-    ## Verificação do token
-    verify = verify_token(request.data)
-    if verify.status_code != 200:
-         return verify
-
-    try:
-        response = requests.post(settings.ORDER + '/api/buyer_orders/', data=request.data)
-        return Response(data=response.json(), status=response.status_code)
-
-    except:
-        return Response({'error': 'Nao foi possivel se comunicar com o servidor'},status=HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'}, status=HTTP_500_INTERNAL_SERVER_ERROR)

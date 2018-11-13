@@ -9,19 +9,16 @@ import requests
 import json
 from django.conf import settings
 from .login_view import verify_token
-from .response_healper import default_response
+from .response_helper import default_response
 
 @api_view(["POST"])
 def create_order(request):
-    url = settings.ORDER + '/api/create_order/'
-    return default_response(url, request)
+    return default_response(settings.ORDER + '/api/create_order/', request)
 
 @api_view(["POST"])
 def set_order_status(request):
-    url = settings.ORDER + '/api/set_order_status/'
-    return default_response(url, request)
+    return default_response(settings.ORDER + '/api/set_order_status/', request)
 
 @api_view(["POST"])
 def buyer_orders(request):
-    url = settings.ORDER + '/api/buyer_orders/'
-    return default_response(url, request)
+    return default_response(settings.ORDER + '/api/buyer_orders/', request)

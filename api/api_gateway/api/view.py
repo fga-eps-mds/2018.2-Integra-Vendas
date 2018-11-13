@@ -9,12 +9,11 @@ from rest_framework.status import (
 )
 import requests
 from .login_view import verify_token
-from .response_healper import default_response
+from .response_helper import default_response
 
 @api_view(["POST"])
 def get_name(request):
-    url = settings.LOGIN + '/api/users/get_name/'
-    return default_response(url, request)
+    return default_response(settings.LOGIN + '/api/users/get_name/', request)
 
 @api_view(["POST"])
 def orders_screen(request):

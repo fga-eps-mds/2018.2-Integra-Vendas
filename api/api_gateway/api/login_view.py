@@ -8,6 +8,7 @@ from rest_framework.status import (
 from rest_framework.response import Response
 import requests
 import json
+from rest_framework.decorators import api_view
 
 def verify_token(data_request):
     if not 'token' in data_request:

@@ -1,14 +1,5 @@
 from rest_framework.decorators import api_view
-from rest_framework.status import (
-    HTTP_403_FORBIDDEN,
-    HTTP_200_OK,
-    HTTP_500_INTERNAL_SERVER_ERROR
-)
-from rest_framework.response import Response
-import requests
-import json
 from django.conf import settings
-from .login_view import verify_token
 from .response_helper import default_response
 
 @api_view(["POST"])

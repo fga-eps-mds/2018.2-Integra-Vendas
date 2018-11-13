@@ -4,7 +4,7 @@ from rest_framework.status import (
 from rest_framework.response import Response
 import requests
 import json
-from .login_view import verify_token
+from .login_views import verify_token
 
 def default_response(url, request):
     verify = verify_token(request.data)

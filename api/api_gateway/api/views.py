@@ -8,7 +8,7 @@ from rest_framework.status import (
     HTTP_500_INTERNAL_SERVER_ERROR
 )
 import requests
-from .login_view import verify_token
+from .login_views import verify_token
 from .response_helper import default_response
 
 @api_view(["POST"])

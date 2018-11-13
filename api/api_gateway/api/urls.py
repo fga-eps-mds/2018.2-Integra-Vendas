@@ -20,11 +20,12 @@ urlpatterns = [
 
     #Order urls
     path('api/create_order/', order_view.create_order),
-    path('api/orders_screen/', order_view.orders_screen),
     path('api/set_order_status/', order_view.set_order_status),
     path('api/buyer_orders/', order_view.buyer_orders),
 
     #Outras urls
     path('api/get_name/', view.get_name),
+    path('api/orders_screen/', view.orders_screen),
+
     
 ]

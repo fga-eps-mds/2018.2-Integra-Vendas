@@ -4,6 +4,20 @@ title: Sprint 9 - 13/10 - 20/10
 sidebar_label: Sprint 9
 ---
 
+# Lista de presença no planejamento
+|Nome|Presença|
+|----|:------:|
+|Lucas Costa||
+|Lucas Pereira||
+|Ricardo Canela||
+|Wesley Araújo||
+|André Pinto||
+|Dâmaso Pereira||
+|Gustavo Lima||
+|Leonardo Medeiros||
+|Shayane Alcântara||
+|Welison Almeida||
+
 # Planejamento da Sprint
 |Par|História|Pontos|
 |---|:------:|:----:|

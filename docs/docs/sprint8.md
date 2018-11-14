@@ -7,16 +7,16 @@ sidebar_label: Sprint 8
 # Lista de presença no planejamento
 |Nome|Presença|
 |----|:------:|
-|Lucas Costa||
-|Lucas Pereira||
-|Ricardo Canela||
-|Wesley Araújo||
-|André Pinto||
-|Dâmaso Pereira||
-|Gustavo Lima||
-|Leonardo Medeiros||
-|Shayane Alcântara||
-|Welison Almeida||
+|Lucas Costa|OK|
+|Lucas Pereira|OK|
+|Ricardo Canela|OK|
+|Wesley Araújo|Faltou|
+|André Pinto|OK|
+|Dâmaso Pereira|OK|
+|Gustavo Lima|Faltou|
+|Leonardo Medeiros|Faltou|
+|Shayane Alcântara|OK|
+|Welison Almeida|OK|
 
 # Planejamento da Sprint
 |Par|História|Pontos|

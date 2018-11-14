@@ -14,16 +14,23 @@ sidebar_label: Sprint 8
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint
 ## Pontos positivos
-1. 
+1. A equipe está bem confortável com as tecnologias usadas;
+2. Ambiente de homologação;
+3. Histórias sendo entregues;
+4. Comunicação da equipe.
 
 ## Pontos de melhoria
-1. 
+1. A equipe está perdendo o compromisso com as reuniões;
+2. Atrasos e faltas na planning;
+3. Demora na retrospectiva.
 
 ## Medidas a serem tomadas
-1. 
+1. Melhorar compromisso com os rituais;
+2. Lista de chamada da planning;
+3. Pensar nos tópicos da retrospectiva com antecedência.
 
 ## Melhorias
-1. 
+1. Melhora na comunicação no git com labels e templates para documentar melhor as atividades.
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint

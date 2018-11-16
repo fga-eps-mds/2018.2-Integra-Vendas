@@ -21,9 +21,9 @@ sidebar_label: Sprint 12
 # Planejamento da Sprint
 |Par|História|Pontos|
 |---|:------:|:----:|
-||||
-||||
-||||
+|[André Pinto](https://github.com/andrelucax) e [Dâmaso Pereira](https://github.com/juniopereirab)|TS13|13|
+|[Gustavo Lima](https://github.com/gustavolima00) e [Shayane Alcântara](https://github.com/shayanealcantara)|TS12|21|
+|[Welison Almeida](https://github.com/WelisonR) e [Leonardo Medeiros](https://github.com/leomedeiros1)|US24 e TS15|8 + 5|
 
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint
@@ -41,7 +41,12 @@ sidebar_label: Sprint 12
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint
-* 
+* A [TS13](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/229) não foi completa, pois não satisfez o critério de aceitação de atingir 80% de cobertura nos testes dos arquivos do front-end propostos pela história.
+* A [TS12](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/228) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [US24](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/271) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [TS15](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/270) foi feita por completo e atingiu todos os critérios de aceitação.
+* Foi feita a [Issue #29](https://github.com/fga-eps-mds/2018.2-FGAPP-login/issues/29) no repositório do microsserviço de login para resolver um bug. Essa issue teve o valor de 5 pontos.
+
 -------------------------------------------------------------------------------
 # Métricas
 <!-- ## Horas durante a sprint

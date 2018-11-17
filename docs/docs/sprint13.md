@@ -28,16 +28,29 @@ sidebar_label: Sprint 13
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint
 ## Pontos positivos
-1. 
+1. A qualidade do código foi melhorada consideravelmente;
+2. A cobertura de testes no front-end atingiu o nível desejado, contribuindo para a qualidade do produto;
+3. A equipe como um todo voltou a ficar mais animada com o trabalho;
+4. Comunicação tanto interna quanto nas issues;
+5. Todas as histórias propostas foram completas;
+6. As atrasos diminuíram;
+7. Cumplicidade entre os membros para ajudar nas dificuldades encontradas.
 
 ## Pontos de melhoria
-1. 
+1. Assiduidade de alguns membros nas reuniões;
+2. As atividades de EPS devem ser atribuídas as membros para garantir a responsabilidade das issues faltantes para a sprint 14;
+3. O PRs estão acumulados.
 
 ## Medidas a serem tomadas
-1. 
+1. Avisar e justificar a falta antecipadamente;
+2. Atribuir atividades de EPS a membros específicos;
+3. Reunir o time para resolver os PRs;
 
 ## Melhorias
-1. 
+1. Diminuição dos atrasos nas reuniões;
+2. A equipe trabalhou em harmonia durante a sprint;
+3. A documentação das sprints não está mais atrasada;
+4. Os microsserviços tiveram suas notas no Code Climate aumentada para "A", melhorando a qualidade do código.
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint

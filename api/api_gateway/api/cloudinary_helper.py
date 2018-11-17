@@ -17,8 +17,8 @@ def upload_image(photo):
 
 def update_photo(url, product, need_default):
     DEFAULT_PRODUCT_IMAGE = 'https://res.cloudinary.com/integraappfga/image/upload/v1541537829/senk2odnxamopwlkmyoq.png'
-    verify = verify_token(product)
 
+    verify = verify_token(product)
     if verify.status_code != 200:
         return verify
 
@@ -35,11 +35,11 @@ def update_photo(url, product, need_default):
         product.update({'photo': DEFAULT_PRODUCT_IMAGE})
 
     try:
-        product_post = requests.post(url, data=product)
+        response = requests.post(url, data=product)
         try:
-            product_post_json = product_post.json()
-            return Response(data=product_post_json, status=product_post.status_code)
+            response_json = response.json()
+            return Response(data=response_json, status=response.status_code)
         except:
-            return Response(product_post)
+            return Response(response)
     except:
-        return Response({'error': 'Não foi possível se comunicar com o servidor'}, status=HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response({'error': 'Nao foi possivel se comunicar com o servidor'}, status=HTTP_500_INTERNAL_SERVER_ERROR)

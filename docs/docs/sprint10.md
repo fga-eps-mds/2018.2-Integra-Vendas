@@ -74,5 +74,8 @@ sidebar_label: Sprint 10
 ![total-horas-10](assets/sprints/total-horas-10.png)
 ![total-horas-td-10](assets/sprints/total-horas-td-10.png)
 
+## Velocity 
+![velocity-9](assets/sprints/velocity-10.png)
+
 ## Burndown
 ![burndown-10](assets/sprints/burndown-10.png)

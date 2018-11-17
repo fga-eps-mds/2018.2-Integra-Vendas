@@ -21,9 +21,9 @@ sidebar_label: Sprint 13
 # Planejamento da Sprint
 |Par|História|Pontos|
 |---|:------:|:----:|
-||||
-||||
-||||
+|[André Pinto](https://github.com/andrelucax) e [Gustavo Lima](https://github.com/gustavolima00)|TS16, TS17 e *TS18*|8 + 8 + *5*|
+|[Shayane Alcântara](https://github.com/shayanealcantara) e [Leonardo Medeiros](https://github.com/leomedeiros1)|TS13|13|
+|[Welison Almeida](https://github.com/WelisonR) e [Dâmaso Pereira](https://github.com/juniopereirab)|TS14|21|
 
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint
@@ -41,7 +41,11 @@ sidebar_label: Sprint 13
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint
-* 
+* A [TS16](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/284) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [TS17](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/285) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [TS13](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/229) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [TS14](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/269) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [TS18](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/286) não foi planejada para ser realizada nessa sprint, mas foi direcionada para uma dupla assim que ela terminou todas as histórias em sua responsabilidade. Foi feita por completo e atingiu todos os critérios de aceitação.
 -------------------------------------------------------------------------------
 # Métricas
 <!-- ## Horas durante a sprint

@@ -1,4 +1,8 @@
 import cloudinary.uploader
+from .login_views import verify_token
+from rest_framework.response import Response
+import requests
+import json
 
 def upload_image(photo):
     if (photo != None):
@@ -10,3 +14,32 @@ def upload_image(photo):
         photo_url = upload_photo['url']
 
     return photo_url
+
+def update_photo(url, product, need_default):
+    DEFAULT_PRODUCT_IMAGE = 'https://res.cloudinary.com/integraappfga/image/upload/v1541537829/senk2odnxamopwlkmyoq.png'
+    verify = verify_token(product)
+
+    if verify.status_code != 200:
+        return verify
+
+    photo = product.get("photo")
+    if (photo != None):
+        try:
+            photo_url = upload_image(product["photo"])
+            product.update({'photo': photo_url})
+            
+        except:
+            return Response({'error': 'Não foi possível fazer o upload da imagem.'},
+                                    status=HTTP_503_SERVICE_UNAVAILABLE)
+    elif (need_default==True):
+        product.update({'photo': DEFAULT_PRODUCT_IMAGE})
+
+    try:
+        product_post = requests.post(url, data=product)
+        try:
+            product_post_json = product_post.json()
+            return Response(data=product_post_json, status=product_post.status_code)
+        except:
+            return Response(product_post)
+    except:
+        return Response({'error': 'Não foi possível se comunicar com o servidor'}, status=HTTP_500_INTERNAL_SERVER_ERROR)

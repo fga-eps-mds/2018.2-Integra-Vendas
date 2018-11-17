@@ -23,7 +23,7 @@ sidebar_label: Sprint 12
 |---|:------:|:----:|
 |[André Pinto](https://github.com/andrelucax) e [Dâmaso Pereira](https://github.com/juniopereirab)|TS13|13|
 |[Gustavo Lima](https://github.com/gustavolima00) e [Shayane Alcântara](https://github.com/shayanealcantara)|TS12|21|
-|[Welison Almeida](https://github.com/WelisonR) e [Leonardo Medeiros](https://github.com/leomedeiros1)|US24 e TS15|13|
+|[Welison Almeida](https://github.com/WelisonR) e [Leonardo Medeiros](https://github.com/leomedeiros1)|US24 e TS15|8 + 5|
 
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint
@@ -65,7 +65,7 @@ sidebar_label: Sprint 12
 
 -------------------------------------------------------------------------------
 # Métricas
-<!-- ## Horas durante a sprint
+## Horas durante a sprint
 ![tempo-mds-12](assets/sprints/tempo-mds-12.png)
 ![tempo-eps-12](assets/sprints/tempo-eps-12.png)
 ![tempo-geral-12](assets/sprints/tempo-geral-12.png)
@@ -78,4 +78,4 @@ sidebar_label: Sprint 12
 ![velocity-12](assets/sprints/velocity-12.png)
 
 ## Burndown
-![burndown-12](assets/sprints/burndown-12.png) -->
+![burndown-12](assets/sprints/burndown-12.png)

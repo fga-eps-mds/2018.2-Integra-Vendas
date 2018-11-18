@@ -61,7 +61,7 @@ sidebar_label: Sprint 13
 * A [TS18](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/286) não foi planejada para ser realizada nessa sprint, mas foi direcionada para uma dupla assim que ela terminou todas as histórias em sua responsabilidade. Foi feita por completo e atingiu todos os critérios de aceitação.
 -------------------------------------------------------------------------------
 # Métricas
-<!-- ## Horas durante a sprint
+## Horas durante a sprint
 ![tempo-mds-13](assets/sprints/tempo-mds-13.png)
 ![tempo-eps-13](assets/sprints/tempo-eps-13.png)
 ![tempo-geral-13](assets/sprints/tempo-geral-13.png)
@@ -74,4 +74,4 @@ sidebar_label: Sprint 13
 ![velocity-13](assets/sprints/velocity-13.png)
 
 ## Burndown
-![burndown-13](assets/sprints/burndown-13.png) -->
+![burndown-13](assets/sprints/burndown-13.png)

@@ -200,7 +200,6 @@ class ProductTest(TestCase):
             'product_id': response2.data[0]["id"],
             'name': 'Newname',
             'price': '1.0',
-            'photo': 'https://res.cloudinary.com/integraappfga/image/upload/v1542241278/IntegraApps_icon.png',
             'description': 'desc',
             'token': login_token
         }

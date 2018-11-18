@@ -3,6 +3,10 @@ from .login_views import verify_token
 from rest_framework.response import Response
 import requests
 import json
+from rest_framework.status import (
+    HTTP_500_INTERNAL_SERVER_ERROR,
+    HTTP_503_SERVICE_UNAVAILABLE
+)
 
 def upload_image(photo):
     if (photo != None):

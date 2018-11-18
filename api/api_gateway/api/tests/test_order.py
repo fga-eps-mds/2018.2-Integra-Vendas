@@ -18,7 +18,7 @@ default_new_status = 0
 default_name = "test1234"
 default_fk_vendor = 1
 default_price = 10.0
-default_photo = 'www.google.com'
+default_photo = 'https://res.cloudinary.com/integraappfga/image/upload/v1541537829/senk2odnxamopwlkmyoq.png'
 default_description = 'description'
 default_product_id = 1
 

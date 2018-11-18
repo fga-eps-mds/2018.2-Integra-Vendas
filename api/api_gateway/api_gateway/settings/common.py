@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 from decouple import config
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,6 +31,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
 ]
+
+cloudinary.config(
+    cloud_name=config('CDN_CLOUD_NAME', default = 'default'),
+    api_key=config('CDN_API_KEY', default = 'default'),
+    api_secret=config('CDN_API_SECRET', default = 'default')
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

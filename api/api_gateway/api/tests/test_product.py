@@ -6,7 +6,7 @@ import json
 default_name = "test1234"
 default_fk_vendor = 1
 default_price = 10.0
-default_photo = 'www.google.com'
+default_photo = 'https://res.cloudinary.com/integraappfga/image/upload/v1541537829/senk2odnxamopwlkmyoq.png'
 default_description = 'description'
 default_product_id = 1
 
@@ -166,7 +166,7 @@ class ProductTest(TestCase):
         self.assertEqual(response3.data["fk_vendor"], data['fk_vendor'])
         self.assertEqual(response3.data["name"], data['name'])
         self.assertEqual(response3.data["price"], data['price'])
-        self.assertEqual(response3.data["photo"], data['photo'])
+        self.assertEqual(response3.data["photo"], default_photo)
         self.assertEqual(response3.data["description"], data['description'])
         self.assertEqual(response3.status_code, 200)
 
@@ -200,7 +200,6 @@ class ProductTest(TestCase):
             'product_id': response2.data[0]["id"],
             'name': 'Newname',
             'price': '1.0',
-            'photo': 'www.teste.com',
             'description': 'desc',
             'token': login_token
         }

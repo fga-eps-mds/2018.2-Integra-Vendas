@@ -40,6 +40,31 @@ O Desenvolvedor tem como responsabilidade:
 * Testar as soluções implementadas durante o desenvolvimento do produto garantindo uma cobertura de testes de pelo menos 90% do código;
 * Seguir padrões, técnicas e boas práticas de programação definidas pelo Scrum Master.
 
+## 1.6 Rotação de Papéis
+A rotação de papéis acontecerá a cada release para garantir a distribuição de conhecimento entre a equipe e auxiliar os membros a terem um melhor conhecimento sobre vários papéis, diminuindo assim, o risco da equipe ficar desamparada caso algum membro não possa atuar em algum ritual.
+
+### 1.6.1 Justificativa
+Foi analisado que seria um risco alto fazer a rotação de papéis com uma periodicidade curta tendo em vista que ainda deveria ser feito o desenvolvimento de funcionalidades do produto durante o período da *release 2* e os papéis não estavam maduros o bastante. Fazer a rotação de papéis por *release* demonstrou ser uma solução mais apropriada, pois existiria a distribuição de conhecimento enquanto teria existiria oportunidade dos integrantes terem tempo o suficiente para aprender sobre seus novos papéis. No entanto, outros integrantes serão convidados a ser o responsável por executar os rituais periodicamente, de maneira que a maioria dos integrantes tenham a experiência de participar na execução do *Scrum*.
+
+### 1.6.2 Definição da rotação
+#### Release 1
+|Papel|Responsável|
+|-----|-----------|
+|Scrum Master|Lucas Pereira|
+|Product Owner|Wesley Araújo|
+|Arquiteto|Ricardo Canela|
+|DevOps|Lucas Costa|
+|Time de Desenvolvimento|André Pinto, Dâmaso Pereira, Gustavo Lima, Leonardo Medeiros, Shayane Alcântara e Welison Almeida|
+
+#### Release 2
+|Papel|Responsável|
+|-----|-----------|
+|Scrum Master|Wesley Araújo|
+|Product Owner|Lucas Pereira|
+|Arquiteto|Lucas Costa|
+|DevOps|Ricardo Canela|
+|Time de Desenvolvimento|André Pinto, Dâmaso Pereira, Gustavo Lima, Leonardo Medeiros, Shayane Alcântara e Welison Almeida|
+
 ---
 # 2 Rituais
 ## 2.1 Sprints

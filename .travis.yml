@@ -58,5 +58,5 @@ jobs:
       script:
         - . ./heroku-helper.sh
         - updateVersion api/VERSION
-        - loginHeroku $EMAIL_HEROKU $HEROKU_TOKEN
+        - loginHeroku $EMAIL_HEROKU $HEROKU_DEV_KEY
         - deployMaster $HEROKU_APP api/api_gateway

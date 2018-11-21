@@ -13,15 +13,15 @@ virtualenv:
   system_site_packages: true
 
 stages: 
-  - integration-tests
-  - check-container
+  - test
+  - deploy
 
 services:
   - docker
 
 jobs:
   include:
-    - stage: check-container
+    - stage: test
       sudo: required
       services:
         - docker
@@ -29,7 +29,7 @@ jobs:
       script:
         - cd api && make check-docker-production
 
-    - stage: check-container
+    - stage: test
       sudo: required
       services:
         - docker
@@ -37,15 +37,26 @@ jobs:
       script:
         - cd api && make check-docker-dev
 
-    - stage: integration-tests
+    - stage: test
       name: "Staging Integration"
       script:
         - make integration-tests file=dc-integration-test.staging.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
-    - stage: integration-tests
+    - stage: test
       name: "Production Integration"
       if: branch = master
       script:
         - make integration-tests file=dc-integration-test.production.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
+
+    - stage: deploy
+      install: npm install -g heroku
+      name: "Deploying to Staging"
+      only:
+        - dev
+      script:
+        - . ./heroku-helper.sh
+        - updateVersion api/VERSION
+        - loginHeroku $EMAIL_HEROKU $HEROKU_TOKEN
+        - deployMaster $HEROKU_APP api/api_gateway

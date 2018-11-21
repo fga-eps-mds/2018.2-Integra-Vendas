@@ -66,7 +66,7 @@ deploy to heroku:
     - gem install dpl
   stage: deploy
   script:
-    - sh heroku-helper.sh
+    - . ./heroku-helper.sh
     - cd api/api_gateway && dpl --provider=heroku --app=integra-vendas-api-gateway --api-key=$HEROKU_DEV_KEY
   only:
     - dev

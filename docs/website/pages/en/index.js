@@ -168,7 +168,7 @@ const Showcase = props => {
   return (
     <div className="productShowcaseSection paddingBottom">
       <h2>Membros</h2>
-      <p>Todo o projeto foi desenvolvido por:</p>
+      <p>Este projeto foi desenvolvido por:</p>
       <div className="logos">{showcase}</div>
       <div className="more-users">
         <a className="button" href={pageUrl('users.html', props.language)}>

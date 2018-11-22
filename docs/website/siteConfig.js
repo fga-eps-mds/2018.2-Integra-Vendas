@@ -11,10 +11,10 @@
 // List of projects/orgs using your project for the users page.
 const users = [
   {
-    caption: 'User1',
+    caption: 'Andre',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
+    image: 'img/users_img/Andre.png',
     infoLink: 'https://www.facebook.com',
     pinned: true,
   },

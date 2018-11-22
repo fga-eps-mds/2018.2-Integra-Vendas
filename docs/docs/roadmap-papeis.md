@@ -4,5 +4,5 @@ title: Roadmap dos papéis
 sidebar_label: Roadmap dos papéis
 ---
 
-![roadmap_papeis](assets/roadmap-papeis.png)
+![roadmap_papeis](assets/roadmap/roadmap-papeis.png)
 

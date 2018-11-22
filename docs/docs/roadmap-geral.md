@@ -4,4 +4,4 @@ title: Roadmap Geral
 sidebar_label: Roadmap Geral
 ---
 
-![roadmap_geral](assets/roadmap-geral.png)
+![roadmap_geral](assets/roadmap/roadmap-geral.png)

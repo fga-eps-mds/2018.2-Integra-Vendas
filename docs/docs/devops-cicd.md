@@ -14,6 +14,8 @@ Tendo o poder de executar scripts de acordo com eventos, pode-se realizar a suit
 
 Como o travis também te permite controlar o ambiente em que são executados os scripts, adicionando dependências, selecionando sistema operacional que executará o script, defindo variáveis de ambiente. É possível realizar testes em diferentes plataformas, realizar o deploy em diferentes ambientes, etc.
 
+O gitlabci funciona assim como o travisci. Porém, dispõe de uma UI mais amigável.
+
 ## Etapas
 O travis permite o controle dos jobs sendo executados em stages. Um job é um ambiente separado que executará um script, podem haver vários jobs sendo executados em paralelo, os jobs estão dentro de uma build, que é o controle geral do travis para quando o travis é acionado.
 
@@ -46,4 +48,16 @@ Na etapa de build e publicação do docker é executado apenas um script que rea
 Ex.: integravendas/product-microservice:stable-1.0
 
 ### Etapa de Deploy
+Na etapa de deploy, ocorre uma diversidade maior porque depende da plataforma a qual se esta subindo a aplicação. No caso do kubernetes é necessário realizar um procedimento na Engine de rolout e atualização da imagem utilizada, no caso do heroku é realizar um push específico.
+* produção: Kubernetes
+* homologação: Heroku
 
+### QA
+Quality Assurance, a fim de manter a qualidade do projeto. É realizada de duas formas:
+* Cobertura de Testes
+
+Cobertura de testes com os testes unitários em django. Cobertura deve estar sempre acima de 80%.
+
+* Análise estática
+
+Análise estática utilizando codeclimate. Codeclimate gera uma nota referente aos débitos técnicos causados por código pobre. Nosso padrão é sempre manter nota A.

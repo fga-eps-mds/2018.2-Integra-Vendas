@@ -15,7 +15,79 @@ const users = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/users_img/Andre.png',
-    infoLink: 'https://www.facebook.com',
+    infoLink: 'https://github.com/andrelucax',
+    pinned: true,
+  },
+  {
+    caption: 'Damaso',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/users_img/Damaso.png',
+    infoLink: 'https://github.com/juniopereirab',
+    pinned: true,
+  },
+  {
+    caption: 'Gustavo',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/users_img/Gustavo.png',
+    infoLink: 'https://github.com/gustavolima00',
+    pinned: true,
+  },
+  {
+    caption: 'Leonardo',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/users_img/Leonardo.png',
+    infoLink: 'https://github.com/leomedeiros1',
+    pinned: true,
+  },
+  {
+    caption: 'Shayane',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/users_img/Shayane.png',
+    infoLink: 'https://github.com/shayanealcantara',
+    pinned: true,
+  },
+  {
+    caption: 'Wally',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/users_img/Wally.png',
+    infoLink: 'https://github.com/WelisonR',
+    pinned: true,
+  },
+  {
+    caption: 'Costa',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/users_img/Costa.png',
+    infoLink: 'https://github.com/lucasca73',
+    pinned: true,
+  },
+  {
+    caption: 'Pereira',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/users_img/Pereira.png',
+    infoLink: 'https://github.com/lugope',
+    pinned: true,
+  },
+  {
+    caption: 'Ricardo',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/users_img/Ricardo.png',
+    infoLink: 'https://github.com/ricardocanela',
+    pinned: true,
+  },
+  {
+    caption: 'Wesley',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/users_img/Wesley.png',
+    infoLink: 'https://github.com/wparaujo',
     pinned: true,
   },
 ];

@@ -161,7 +161,7 @@ const Showcase = props => {
 
   const showcase = siteConfig.users.filter(user => user.pinned).map(user => (
     <a href={user.infoLink} key={user.infoLink}>
-      <img src={user.image} alt={user.caption} title={user.caption} />
+      <img class="img-circle" src={user.image} alt={user.caption} title={user.caption} />
     </a>
   ));
 

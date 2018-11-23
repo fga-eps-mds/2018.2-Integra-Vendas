@@ -6,6 +6,9 @@ python:
 
 cache: pip
 
+git:
+  depth: false
+
 install:
   - pip install -r api/api_gateway/requirements/dev.txt
 
@@ -13,7 +16,6 @@ virtualenv:
   system_site_packages: true
 
 stages:
-  - gh-pages
   - test
   - check
   - build
@@ -24,16 +26,6 @@ services:
 
 jobs:
   include:
-    - stage: gh-pages
-      name: "Publishing GH-Pages"
-      sudo: required
-      services:
-        - docker
-      only:
-        - master
-      script:
-        - sh run-publish-pages.sh
-
     - stage: check
       name: "Checking Production Container Run"
       sudo: required
@@ -58,7 +50,8 @@ jobs:
 
     - stage: test
       name: "Production Integration"
-      only:
+      branches:
+        only:
         - master
       script:
         - make integration-tests file=dc-integration-test.production.yml
@@ -83,7 +76,8 @@ jobs:
     - stage: deploy
       name: "Deploying to Staging"
       install: npm install -g heroku
-      only:
+      branches:
+        only:
         - dev
       script:
         - . ./heroku-helper.sh
@@ -94,8 +88,20 @@ jobs:
     - stage: deploy
       name: "Deploying to Production"
       only:
-        - tags
+        - master
+        - /(\d+\.)?(\d+\.)?(\*|\d+)$/
       script:
         - cd api
         - sh install-kubectl.sh
         - sh run-deploy.sh production
+
+    - stage: deploy
+      name: "Publishing GH-Pages"
+      sudo: required
+      services:
+        - docker
+      branches:
+        only:
+        - master
+      script:
+        - sh run-publish-pages.sh

@@ -31,7 +31,7 @@ jobs:
       only:
         - master
       script:
-        - cd api && make check-docker-production
+        - sh run-publish-pages.sh
 
     - stage: test
       name: "Checking Production Container Run"

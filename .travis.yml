@@ -31,6 +31,9 @@ jobs:
       sudo: required
       services:
         - docker
+      branches:
+        only:
+          - master
       script:
         - cd api && make check-docker-production
 
@@ -52,7 +55,7 @@ jobs:
       name: "Production Integration"
       branches:
         only:
-        - master
+          - master
       script:
         - make integration-tests file=dc-integration-test.production.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
@@ -78,7 +81,7 @@ jobs:
       install: npm install -g heroku
       branches:
         only:
-        - dev
+          - dev
       script:
         - . ./heroku-helper.sh
         - updateVersion api/VERSION
@@ -87,9 +90,10 @@ jobs:
 
     - stage: deploy
       name: "Deploying to Production"
-      only:
-        - master
-        - /(\d+\.)?(\d+\.)?(\*|\d+)$/
+      branches:
+        only:
+          - master
+          - /(\d+\.)?(\d+\.)?(\*|\d+)$/
       script:
         - cd api
         - sh install-kubectl.sh
@@ -102,6 +106,6 @@ jobs:
         - docker
       branches:
         only:
-        - master
+          - master
       script:
         - sh run-publish-pages.sh

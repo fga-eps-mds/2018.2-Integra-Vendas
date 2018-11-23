@@ -15,6 +15,7 @@ virtualenv:
 stages:
   - gh-pages
   - test
+  - check
   - build
   - deploy
 
@@ -33,7 +34,7 @@ jobs:
       script:
         - sh run-publish-pages.sh
 
-    - stage: test
+    - stage: check
       name: "Checking Production Container Run"
       sudo: required
       services:
@@ -41,7 +42,7 @@ jobs:
       script:
         - cd api && make check-docker-production
 
-    - stage: test
+    - stage: check
       name: "Checking Development Container Run"
       sudo: required
       services:

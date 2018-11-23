@@ -61,3 +61,8 @@ Cobertura de testes com os testes unitários em django. Cobertura deve estar sem
 * Análise estática
 
 Análise estática utilizando codeclimate. Codeclimate gera uma nota referente aos débitos técnicos causados por código pobre. Nosso padrão é sempre manter nota A.
+
+### Testes Unitários Integrados
+No projeto integra-vendas temos um serviço chamado api-gateway. Ele é responsável por unificar a entrada de requisições e realizar a autenticação necessária.
+
+Para que as suas funcionalidades fossem testadas nós elaboramos uma forma alternativa de testes unitários, que se mostrou como teste de integração do backend. Antes de realizar os testes unitários da api-gateway, se prepara um ambiente único e fechado de containers rodando os microserviços do sistema, após todos os microserviços estiverem executando, os testes são executados na api-gateway. Esses testes são necessários para ser gerado o relatório de cobertura de testes da api-gateway.

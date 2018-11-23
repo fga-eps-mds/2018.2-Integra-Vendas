@@ -38,8 +38,7 @@ jobs:
         - cd api && make check-docker-production
 
 # container check
-    - if: branch = dev
-      stage: check
+    - stage: check
       name: "Checking Development Container Run"
       sudo: required
       services:
@@ -47,10 +46,16 @@ jobs:
       script:
         - cd api && make check-docker-dev
 
+# Integration test
+    - stage: test
+      name: "Staging Integration"
+      script:
+        - make integration-tests file=dc-integration-test.staging.yml
+
 # test staging + codecov
     - if: branch = dev
       stage: test
-      name: "Staging Integration"
+      name: "Staging Integration codecov publish"
       script:
         - make integration-tests file=dc-integration-test.staging.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}

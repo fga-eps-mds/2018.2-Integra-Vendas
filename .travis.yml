@@ -26,16 +26,20 @@ services:
 
 jobs:
   include:
-    - stage: check
+
+# container check
+    - if: branch = master
+      stage: check
       name: "Checking Production Container Run"
       sudo: required
       services:
         - docker
-      if: branch = master
       script:
         - cd api && make check-docker-production
 
-    - stage: check
+# container check
+    - if: branch = dev
+      stage: check
       name: "Checking Development Container Run"
       sudo: required
       services:
@@ -43,22 +47,24 @@ jobs:
       script:
         - cd api && make check-docker-dev
 
-    - stage: test
+# test staging + codecov
+    - if: branch = dev
+      stage: test
       name: "Staging Integration"
       script:
         - make integration-tests file=dc-integration-test.staging.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
-    - stage: test
+# Test production
+    - if: branch = dev
+      stage: test
       name: "Production Integration"
-      branches:
-        only:
-          - master
       script:
         - make integration-tests file=dc-integration-test.production.yml
-        - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
-    - stage: build
+# Docker hub publish
+    - if: branch = master
+      stage: build
       name: "Publish production images on docker hub"
       sudo: required
       services:
@@ -66,7 +72,9 @@ jobs:
       script:
         - cd api && sh run-publish-docker.sh production
 
-    - stage: build
+# Docker hub publish
+    - if: branch = dev
+      stage: build
       name: "Publish staging images on docker hub"
       sudo: required
       services:
@@ -74,33 +82,32 @@ jobs:
       script:
         - cd api && sh run-publish-docker.sh staging
 
-    - stage: deploy
+# Heroku cli publish
+    - if: branch = dev
+      stage: deploy
       name: "Deploying to Staging"
       install: npm install -g heroku
-      if: branch = dev
       script:
         - . ./heroku-helper.sh
         - updateVersion api/VERSION
         - loginHeroku $EMAIL_HEROKU $HEROKU_DEV_KEY
         - deployMaster $HEROKU_APP api/api_gateway
 
-    - stage: deploy
+# Tag Regex
+    - if: branch = /(\d+\.)?(\d+\.)?(\*|\d+)$/
+      stage: deploy
       name: "Deploying to Production"
-      on:
-        tags: true
-        branch:
-          - master
-          - /(\d+\.)?(\d+\.)?(\*|\d+)$/
       script:
         - cd api
         - sh install-kubectl.sh
         - sh run-deploy.sh production
 
-    - stage: deploy
+# gh-pages publish
+    - if: branch = master
+      stage: deploy
       name: "Publishing GH-Pages"
       sudo: required
       services:
         - docker
-      if: branch = master
       script:
         - sh run-publish-pages.sh

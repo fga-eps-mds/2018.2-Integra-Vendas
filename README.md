@@ -11,6 +11,7 @@
 * [Documentação do App Integra](https://fga-eps-mds.github.io/2018.2-FGAPP-FrontEnd)
 
 
+
 Vendas é um módulo do projeto Integra, que contempla a venda e troca de produtos dentro do ambiente acadêmico da UnB Faculdade Gama.
 
 # Requisitos

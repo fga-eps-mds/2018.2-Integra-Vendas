@@ -12,8 +12,10 @@ install:
 virtualenv:
   system_site_packages: true
 
-stages: 
+stages:
+  - gh-pages
   - test
+  - build
   - deploy
 
 services:
@@ -21,19 +23,29 @@ services:
 
 jobs:
   include:
-    - stage: test
+    - stage: gh-pages
+      name: "Publishing GH-Pages"
       sudo: required
       services:
         - docker
-      name: "Checking Production Container Run"
+      only:
+        - master
       script:
         - cd api && make check-docker-production
 
     - stage: test
+      name: "Checking Production Container Run"
       sudo: required
       services:
         - docker
+      script:
+        - cd api && make check-docker-production
+
+    - stage: test
       name: "Checking Development Container Run"
+      sudo: required
+      services:
+        - docker
       script:
         - cd api && make check-docker-dev
 
@@ -45,14 +57,31 @@ jobs:
 
     - stage: test
       name: "Production Integration"
-      if: branch = master
+      only:
+        - master
       script:
         - make integration-tests file=dc-integration-test.production.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
+    - stage: build
+      name: "Publish production images on docker hub"
+      sudo: required
+      services:
+        - docker
+      script:
+        - cd api && sh run-publish-docker.sh production
+
+    - stage: build
+      name: "Publish staging images on docker hub"
+      sudo: required
+      services:
+        - docker
+      script:
+        - cd api && sh run-publish-docker.sh staging
+
     - stage: deploy
-      install: npm install -g heroku
       name: "Deploying to Staging"
+      install: npm install -g heroku
       only:
         - dev
       script:
@@ -60,3 +89,12 @@ jobs:
         - updateVersion api/VERSION
         - loginHeroku $EMAIL_HEROKU $HEROKU_DEV_KEY
         - deployMaster $HEROKU_APP api/api_gateway
+
+    - stage: deploy
+      name: "Deploying to Production"
+      only:
+        - tags
+      script:
+        - cd api
+        - sh install-kubectl.sh
+        - sh run-deploy.sh production

@@ -40,7 +40,7 @@ A planilha com todos os dados do EVM, tanto da release 1 e da release 2 está di
 |-------|---------|-----|
 |BAC|Orçamento Disponível Release 1|R$ 165.312,50|
 |L|Tamanho da Sprint em dias|7|
-|PS|Total de Sprints Planejadas|8|
+|PS|Total de Sprints Planejadas|5|
 |SD|Data de inínio|25/08/2018|
 |PRP|Pontos Planejados para Release 1|223|
 

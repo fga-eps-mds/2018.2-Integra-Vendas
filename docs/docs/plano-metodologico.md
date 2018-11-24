@@ -68,7 +68,7 @@ Foi analisado que seria um risco alto fazer a rotação de papéis com uma perio
 ---
 # 2 Rituais
 ## 2.1 Sprints
-A *sprint* é um período de tempo definido durante o qual é produzida uma versão incremental do produto. Uma *sprint* inicia imediatamente após a conclusão da *sprint* anterior e tem o objetivo de entregar um incremento potencialmente utilizável do produto [[1]](#7-referencias). As *sprints* do atual projeto terá as seguintes características:
+A *sprint* é um período de tempo definido durante o qual é produzida uma versão incremental do produto. Uma *sprint* inicia imediatamente após a conclusão da *sprint* anterior e tem o objetivo de entregar um incremento potencialmente utilizável do produto [[1]](#7-referencias). As *sprints* do atual projeto terão as seguintes características:
 * Duração: 7 dias;
 * Todas as *sprints* começarão às 14 horas do sábado e se encerrarão 9 horas do sábado seguinte dando início, respectivamente, aos rituais de Revisão da *sprint*, Retrospectiva da *sprint*, Planejamento da *sprint* e Definição de riscos.
 
@@ -80,16 +80,16 @@ As *daily meetings* são a documentação do trabalho diário dos membros da equ
 	* "O que será feito?"
 	* "Quais foram as dificuldades?"
 
-Para verificar qual seria o melhor horário para fazer as *dilies meetings* durante a semana, foi feito um mapa de calor da disponibilidade da equipe.
+Para verificar qual seria o melhor horário para fazer as *dailies meetings* durante a semana, foi feito um mapa de calor da disponibilidade da equipe.
 
 ![quadro-disponibilidade](assets/metodologia/quadro-disponibilidade.png)
 
 Verificando o quadro de disponibilidade foi definido com a equipe as seguintes características:
-* As *dailies meetings* presenciais acontecerão nas segundas, terças e quintas às 18 horas;
+* As *dailies meetings* presenciais acontecerão nas segundas, terças e quintas às 15:50 horas;
 * Para suprir a falta de encontros presenciais, nos outros dias as *dailies meetings* serão documentadas em um canal de texto nomeado "#daily" no Discord.
 
 ## 2.3 Revisão da Sprint
-Uma reunião informal para validar o incremento do produto produzido na *sprint* atual e adaptar o *backlog* do produto se necessário [[1]](#7-referencias). No caso do deste processo de desenvolvimento nem todos os *stakeholders* estarão presentes na revisão do incremento do produto, pois a parte interessada analisará o produto em outro momento. A Revisão da *Sprint* terá as seguintes características:
+Uma reunião formal para validar o incremento do produto produzido na *sprint* atual e adaptar o *backlog* do produto se necessário [[1]](#7-referencias). No caso deste processo de desenvolvimento nem todos os *stakeholders* estarão presentes na revisão do incremento do produto, pois a parte interessada analisará o produto em outro momento. A Revisão da *Sprint* terá as seguintes características:
 * Duração de 1 hora;
 * Envolverá a equipe de desenvolvimento, o Scrum Master, o PO, o Arquiteto e o DevOps.
 
@@ -100,7 +100,7 @@ Ocorrendo após a Revisão da *sprint*, a Retrospectiva da *sprint* será o mome
 * Será documentada anonimamente seguindo os tópicos:
 	* Pontos positivos: Cada membro da equipe apontará pontos positivos da equipe durante a *sprint* que ocorreu;
 	* Pontos de melhoria: Cada membro da equipe apontará pontos melhoria da equipe durante a *sprint* que ocorreu;
-	* Sugestões de melhoria: Cada membro apresentará sugestões para solucionar os pontos de melhoria observados na *sprint* e, após a sugestão ser discutida pela equipe, as sugestões serão colocadas em prática.
+	* Sugestões de melhoria: Cada membro apresentará sugestões para solucionar os pontos de melhoria observados na *sprint* e, após serem discutidas pela equipe, serão colocadas em prática.
 
 ## 2.5 Planejamento da Sprint
 Com a colaboração de todo os papéis, é planejado o trabalho a ser realizado na *sprint*. Tendo como tarefa principal do Scrum Master garantir a execução do ritual o entendimento dos participantes sobre o propósito do mesmo [[1]](#7-referencias). O Planejamento da *sprint* terá as seguintes características:
@@ -135,13 +135,13 @@ As labels serão dividídas por identificadores para garantir que todas as carac
 ## 3.2 Épicos
 Os Épico provê uma camada extra na hierarquia das Issues definindo um tema que agrupa tarefas que serão realizadas e se comportando como grandes US [[3]](#7-referencias)[[4]](#7-referencias). No desenvolvimento do produto os Épicos terão o objetivo de agrupar US e terão os seguintes atributos:
 * Código: EP## (#: número da EP);
-* Nome: <código> - Eu como <ator> gostaria de <funcionalidade de alto nível> para <valor atribuído para o stakeholder>;
+* Nome: **código** - Eu, como **ator**, gostaria de **funcionalidade de alto nível** para **valor atribuído para o stakeholder**;
 * Lista de USs atreladas ao Épico.
 
 ## 3.3 Histórias de Usuário (US)
 As USs são descrições de alto nível de funcionalidades que definem incrementos no produto pela perspectiva dos *stakeholders* [[4]](#7-referencias). As USs serão documentadas nao GitHub como *issues* (seguindo todas as regras definidas anteriormente para *issues*) que obrigatoriamente deverão estar atreladas a Épicos e seguirão um template definido:
 * Código/Nome: US## (#: número da US);
-* Descrição: Eu como <ator> gostaria de <funcionalidade> para <valor atribuído para o *stakeholder*>;
+* Descrição: Eu, como **ator**, gostaria de **funcionalidade** para **valor atribuído para o** ***stakeholder***;
 * Tarefas: Lista de atividades que levam a produção da funcionalidade;
 * Requisitos: Critérios de aceitação.
 
@@ -178,7 +178,7 @@ Os riscos do projeto serão divididos em riscos internos e externos e serão des
 ---
 # 5 Técnicas de codificação
 ## 5.1 Programação em pares
-A programação em pares é uma prática extraída do *Extreme Programing* (XP) na qual um par de desenvolvedores ficam responsáveis por produzir uma funcionalidade juntos, sendo um o piloto e o outro o co-piloto. Ambos os desenvolvedores devem trabalhar ao mesmo tempo e no mesmo computador de maneira que o piloto codifica e o co-piloto acompanha o trabalho deste. É mandatório que os desenvolvedores invertam seus papéis periodicamente [[7]](#7-referencias).
+A programação em pares é uma prática extraída do *Extreme Programing* (XP) na qual um par de desenvolvedores se torna responsável por produzir uma funcionalidade, sendo um o piloto e o outro o co-piloto. Ambos os desenvolvedores devem trabalhar ao mesmo tempo e no mesmo computador de maneira que o piloto codifica e o co-piloto acompanha o trabalho deste. É mandatório que os desenvolvedores invertam seus papéis periodicamente [[7]](#7-referencias).
 
 Ao decorrer do projeto o *Scrum Master* será responsável por redefinir os pares do Time de Desenvolvimento a cada *sprint* para garantir a homogeneidade da equipe. No entando, a partir da primeira release os pares serão distribuidos aleatoriamente uma vez que a maturidade do Time de Desenvolvimento estará garantida.
 
@@ -209,13 +209,13 @@ Os princiapais canais de comunicação da equipe serão:
 * Discord
 	* O Discord será o principal canal para se fazer reuniões remotas;
 	* Os pares serão encorajados a se comunicarem pelo por canais do Discord, garantindo a transparência na atividade dos desenvolvedores;
-	* O Discord também terá canais para compartilhamento de conhecimento entre os membros, o qual será usado para guardar links e artigos;
+	* O Discord também terá canais para compartilhamento de conhecimento entre os membros, o quais serão usados para guardar links e artigos;
 	* O Discord também terá um canal para documentar as *Dailies Meetings* como descrito no [tópico 2.2](#22-daily-meeting).
 * Google Drive
 	* Haverá uma pasta no Google Drive para o compartilhamento de documentos;
-	* A pasta também terá os documentos de métricas para garantir o fácil acesso da equipe para coleta de dados.
+	* A pasta também terá os documentos de métricas para garantir o fácil acesso da equipe à coleta de dados.
 * Github
-	* O GitHub será a principal ferramenta para documentar as tarefas (em forma de *issues*) e a quem eles estão delegadas;
+	* O GitHub será a principal ferramenta para documentar as tarefas (em forma de *issues*) e a quem elas estão delegadas;
 	* A partir das *issues* os membros da equipe podem adicionar comentários sobre uma determinada *issue* para tirar dúvidas ou fazer considerações;
 ---
 # 7 Referências

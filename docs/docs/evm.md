@@ -55,7 +55,7 @@ A planilha com todos os dados do EVM, tanto da release 1 e da release 2 está di
 |SD|Data de inínio|06/10/2018|
 |PRP|Pontos Planejados para Release 2|319|
 
-![Gráfico EVM Release 1](assets/evm/evm2.png)
+![Gráfico EVM Release 2](assets/evm/evm2.png)
 
 ## Referências
 [1](https://github.com/fga-eps-mds/A-Disciplina/blob/master/Agil_material/AgileEVM_-_Earned_Value_Management_in_Scrum_Projects.pdf) Sulaiman T., Barton B., Blackburn T. AgileEVM – Earned Value Management in Scrum Projects.

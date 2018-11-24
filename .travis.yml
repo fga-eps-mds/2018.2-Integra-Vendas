@@ -17,6 +17,8 @@ virtualenv:
 
 stages:
   - name: test
+  - name: test-codecov
+    if: branch = dev
   - name: check
   - name: test-prod
     if: branch = master
@@ -45,7 +47,7 @@ services:
 jobs:
   include:
 # container check
-    - stage: check
+    - stage: check-prod
       name: "Checking Production Container Run"
       script:
         - cd api && make check-docker-production
@@ -63,20 +65,20 @@ jobs:
         - make integration-tests file=dc-integration-test.staging.yml
 
 # test staging + codecov
-    - stage: test
+    - stage: test-codecov
       name: "Staging Integration codecov publish"
       script:
         - make integration-tests file=dc-integration-test.staging.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
 # Test production
-    - stage: test
+    - stage: test-prod
       name: "Production Integration"
       script:
         - make integration-tests file=dc-integration-test.production.yml
 
 # Docker hub publish
-    - stage: build
+    - stage: build-prod
       name: "Publish production images on docker hub"
       sudo: required
       services:
@@ -85,7 +87,7 @@ jobs:
         - cd api && sh run-publish-docker.sh production
 
 # Docker hub publish
-    - stage: build
+    - stage: build-stg
       name: "Publish staging images on docker hub"
       sudo: required
       services:
@@ -94,7 +96,7 @@ jobs:
         - cd api && sh run-publish-docker.sh staging
 
 # Heroku cli publish
-    - stage: deploy
+    - stage: deploy-stg
       name: "Deploying to Staging"
       install: npm install -g heroku
       script:
@@ -104,7 +106,7 @@ jobs:
         - deployMaster $HEROKU_APP api/api_gateway
 
 # Tag Regex
-    - stage: deploy
+    - stage: deploy-prod
       name: "Deploying to Production"
       script:
         - cd api
@@ -112,7 +114,7 @@ jobs:
         - sh run-deploy.sh production
 
 # gh-pages publish
-    - stage: deploy
+    - stage: deploy-gh-pages
       name: "Publishing GH-Pages"
       sudo: required
       services:

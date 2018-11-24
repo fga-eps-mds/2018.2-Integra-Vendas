@@ -58,6 +58,6 @@ A planilha com todos os dados do EVM, tanto da release 1 e da release 2 está di
 ![Gráfico EVM Release 2](assets/evm/evm2.png)
 
 ## Referências
-[1](https://github.com/fga-eps-mds/A-Disciplina/blob/master/Agil_material/AgileEVM_-_Earned_Value_Management_in_Scrum_Projects.pdf) Sulaiman T., Barton B., Blackburn T. AgileEVM – Earned Value Management in Scrum Projects.
+[1] SULAIMAN, Tamara; BARTON, Brent; BLACKBURN, Thomas. AgileEVM – Earned Value Management in Scrum Projects. 2006. Disponível em: <https://github.com/fga-eps-mds/A-Disciplina/blob/master/Agil_material/AgileEVM_-_Earned_Value_Management_in_Scrum_Projects.pdf>. Acesso em: 23 nov. 2018.
 
-EVM Dr. Down. Acesso em: https://fga-eps-mds.github.io/2018.1-Dr-Down/eps/EVM_AGILE/ 
+[2] MENDES, Mariana de Souza; SCONETTO, João Pedro. EVM Agile - Dr. Down. 2018. Disponível em: <https://fga-eps-mds.github.io/2018.1-Dr-Down/eps/EVM_AGILE/>. Acesso em: 24 nov. 2018. 

@@ -37,14 +37,14 @@ O DevOps tem como responsabilidade:
 O Desenvolvedor tem como responsabilidade:
 * Seguir a metodologia e os rituais definidos pelo Scrum Master;
 * Desenvolver o produto;
-* Testar as soluções implementadas durante o desenvolvimento do produto garantindo uma cobertura de testes de pelo menos 90% do código;
+* Testar as soluções implementadas durante o desenvolvimento do produto garantindo uma cobertura de testes de pelo menos 80% do código;
 * Seguir padrões, técnicas e boas práticas de programação definidas pelo Scrum Master.
 
 ## 1.6 Rotação de Papéis
 A rotação de papéis acontecerá a cada release para garantir a distribuição de conhecimento entre a equipe e auxiliar os membros a terem um melhor conhecimento sobre vários papéis, diminuindo assim, o risco da equipe ficar desamparada caso algum membro não possa atuar em algum ritual.
 
 ### 1.6.1 Justificativa
-Foi analisado que seria um risco alto fazer a rotação de papéis com uma periodicidade curta tendo em vista que ainda deveria ser feito o desenvolvimento de funcionalidades do produto durante o período da *release 2* e os papéis não estavam maduros o bastante. Fazer a rotação de papéis por *release* demonstrou ser uma solução mais apropriada, pois existiria a distribuição de conhecimento enquanto teria existiria oportunidade dos integrantes terem tempo o suficiente para aprender sobre seus novos papéis. No entanto, outros integrantes serão convidados a ser o responsável por executar os rituais periodicamente, de maneira que a maioria dos integrantes tenham a experiência de participar na execução do *Scrum*.
+Foi analisado que seria um risco alto fazer a rotação de papéis com uma periodicidade curta tendo em vista que ainda deveria ser feito o desenvolvimento de funcionalidades do produto durante o período da *release 2* e os papéis não estavam maduros o bastante. Fazer a rotação de papéis por *release* demonstrou ser uma solução mais apropriada, pois existiria a distribuição de conhecimento enquanto haveria oportunidade dos integrantes terem tempo o suficiente para aprender sobre seus novos papéis. No entanto, outros integrantes serão convidados a serem os responsaveis por executar os rituais periodicamente, de maneira que a maioria dos integrantes tenham a experiência de participar na execução do *Scrum*.
 
 ### 1.6.2 Definição da rotação
 #### Release 1

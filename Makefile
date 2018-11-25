@@ -1,8 +1,38 @@
 default:
-	cd api && make
+	make build
+	make run
 
 run:
-	cd api && make run
+	docker network create api-backend || true
+	docker-compose up
+
+build:
+	docker-compose build
+
+enter:
+	docker-compose exec web bash
+
+test:
+	docker-compose exec web bash -c "cd api_gateway && python manage.py test"
+
+production:
+	docker-compose -f docker-compose-production.yml build
+	docker-compose -f docker-compose-production.yml up
+
+down:
+	docker-compose down
+
+check-docker-production:
+	make production &
+	sleep 60
+	bash check-container.sh
+	docker-compose -f docker-compose-production.yml down
+
+check-docker-dev:
+	make &
+	sleep 60
+	bash check-container.sh
+	make down
 
 integration-tests:
 	docker-compose -f ${file} build
@@ -44,3 +74,4 @@ run-integration-tests:
 
 build-production:
 	docker-compose -f dc-integration-test.production.yml build
+

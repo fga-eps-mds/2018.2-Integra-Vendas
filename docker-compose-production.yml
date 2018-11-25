@@ -9,10 +9,11 @@ services:
       context: .
       dockerfile: production.Dockerfile
     entrypoint: bash -c "bash check-db-service.sh && gunicorn --bind 0.0.0.0:8000 api_gateway.wsgi --log-file -"
-    ports:
-      - 5000:8000
     volumes:
       - .:/code
+    working_dir: /code/api/api_gateway
+    ports:
+      - 5000:8000
     environment:
       - DJANGO_SETTINGS_MODULE=api_gateway.settings.production
 

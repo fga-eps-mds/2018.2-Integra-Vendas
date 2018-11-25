@@ -6,10 +6,10 @@ services:
     container_name: api-gateway
     command: bash -c "bash"
     volumes:
-      - ./api:/code
+      - .:/code
+    working_dir: /code/api/api_gateway
     ports:
       - 5000:8000
-    working_dir: /code/api_gateway
     depends_on:
       - login
       - order

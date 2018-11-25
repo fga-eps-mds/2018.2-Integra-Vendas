@@ -10,6 +10,9 @@ services:
     build: api
     container_name: api-gateway
     command: bash -c "bash"
+    volumes:
+      - .:/code
+    working_dir: /code/api/api_gateway
     ports:
       - 5000:8000
     depends_on:

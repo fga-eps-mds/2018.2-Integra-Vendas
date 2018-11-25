@@ -1,128 +1,111 @@
-sudo: required
+cache: pip
+git: 
+  depth: false
+install: 
+  - "pip install -r api/api_gateway/requirements/dev.txt"
+jobs: 
+  include: 
+    - 
+      branches: 
+        only: 
+          - master
+      name: "Checking Production Container Run"
+      script: 
+        - "cd api && make check-docker-production"
+      services: 
+        - docker
+      stage: check
+      sudo: required
+    - 
+      name: "Checking Development Container Run"
+      script: 
+        - "cd api && make check-docker-dev"
+      services: 
+        - docker
+      stage: check
+      sudo: required
+    - 
+      name: "Staging Integration"
+      script: 
+        - "make integration-tests file=dc-integration-test.staging.yml"
+      services: 
+        - docker
+      stage: test
+    - 
+      branches: 
+        only: 
+          - dev
+      name: "Staging Integration codecov publish"
+      script: 
+        - "make integration-tests file=dc-integration-test.staging.yml"
+        - "cd api/api_gateway && codecov -t ${CODECOV_TOKEN}"
+      services: 
+        - docker
+      stage: test
+    - 
+      branches: 
+        only: 
+          - master
+      name: "Production Integration"
+      script: 
+        - "make integration-tests file=dc-integration-test.production.yml"
+      stage: test
+    - 
+      if: "branch = master"
+      name: "Publish production images on docker hub"
+      script: 
+        - "cd api && sh run-publish-docker.sh production"
+      services: 
+        - docker
+      stage: build
+      sudo: required
+    - 
+      if: "branch = dev"
+      name: "Publish staging images on docker hub"
+      script: 
+        - "cd api && sh run-publish-docker.sh staging"
+      services: 
+        - docker
+      stage: build
+      sudo: required
+    - 
+      if: "branch = dev"
+      install: "npm install -g heroku"
+      name: "Deploying to Staging"
+      script: 
+        - ". ./heroku-helper.sh"
+        - "updateVersion api/VERSION"
+        - "loginHeroku $EMAIL_HEROKU $HEROKU_DEV_KEY"
+        - "deployMaster $HEROKU_APP api/api_gateway"
+      stage: deploy
+    - 
+      if: "branch = /(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$/"
+      name: "Deploying to Production"
+      script: 
+        - "cd api"
+        - "sh install-kubectl.sh"
+        - "sh run-deploy.sh production"
+      stage: deploy
+    - 
+      if: "branch = master"
+      name: "Publishing GH-Pages"
+      script: 
+        - "sh run-publish-pages.sh"
+      services: 
+        - docker
+      stage: deploy
+      sudo: required
 
 language: python
-python:
+python: 
   - "3.4"
-
-cache: pip
-
-git:
-  depth: false
-
-install:
-  - pip install -r api/api_gateway/requirements/dev.txt
-
-virtualenv:
-  system_site_packages: true
-
+services: 
+  - docker
 stages:
   - test
   - check
   - build
   - deploy
-
-services:
-  - docker
-
-jobs:
-  include:
-
-# container check
-    - stage: check
-      branches:
-        only:
-          - master
-      name: "Checking Production Container Run"
-      sudo: required
-      services:
-        - docker
-      script:
-        - cd api && make check-docker-production
-
-# container check
-    - stage: check
-      name: "Checking Development Container Run"
-      sudo: required
-      services:
-        - docker
-      script:
-        - cd api && make check-docker-dev
-
-# Integration test
-    - stage: test
-      name: "Staging Integration"
-      services:
-        - docker
-      script:
-        - make integration-tests file=dc-integration-test.staging.yml
-
-# test staging + codecov
-    - stage: test
-      branches:
-        only:
-          - dev
-      name: "Staging Integration codecov publish"
-      services:
-        - docker
-      script:
-        - make integration-tests file=dc-integration-test.staging.yml
-        - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
-
-# Test production
-    - stage: test
-      branches:
-        only:
-          - master
-      name: "Production Integration"
-      script:
-        - make integration-tests file=dc-integration-test.production.yml
-
-# Docker hub publish
-    - stage: build
-      if: branch = master
-      name: "Publish production images on docker hub"
-      sudo: required
-      services:
-        - docker
-      script:
-        - cd api && sh run-publish-docker.sh production
-
-# Docker hub publish
-    - stage: build
-      if: branch = dev
-      name: "Publish staging images on docker hub"
-      sudo: required
-      services:
-        - docker
-      script:
-        - cd api && sh run-publish-docker.sh staging
-
-# Heroku cli publish
-    - stage: deploy
-      if: branch = dev
-      name: "Deploying to Staging"
-      install: npm install -g heroku
-      script:
-        - . ./heroku-helper.sh
-        - updateVersion api/VERSION
-        - loginHeroku $EMAIL_HEROKU $HEROKU_DEV_KEY
-        - deployMaster $HEROKU_APP api/api_gateway
-
-# Tag Regex
-    - stage: deploy
-      if: branch = /(\d+\.)?(\d+\.)?(\*|\d+)$/
-      name: "Deploying to Production"
-      script:
-        - cd api
-        - sh install-kubectl.sh
-        - sh run-deploy.sh production
-
-# gh-pages publish
-    - stage: deploy
-      if: branch = master
-      name: "Publishing GH-Pages"
-      sudo: required
-      services:
-        - docker
-      script:
-        - sh run-publish-pages.sh
+sudo: required
+virtualenv: 
+  system_site_packages: true

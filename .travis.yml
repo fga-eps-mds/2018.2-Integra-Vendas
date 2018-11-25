@@ -49,6 +49,8 @@ jobs:
 # Integration test
     - stage: test
       name: "Staging Integration"
+      services:
+        - docker
       script:
         - make integration-tests file=dc-integration-test.staging.yml
 
@@ -56,6 +58,8 @@ jobs:
     - stage: test
       if: branch = dev
       name: "Staging Integration codecov publish"
+      services:
+        - docker
       script:
         - make integration-tests file=dc-integration-test.staging.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}

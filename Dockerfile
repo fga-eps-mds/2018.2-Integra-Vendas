@@ -2,7 +2,7 @@ FROM python:3.5.6-slim-stretch
 ENV PYTHONUNBUFFERED 1
 
 ADD . /code
-WORKDIR /code/api/api_gateway
+WORKDIR /code/api
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements/dev.txt

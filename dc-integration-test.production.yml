@@ -12,7 +12,7 @@ services:
     command: bash -c "bash"
     volumes:
       - .:/code
-    working_dir: /code/api/api_gateway
+    working_dir: /code/api
     ports:
       - 5000:8000
     depends_on:

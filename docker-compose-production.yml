@@ -11,7 +11,7 @@ services:
     entrypoint: bash -c "bash check-db-service.sh && gunicorn --bind 0.0.0.0:8000 api_gateway.wsgi --log-file -"
     volumes:
       - .:/code
-    working_dir: /code/api/api_gateway
+    working_dir: /code/api
     ports:
       - 5000:8000
     environment:

@@ -7,7 +7,7 @@ python:
 cache: pip
 
 install:
-  - pip install -r api/api_gateway/requirements/dev.txt
+  - pip install -r api/requirements/dev.txt
 
 virtualenv:
   system_site_packages: true
@@ -46,7 +46,7 @@ jobs:
       git:
         depth: 50
       script:
-        - echo ${CODECOV_TOKEN} >> api/api_gateway/codecov_token
+        - echo ${CODECOV_TOKEN} >> api/codecov_token
         - make integration-tests file=dc-integration-test.staging.yml
 
     - stage: test
@@ -67,7 +67,7 @@ jobs:
         - docker
       if: tag =~ /(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$/
       script:
-        - cd api && sh run-publish-docker.sh production
+        - sh run-publish-docker.sh production
 
     - stage: publish
       name: "Publish Staging docker images"
@@ -76,7 +76,7 @@ jobs:
         - docker
       if: branch = dev
       script:
-        - cd api && sh run-publish-docker.sh staging
+        - sh run-publish-docker.sh staging
 
     - stage: deploy
       name: "Github Pages deploy"
@@ -94,7 +94,6 @@ jobs:
         - docker
       if: tag =~ /(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$/
       script:
-        - cd api
         - sh install-kubectl.sh
         - sh run-deploy.sh production
 
@@ -104,6 +103,6 @@ jobs:
       if: branch = dev
       script:
         - . ./heroku-helper.sh
-        - updateVersion api/VERSION
+        - updateVersion VERSION
         - loginHeroku $EMAIL_HEROKU $HEROKU_DEV_KEY
-        - deployMaster $HEROKU_APP api/api_gateway
+        - deployMaster $HEROKU_APP api 

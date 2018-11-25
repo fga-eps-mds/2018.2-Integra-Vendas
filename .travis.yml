@@ -29,7 +29,9 @@ jobs:
 
 # container check
     - stage: check
-      if: branch = master
+      branches:
+        only:
+          - master
       name: "Checking Production Container Run"
       sudo: required
       services:
@@ -56,7 +58,9 @@ jobs:
 
 # test staging + codecov
     - stage: test
-      if: branch = dev
+      branches:
+        only:
+          - dev
       name: "Staging Integration codecov publish"
       services:
         - docker
@@ -65,11 +69,13 @@ jobs:
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
 # Test production
-    # - stage: test
-    #   if: branch = dev
-    #   name: "Production Integration"
-    #   script:
-    #     - make integration-tests file=dc-integration-test.production.yml
+    - stage: test
+      branches:
+        only:
+          - master
+      name: "Production Integration"
+      script:
+        - make integration-tests file=dc-integration-test.production.yml
 
 # Docker hub publish
     - stage: build

@@ -35,12 +35,7 @@ check-docker-dev:
 	make down
 
 integration-tests:
-	docker-compose -f ${file} build
-	docker-compose -f ${file} up -d
-	echo "Running Integration Tests"
-	docker exec api-gateway bash -c "ls && bash ./check-services.sh && sh run-tests.sh"
-	docker-compose -f ${file} down
-	docker-compose -f ${file} rm -f -s
+	bash run-integration-tests.sh ${file}
 
 staging-integration-tests:
 	sh remove-all-containers.sh || true

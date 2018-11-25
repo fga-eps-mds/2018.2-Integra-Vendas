@@ -7,7 +7,7 @@ services:
       - postgres_data:/var/lib/postgresql/data/
 
   api:
-    build: api
+    build: .
     container_name: api-gateway
     command: bash -c "bash"
     volumes:

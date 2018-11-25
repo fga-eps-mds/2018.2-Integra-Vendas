@@ -46,8 +46,8 @@ jobs:
       git:
         depth: 50
       script:
+        - echo ${CODECOV_TOKEN} >> api/api_gateway/codecov_token
         - make integration-tests file=dc-integration-test.staging.yml
-        - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
     - stage: test
       name: "Production Integration"
@@ -59,7 +59,6 @@ jobs:
         depth: 50
       script:
         - make integration-tests file=dc-integration-test.production.yml
-        - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
     - stage: publish
       name: "Publish Production docker images"

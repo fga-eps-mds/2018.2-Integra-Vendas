@@ -14,6 +14,7 @@ virtualenv:
 
 stages: 
   - test
+  - publish
   - deploy
 
 services:
@@ -22,39 +23,86 @@ services:
 jobs:
   include:
     - stage: test
+      name: "Checking Production Container Run"
       sudo: required
       services:
         - docker
-      name: "Checking Production Container Run"
       script:
         - cd api && make check-docker-production
 
     - stage: test
+      name: "Checking Development Container Run"
       sudo: required
       services:
         - docker
-      name: "Checking Development Container Run"
       script:
         - cd api && make check-docker-dev
 
     - stage: test
       name: "Staging Integration"
+      sudo: required
+      services:
+        - docker
+      git:
+        depth: 50
       script:
         - make integration-tests file=dc-integration-test.staging.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
     - stage: test
       name: "Production Integration"
+      sudo: required
+      services:
+        - docker
       if: branch = master
+      git:
+        depth: 50
       script:
         - make integration-tests file=dc-integration-test.production.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
 
+    - stage: publish
+      name: "Publish Production docker images"
+      sudo: required
+      services:
+        - docker
+      if: tag =~ /(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$/
+      script:
+        - cd api && sh run-publish-docker.sh production
+
+    - stage: publish
+      name: "Publish Staging docker images"
+      sudo: required
+      services:
+        - docker
+      if: branch = dev
+      script:
+        - cd api && sh run-publish-docker.sh staging
+
+    - stage: deploy
+      name: "Github Pages deploy"
+      sudo: required
+      services:
+        - docker
+      if: branch = master
+      script:
+        - sh run-publish-pages.sh
+
+    - stage: deploy
+      name: "Deploying to production"
+      sudo: required
+      services:
+        - docker
+      if: tag =~ /(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$/
+      script:
+        - cd api
+        - sh install-kubectl.sh
+        - sh run-deploy.sh production
+
     - stage: deploy
       install: npm install -g heroku
       name: "Deploying to Staging"
-      only:
-        - dev
+      if: branch = dev
       script:
         - . ./heroku-helper.sh
         - updateVersion api/VERSION

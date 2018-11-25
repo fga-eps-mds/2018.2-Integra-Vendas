@@ -43,6 +43,8 @@ jobs:
       sudo: required
       services:
         - docker
+      git:
+        depth: 50
       script:
         - make integration-tests file=dc-integration-test.staging.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}
@@ -53,6 +55,8 @@ jobs:
       services:
         - docker
       if: branch = master
+      git:
+        depth: 50
       script:
         - make integration-tests file=dc-integration-test.production.yml
         - cd api/api_gateway && codecov -t ${CODECOV_TOKEN}

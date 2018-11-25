@@ -51,22 +51,12 @@ deploy to production:
     - sh install-kubectl.sh
     - sh run-deploy.sh production
 
-# deploy to staging:
-#   image: python:3
-#   only:
-#     - dev
+# deploy to heroku:
 #   stage: deploy
 #   script:
-#     - cd api
-#     - sh install-kubectl.sh
-#     - sh run-deploy.sh staging
-
-deploy to heroku:
-  before_script:
-    - gem install dpl
-  stage: deploy
-  script:
-    - . ./heroku-helper.sh
-    - cd api/api_gateway && dpl --provider=heroku --app=integra-vendas-api-gateway --api-key=$HEROKU_DEV_KEY
-  only:
-    - dev
+#     - . ./heroku-helper.sh
+#     - updateVersion api/VERSION
+#     - loginHeroku $EMAIL_HEROKU $HEROKU_DEV_KEY
+#     - deployMaster $HEROKU_APP api/api_gateway
+#   only:
+#     - dev

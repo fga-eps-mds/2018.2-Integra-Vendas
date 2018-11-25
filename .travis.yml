@@ -53,8 +53,7 @@ jobs:
     - stage: deploy
       install: npm install -g heroku
       name: "Deploying to Staging"
-      only:
-        - dev
+      if: branch = dev
       script:
         - . ./heroku-helper.sh
         - updateVersion api/VERSION

@@ -28,7 +28,7 @@ jobs:
       services:
         - docker
       script:
-        - cd api && make check-docker-production
+        - make check-docker-production
 
     - stage: test
       name: "Checking Development Container Run"
@@ -36,7 +36,7 @@ jobs:
       services:
         - docker
       script:
-        - cd api && make check-docker-dev
+        - make check-docker-dev
 
     - stage: test
       name: "Staging Integration"

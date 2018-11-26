@@ -3,6 +3,21 @@ id: sprint2
 title: Sprint 2 - 25/08 - 01/09
 sidebar_label: Sprint 2
 ---
+## Atividades da Sprint
+
+* Definição das tecnologias a serem utilizadas no projeto;
+
+* Treinamento de Git;
+
+* Treinamento de React-Native;
+
+* Treinamento de Python;
+
+* Treinamento de Django;
+
+* Treinamento de teste unitário;
+
+* Apresentação sobre funcionamento do JWT;
 
 # Retrospectiva da Sprint
 ## Pontos positivos

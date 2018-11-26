@@ -7,9 +7,12 @@ services:
       - postgres_data:/var/lib/postgresql/data/
 
   api:
-    build: api
+    build: .
     container_name: api-gateway
     command: bash -c "bash"
+    volumes:
+      - .:/code
+    working_dir: /code/api
     ports:
       - 5000:8000
     depends_on:

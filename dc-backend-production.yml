@@ -9,7 +9,7 @@ services:
   api:
     container_name: api-gateway
     build:
-      context: ./api
+      context: .
       dockerfile: production.Dockerfile
     ports:
       - 5000:8000

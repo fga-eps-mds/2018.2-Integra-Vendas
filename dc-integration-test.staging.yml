@@ -2,14 +2,14 @@ version: '3.3'
 
 services:
   api:
-    build: api
+    build: .
     container_name: api-gateway
     command: bash -c "bash"
     volumes:
-      - ./api:/code
+      - .:/code
+    working_dir: /code/api
     ports:
       - 5000:8000
-    working_dir: /code/api_gateway
     depends_on:
       - login
       - order

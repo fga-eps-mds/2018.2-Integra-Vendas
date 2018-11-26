@@ -76,7 +76,7 @@ Disponível em: <https://github.com/fga-eps-mds/2017.2-Receita-Mais>
 Acesso em: 30 de Agosto de 2018.
 
 #### 1.5 Visão Geral
-Este documento está sendo estruturado em 6 seções. A seção 1 aborda a introdução, onde é apresentada a visão para o projeto. O posicionamento encontra-se na seção 2, onde é declarado o problema, a descrição do produto, além da oportunidade de negócio. As descrições da parte interessada e dos usuários, encontra-se na seção 3 e informa qual seria o público-alvo para o *App*. A seção 4 busca descrever a visão geral do produto, especificando o produto, de forma geral e mais ampla. Os recursos do produto descreve as funções e capacidades do *App*, já a seção 5 aborda as restrições de design, implementação, segurança e uso.
+Este documento está sendo estruturado em 6 seções. A seção 1 aborda a introdução, onde é apresentada a visão para o projeto. O posicionamento encontra-se na seção 2, onde é declarado o problema, a descrição do produto, além da oportunidade de negócio. As descrições da parte interessada e dos usuários, encontra-se na seção 3 e informa qual seria o público-alvo para o *App*. A seção 4 busca descrever a visão geral do produto, especificando o produto, de forma geral e mais ampla. Os recursos do produto são desenvolvidos na seção 5, descrevendo as funções e capacidades do *App*, já a seção 6 aborda as restrições de *design*, implementação, segurança e uso.
 
 ### 2. Posicionamento
 #### 2.1 Oportunidade de Negócio

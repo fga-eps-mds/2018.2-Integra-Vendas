@@ -46,7 +46,7 @@ sidebar_label: Documento de Visão
 Esse documento de visão tem como objetivo estabelecer e declarar todos os propósitos e parâmetros para o desenvolvimento do aplicativo Integra, que será desenvolvido para o sistema *Android*, e as demais finalidades serão descritas a seguir.
 
 #### 1.2 Escopo
-Esse projeto tem como finalidades, fazer a conexão entre vendedores autônomos de produtos alimentícios, e os potenciais compradores. Para facilitar o contato entre ambos, e também a dinâmica de vendas utilizadas pelos vendedores.
+Esse projeto tem a finalidade de realizar a conexão entre vendedores autônomos de produtos alimentícios e os potenciais compradores. Para tanto, pretende-se facilitar o contato entre ambos e também a dinâmica de vendas utilizada pelos vendedores.
 
 #### 1.3 Definições, acrônimos e abreviações
 * FGA - Faculdade do Gama.
@@ -63,11 +63,11 @@ Esse projeto tem como finalidades, fazer a conexão entre vendedores autônomos 
 * *Front-end* - Parte da aplicação que interage diretamente com o usuário.
 
 #### 1.4 Visão Geral
-Este documento está sendo estruturado em 6 seções. A seção 1 aborda a introdução, onde é apresentada a visão para o projeto. O posicionamento encontra-se na seção 2, onde é declarado o problema, a descrição do produto, além da oportunidade de negócio. As descrições da parte interessada e dos usuários, encontra-se na seção 3 e informa qual seria o público-alvo para o *App*. A seção 4 busca descrever a visão geral do produto, especificando o produto, de forma geral e mais ampla. Os recursos do produto são desenvolvidos na seção 5, descrevendo as funções e capacidades do *App*, já a seção 6 aborda as restrições de *design*, implementação, segurança e uso.
+Este documento está sendo estruturado em 6 seções. A seção 1 aborda a introdução, sendo apresentada a visão para o projeto. O posicionamento encontra-se na seção 2 na qual é declarado o problema, a descrição do produto, além da oportunidade de negócio. As descrições da parte interessada e dos usuários encontra-se na seção 3 e informa qual seria o público-alvo para o *App*. A seção 4 busca descrever a visão geral do produto, especificando o produto, de forma geral e mais ampla. Os recursos do produto são desenvolvidos na seção 5, descrevendo as funções e capacidades do *App*, já a seção 6 aborda as restrições de *design*, implementação, segurança e uso.
 
 ### 2. Posicionamento
 #### 2.1 Oportunidade de Negócio
-Atualmente no ambiente acadêmico da FGA-UnB muitos estudantes utilizam de atividades autônomas de venda de produtos para acrescentar como uma renda extra. Porém, a forma de comunicação entre esses vendedores com os potenciais compradores resume-se ao contato pessoal no horário do almoço, em que os vendedores passam de mesa em mesa no RU, oferecendo seus produtos para os outros estudantes.
+Atualmente, o ambiente acadêmico da FGA-UnB conta com muitos estudantes que utilizam de atividades autônomas de venda de produtos como uma forma de obtenção de renda extra. Porém, a forma de comunicação entre esses vendedores com os potenciais compradores resume-se ao contato pessoal no horário do almoço, em que os vendedores passam de mesa em mesa no RU, oferecendo seus produtos para os outros estudantes.
 
 Nosso projeto tem como objetivo fazer com que essa comunicação seja mais fluída e eficiente entre os vendedores e compradores, através de um *App*, que fará a comunicação e possibilitará o encontro de ambos, para assim agilizar e melhorar a harmonia no ambiente acadêmico, que por sua vez se depara com pessoas, às vezes, incomodadas por não estarem interessadas em comprar quaisquer produtos.
 
@@ -81,11 +81,11 @@ Após uma entrevista breve com a vendedora Priscila, foram apresentadas algumas 
 |Falha na comunicação entre compradores e vendedores.|Realização das vendas.|Vendas prejudicadas, desgaste físico do vendedor na procura por compradores, demandando um tempo considerável para a venda.|Um meio de comunicação simples para propiciar o encontro de vendedores com possiveis compradores e a criação de uma forma prática de *marketing* para os interessados.|
 
 #### 2.3 Instrução de Posição do Produto
-Para que os estudantes vendedores e os compradores que sofrem com a falta de um veículo de comunicação. O Integra vem com o objetivo de servir como uma ponte de comunicação entre essas duas entidades (compradores e vendedores) a fim de melhorar o encontro e o comércio de produtos no ambiente acadêmico. Uma solução viável para isso, seria um serviço de compartilhamento de informações, em que ao realizar um pedido, o cliente pode informar o local que se encontra o cliente, forma de pagamento, entre outras.
+Para vendedores e compradores de produtos na FGA que sofrem com a falta de um veículo de comunicação, o Integra vem com o objetivo de servir como uma ponte de comunicação entre essas duas entidades (compradores e vendedores) a fim de melhorar o encontro e o comércio de produtos no ambiente acadêmico. Uma solução viável para isso seria um serviço de compartilhamento de informações, em que ao realizar um pedido, o cliente pode informar o local que se encontra o cliente, forma de pagamento, entre outras.
 
 ### 3. Descrições da Parte Interessada e dos Usuários
 #### 3.1 Demográficos de Mercado
-Atualmente a FGA comporta milhares de discentes, sendo que alguns dividem a jornada acadêmica com o comércio de produtos pela faculdade como uma forma de obter dinheiro durante esse período. Com o objetivo de estreitar a relação entre os compradores e os vendedores, esse projeto propõe-se a atingir os frequentadores da FGA e apresentar uma solução para facilitar o processo de venda de mercadorias — doces, sobremesas, marmitas, etc. — dentro da faculdade.
+Atualmente a FGA comporta milhares de discentes, sendo que alguns dividem a jornada acadêmica com o comércio de produtos pela faculdade como uma forma de obter dinheiro durante esse período. Com o objetivo de estreitar a relação entre os compradores e os vendedores, esse projeto propõe-se a atingir os frequentadores da FGA e apresentar uma solução que facilita o processo de venda de mercadorias — doces, sobremesas, marmitas, etc. — dentro da faculdade.
 
 #### 3.2 Resumo da Parte Interessada
 |Grupo|Descrição|Responsabilidade|
@@ -126,7 +126,7 @@ A aplicação estará ativa por parte do vendedor durante o seu período de ativ
 |Representantes|Lucas Costa, Lucas Pereira, Ricardo Canela, Wesley Araujo|
 |-|-|
 |**Descrição**|Gerenciamento de projeto.|
-|**Tipo**|Estudantes da FGA da disciplina de GPP.|
+|**Tipo**|Estudantes da FGA da disciplina de EPS.|
 |**Responsabilidade**|Coordenar, auxiliar e orientar a equipe de desenvolvimento de *software*, além de fundamentar o projeto.|
 |**Critérios de Sucesso**|Gerir adequadamente o desenvolvimento, tratar riscos e entregar o produto.|
 |**Envolvimento**|Alto.|
@@ -199,7 +199,7 @@ O cliente poderá assinalar o interesse pelo produto, fazendo o pedido e logo em
 O sistema precisa ser atrativo aos usuários e ao mesmo tempo de fácil uso.
 
 #### 6.2 Restrições de Implementação
-O sistema terá o *back-end* desenvolvido usando a linguagem Python com o *framework* Django e o *front-end* baseado em *Java* com o *framework* *React-native*. O sistema deverá ser desenvolvido para funcionar junto a outros apps que serão desenvolvidos por outras equipes.
+O sistema terá o *back-end* baseado em microsserviços desenvolvidos usando a linguagem Python com o *framework* Django e o *front-end* baseado em *Java* com o *framework* *React-native*. O sistema deverá ser desenvolvido para funcionar junto a outros apps que serão desenvolvidos por outras equipes.
 
 #### 6.3 Restrições de Segurança
 O sistema se comunica com um banco de dados externo. O sistema deve ser resistente a ataques e possiveis tentativas de invasão.

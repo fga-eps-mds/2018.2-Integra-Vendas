@@ -32,7 +32,22 @@ sidebar_label: Riscos
 |339|258|265|191|144|121|99|110|97|95|82|61|53|
 
 ## Gráficos de Burndown dos Riscos
+### Riscos Internos
+![burndown_risco_1](assets/riscos/burndown-risco-1.png)
+![burndown_risco_2](assets/riscos/burndown-risco-2.png)
+![burndown_risco_3](assets/riscos/burndown-risco-3.png)
+![burndown_risco_4](assets/riscos/burndown-risco-4.png)
+![burndown_risco_5](assets/riscos/burndown-risco-5.png)
+![burndown_risco_6](assets/riscos/burndown-risco-6.png)
+![burndown_risco_8](assets/riscos/burndown-risco-8.png)
+![burndown_risco_9](assets/riscos/burndown-risco-9.png)
+![burndown_risco_10](assets/riscos/burndown-risco-10.png)
+![burndown_risco_11](assets/riscos/burndown-risco-11.png)
+![burndown_risco_12](assets/riscos/burndown-risco-12.png)
 
+### Riscos Externos
+![burndown_risco_13](assets/riscos/burndown-risco-13.png)
+![burndown_risco_7](assets/riscos/burndown-risco-7.png)
 
 ## Gráfico de Burndown Total
 ![burndown_riscos](assets/riscos/burndown_riscos.png)

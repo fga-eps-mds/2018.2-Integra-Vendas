@@ -62,20 +62,7 @@ Esse projeto tem como finalidades, fazer a conexão entre vendedores autônomos 
 * *Back-end* - Ele é o responsável, em termos gerais, pela implementação da regra de negócio.
 * *Front-end* - Parte da aplicação que interage diretamente com o usuário.
 
-#### 1.4 Referências
-IBM Knowledge Center - Documento de Visão: Estruturas de um Documento de Visão.
-Disponível em: <https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html>
-Acesso em: 30 de Agosto de 2018.
-
-MENDES, Mariana et al. Projeto Dr. Down: Documento de Visão.
-Disponível em: <https://fga-eps-mds.github.io/2018.1-Dr-Down/>
-Acesso em: 28 de Agosto de 2018.
-
-HIROSHI, Lucas et al. Projeto Receita Mais: Documento de Visão.
-Disponível em: <https://github.com/fga-eps-mds/2017.2-Receita-Mais>
-Acesso em: 30 de Agosto de 2018.
-
-#### 1.5 Visão Geral
+#### 1.4 Visão Geral
 Este documento está sendo estruturado em 6 seções. A seção 1 aborda a introdução, onde é apresentada a visão para o projeto. O posicionamento encontra-se na seção 2, onde é declarado o problema, a descrição do produto, além da oportunidade de negócio. As descrições da parte interessada e dos usuários, encontra-se na seção 3 e informa qual seria o público-alvo para o *App*. A seção 4 busca descrever a visão geral do produto, especificando o produto, de forma geral e mais ampla. Os recursos do produto são desenvolvidos na seção 5, descrevendo as funções e capacidades do *App*, já a seção 6 aborda as restrições de *design*, implementação, segurança e uso.
 
 ### 2. Posicionamento
@@ -219,3 +206,17 @@ O sistema se comunica com um banco de dados externo. O sistema deve ser resisten
 
 #### 6.4 Restrições de Uso
 Para o uso do sistema é necessário que o usuário tenha acesso a um dispositivo conectado à internet.
+
+### 7. Referências Bibliográficas
+
+IBM Knowledge Center - Documento de Visão: Estruturas de um Documento de Visão.
+Disponível em: <https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html>
+Acesso em: 30 de Agosto de 2018.
+
+MENDES, Mariana et al. Projeto Dr. Down: Documento de Visão.
+Disponível em: <https://fga-eps-mds.github.io/2018.1-Dr-Down/>
+Acesso em: 28 de Agosto de 2018.
+
+HIROSHI, Lucas et al. Projeto Receita Mais: Documento de Visão.
+Disponível em: <https://github.com/fga-eps-mds/2017.2-Receita-Mais>
+Acesso em: 30 de Agosto de 2018.

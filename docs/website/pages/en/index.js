@@ -161,14 +161,14 @@ const Showcase = props => {
 
   const showcase = siteConfig.users.filter(user => user.pinned).map(user => (
     <a href={user.infoLink} key={user.infoLink}>
-      <img src={user.image} alt={user.caption} title={user.caption} />
+      <img class="img-circle" src={user.image} alt={user.caption} title={user.caption} />
     </a>
   ));
 
   return (
     <div className="productShowcaseSection paddingBottom">
       <h2>Membros</h2>
-      <p>Todo o projeto foi desenvolvido por:</p>
+      <p>Este projeto foi desenvolvido por:</p>
       <div className="logos">{showcase}</div>
       <div className="more-users">
         <a className="button" href={pageUrl('users.html', props.language)}>

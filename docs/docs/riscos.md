@@ -31,5 +31,10 @@ sidebar_label: Riscos
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 |339|258|265|191|144|121|99|110|97|95|82|61|53|
 
-## Gráfico de Burndown
-![burndown_riscos](assets/metricas/burndown_riscos.png)
+## Gráficos de Burndown dos Riscos
+
+
+## Gráfico de Burndown Total
+![burndown_riscos](assets/riscos/burndown_riscos.png)
+
+

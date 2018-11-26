@@ -27,9 +27,9 @@ sidebar_label: Riscos
 
 # Burndown dos Riscos
 ## Pontuação total
-|Sprint 2|Sprint 3|Sprint 4|Sprint 5|Sprint 6|
-|:------:|:------:|:------:|:------:|:------:|
-|339|258|265|191|144|
+|Sprint 2|Sprint 3|Sprint 4|Sprint 5|Sprint 6|Sprint 7|Sprint 8|Sprint 9|Sprint 10|Sprint 11|Sprint 12|Sprint 13|Sprint 14|
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|339|258|265|191|144|121|99|110|97|95|82|61|53|
 
 ## Gráfico de Burndown
 ![burndown_riscos](assets/metricas/burndown_riscos.png)

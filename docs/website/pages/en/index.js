@@ -77,7 +77,6 @@ class HomeSplash extends React.Component {
     const language = this.props.language || '';
     return (
       <SplashContainer>
-        {/* <Logo img_src={imgUrl('docusaurus.svg')} /> */}
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
@@ -104,16 +103,16 @@ const Features = () => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'Encontre consumidores interessados em seu produto no campus diretamente, sem precisar se deslocar tanto tempo procurando por tentativa e erro algum cliente',
-        // image: imgUrl('docusaurus.svg'),
-        imageAlign: 'top',
-        title: 'Vendedores',
-      },
-      {
         content: 'Economize seu tempo encontrando rapidamente seu produto para que consiga utilizar seu precioso tempo para estudo e finalizar sua graduação com sucesso.',
-        // image: imgUrl('docusaurus.svg'),
+        image: imgUrl('buyer.png'),
         imageAlign: 'top',
         title: 'Consumidores',
+      },
+      {
+        content: 'Encontre consumidores interessados em seu produto no campus diretamente, sem precisar se deslocar tanto tempo procurando por tentativa e erro algum cliente',
+        image: imgUrl('seller.png'),
+        imageAlign: 'top',
+        title: 'Vendedores',
       },
     ]}
   </Block>
@@ -133,7 +132,7 @@ const LearnHow = () => (
     {[
       {
         content: 'Encontre ofertas disponíveis rapidamente, podendo comparar com os menores preços.',
-        // image: imgUrl('docusaurus.svg'),
+        image: imgUrl('screenshot1.jpg'),
         imageAlign: 'right',
         title: 'Agilidade ao Encontrar Produtos',
       },
@@ -146,7 +145,7 @@ const TryOut = () => (
     {[
       {
         content: 'Sem desgastes para acessar pedidos e encontrar clientes interessados diretamente.',
-        // image: imgUrl('docusaurus.svg'),
+        image: imgUrl('screenshot2.jpg'),
         imageAlign: 'left',
         title: 'Pedidos Acessíveis Rapidamente',
       },
@@ -172,7 +171,7 @@ const Showcase = props => {
       <div className="logos">{showcase}</div>
       <div className="more-users">
         <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
+          Mais sobre desenvolvedores do {siteConfig.title}
         </a>
       </div>
     </div>

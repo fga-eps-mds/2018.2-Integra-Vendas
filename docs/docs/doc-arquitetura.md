@@ -18,11 +18,11 @@ Este documento se aplica à produção do aplicativo Integra, implementado para 
 
 ## 2.1 Diagrama de relações
 
-![relacoes](assets/arquitetura/diagrama_relacoes.png)
+![relacoes](assets/arquitetura/diagrama_relacoes.jpg)
 
 O diagrama apresenta cada etapa que será seguida para que o aplicativo funcione, relacionando o *front-end* com o *back-end*.
 
-## 2.2 Diagrama React/Redux/Microsserviços
+## 2.2 Diagrama React/Microsserviços
 
 ![react](assets/arquitetura/diagrama_react.png)
 

@@ -2,7 +2,7 @@
   "docs": {
     "Abertura": ["tap", "eap", "canvas", "roi", "evm"],
     "Projeto": ["plano-metodologico", "doc-visao", "doc-arquitetura"],
-    "Métricas": ["riscos", "produtividade", "conhecimento"],
+    "Métricas": ["riscos", "conhecimento"],
     "Roadmaps": ["rm-geral", "rm-papeis", "rm-produto"],
     "Design": ["id-visual", "baixa-fidelidade", "alta-fidelidade"],
     "Devops": ["devops-ambiente", "devops-cicd"]

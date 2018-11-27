@@ -7,23 +7,23 @@ sidebar_label: Sprint 14
 # Lista de presença no planejamento
 |Nome|Presença|
 |----|:------:|
-|Lucas Costa||
-|Lucas Pereira||
-|Ricardo Canela||
-|Wesley Araújo||
-|André Pinto||
-|Dâmaso Pereira||
-|Gustavo Lima||
-|Leonardo Medeiros||
-|Shayane Alcântara||
-|Welison Almeida||
+|Lucas Costa|OK|
+|Lucas Pereira|OK|
+|Ricardo Canela|Atrasado|
+|Wesley Araújo|Atrasado|
+|André Pinto|OK|
+|Dâmaso Pereira|Atrasado|
+|Gustavo Lima|OK|
+|Leonardo Medeiros|OK|
+|Shayane Alcântara|OK|
+|Welison Almeida|OK|
 
 # Planejamento da Sprint
 |Par|História|Pontos|
 |---|:------:|:----:|
-||||
-||||
-||||
+|[André Pinto](https://github.com/andrelucax) e [Shayane Alcântara](https://github.com/shayanealcantara)|US25 e TS21|13 + 13|
+|[Leonardo Medeiros](https://github.com/leomedeiros1) e [Dâmaso Pereira](https://github.com/juniopereirab)|TS20 e TS19|5 + 8|
+|[Welison Almeida](https://github.com/WelisonR) e [Gustavo Lima](https://github.com/gustavolima00)|US26 e *TS22*|13 + *8*|
 
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint

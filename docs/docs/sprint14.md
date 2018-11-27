@@ -47,9 +47,9 @@ sidebar_label: Sprint 14
 * A [US26](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/297) foi feita por completo e atingiu todos os critérios de aceitação.
 * A [TS20](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/296) foi feita por completo e atingiu todos os critérios de aceitação.
 * A [TS19](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/295) não foi feita, pois as funcionalidades da história dependiam da resolução de muitos PRs que não foram resolvidos antes da sprint terminar. Então a história se tornou uma dívida técnica.
+
 -------------------------------------------------------------------------------
 # Métricas
-<!-- ## Horas durante a sprint
 ![tempo-mds-14](assets/sprints/tempo-mds-14.png)
 ![tempo-eps-14](assets/sprints/tempo-eps-14.png)
 ![tempo-geral-14](assets/sprints/tempo-geral-14.png)
@@ -62,4 +62,4 @@ sidebar_label: Sprint 14
 ![velocity-14](assets/sprints/velocity-14.png)
 
 ## Burndown
-![burndown-14](assets/sprints/burndown-14.png) -->
+![burndown-14](assets/sprints/burndown-14.png)

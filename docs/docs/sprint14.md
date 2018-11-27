@@ -28,16 +28,29 @@ sidebar_label: Sprint 14
 -------------------------------------------------------------------------------
 # Retrospectiva da Sprint
 ## Pontos positivos
-1. 
+1. Empenho da equipe;
+2. O semestre está acabando;
+3. Time produtivo e eficiente;
+4. A equipe está satisfeita com o produto desenvolvido;
+5. Boa comunicação;
+6. Boas entregas das histórias;
+7. Esforço para resolver os PRs;
+8. Concerto de alguns *bugs*;
+9. Estamos otimistas.
 
 ## Pontos de melhoria
-1. 
+1. Dificuldade em aprovar os PRs;
+2. Terminar documentação de EPS;
+3. Fazer uma apresentação da segunda release melhor que da primeira.
 
 ## Medidas a serem tomadas
-1. 
+1. Mais um multirão de resolução de PRs no final de semana;
+2. Continuar à fazer documentações distribuidas;
+3. Separar falar e praticar a apresentação.
 
 ## Melhorias
-1. 
+1. A assiduidade dos membros nas reuniões melhorou;
+2. Atividades de EPS estão bem distribuidas;
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint

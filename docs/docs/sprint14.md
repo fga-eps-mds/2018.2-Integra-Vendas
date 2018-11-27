@@ -41,7 +41,12 @@ sidebar_label: Sprint 14
 
 -------------------------------------------------------------------------------
 # Revisão da Sprint
-* 
+* A [US25](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/294) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [TS21](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/301) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [TS22](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/306) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [US26](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/297) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [TS20](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/296) foi feita por completo e atingiu todos os critérios de aceitação.
+* A [TS19](https://github.com/fga-eps-mds/2018.2-Integra-Vendas/issues/295) não foi feita, pois as funcionalidades da história dependiam da resolução de muitos PRs que não foram resolvidos antes da sprint terminar. Então a história se tornou uma dívida técnica.
 -------------------------------------------------------------------------------
 # Métricas
 <!-- ## Horas durante a sprint

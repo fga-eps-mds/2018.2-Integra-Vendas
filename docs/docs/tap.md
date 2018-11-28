@@ -32,12 +32,12 @@ sidebar_label: TAP
 
 ## Descrição do Projeto
 
-O iFoodFGA é um aplicativo que auxilia a conexão entre vendedores de sobremesas da FGA com os clientes em potencial.
+O Integra Vendas é um aplicativo que auxilia a conexão entre vendedores de sobremesas da Universidade de Brasília - Faculdade do Gama (FGA) com seus clientes em potencial.
 
 ## Propósito e Justificativa
-O iFoodFGA tem o objetivo de facilitar a forma como os vendedores atingem os clientes para poderem ter vendas com mais eficiência e eficácia.
+O Integra Vendas tem o objetivo de facilitar a forma como os vendedores atingem os clientes para poderem ter vendas com mais eficiência e eficácia.
 
-Os vendedores de gastam um valioso tempo passando em todas as mesas, no horário do almoço, fazendo com que não consigam se concentrar em clientes que estejam mais dispostos a comprar, não só tendo um alto custo de tempo, como também de extensas movimentações repetitivas entre as mesas, que podem incomodar estudantes que não pretendem comprar o produto ou fazendo-os se irritarem se passado repedidamente vendedores em suas mesas.
+Os vendedores gastam um valioso tempo passando em todas as mesas, no horário do almoço, fazendo com que não consigam se concentrar em clientes que estejam dispostos a comprar. Assim, eles não só gastam seu tempo de maneira ineficiente a procura de clientes, como também incomodam estudantes que não pretendem comprar o produto ou os irritam ao passar repetidamente nas mesmas mesas.
 
 ## Objetivos
 

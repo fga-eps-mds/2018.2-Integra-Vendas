@@ -4,14 +4,40 @@ title: Termo de Abertura do Projeto
 sidebar_label: TAP
 ---
 
+## Stakeholders
+
+### Engenharia de Produto de Software
+|Membro|E-mail|
+|------|------|
+|[Lucas Costa](https://github.com/lucasca73)|lucascostaa73@gmail.com|
+|[Lucas Pereira](https://github.com/lugope)|lucasgpereira.10@gmail.com|
+|[Ricardo Canela](https://github.com/ricardocanela)|ricardolimacanela@gmail.com|
+|[Wesley Araujo](https://github.com/wparaujo)|wparaujo7@gmail.com|
+
+### Desenvolvedores
+
+|Membro|E-mail|
+|------|------|
+|[André Pinto](https://github.com/andrelucax)|andrelucax@gmail.com|
+|[Dâmaso Pereira](https://github.com/juniopereirab)|junio.pereirab@gmail.com|
+|[Gustavo Lima](https://github.com/gustavolima00)|gustavomarques.gml@gmail.com|
+|[Leonardo Medeiros](https://github.com/leomedeiros1)|leonardomedeiros.6@gmail.com|
+|[Shayane Alcântara](https://github.com/shayanealcantara)|shayanealcantaraa@gmail.com|
+|[Welison Almeida](https://github.com/WelisonR)|welison.almeida.923@gmail.com|
+
+### Orientadora
+[Carla Silva Rocha Aguiar](https://github.com/RochaCarla)
+
+---------------------------------
+
 ## Descrição do Projeto
 
-O iFoodFGA é um aplicativo que auxilia a conexão entre vendedores de sobremesas da FGA com os clientes em potencial.
+O Integra Vendas é um aplicativo que auxilia a conexão entre vendedores de sobremesas da Universidade de Brasília - Faculdade do Gama (FGA) com seus clientes em potencial.
 
 ## Propósito e Justificativa
-O iFoodFGA tem o objetivo de facilitar a forma como os vendedores atingem os clientes para poderem ter vendas com mais eficiência e eficácia.
+O Integra Vendas tem o objetivo de facilitar a forma como os vendedores atingem os clientes para poderem ter vendas com mais eficiência e eficácia.
 
-Os vendedores de gastam um valioso tempo passando em todas as mesas, no horário do almoço, fazendo com que não consigam se concentrar em clientes que estejam mais dispostos a comprar, não só tendo um alto custo de tempo, como também de extensas movimentações repetitivas entre as mesas, que podem incomodar estudantes que não pretendem comprar o produto ou fazendo-os se irritarem se passado repedidamente vendedores em suas mesas.
+Os vendedores gastam um valioso tempo passando em todas as mesas, no horário do almoço, fazendo com que não consigam se concentrar em clientes que estejam dispostos a comprar. Assim, eles não só gastam seu tempo de maneira ineficiente a procura de clientes, como também incomodam estudantes que não pretendem comprar o produto ou os irritam ao passar repetidamente nas mesmas mesas.
 
 ## Objetivos
 
@@ -57,28 +83,4 @@ Valores fixos mensais se alongam por 4 meses que seria o prazo do projeto.
 |Marketing Digital|R$ 10.000,00|1|R$ 10.000,00|
 |Custo estimado|-|-|R$ 345.000,00|
 |Custo estimado + 15% de taxa de risco|-|-|R$ 396.750,00|
-
-## Stakeholders
-
-### Engenharia de Produto de Software
-|Membro|Papel|
-|----|----|
-|[Lucas Costa](https://github.com/lucasca73)|DevOps|
-|[Lucas Pereira](https://github.com/lugope)|Scrum Master|
-|[Ricardo Canela](https://github.com/ricardocanela)|Arquiteto de Software|
-|[Wesley Araujo](https://github.com/wparaujo)|Product Owner|
-
-### Desenvolvedores
-
-|Membro|
-|----|
-|[André Pinto](https://github.com/andrelucax)|
-|[Dâmaso Pereira](https://github.com/juniopereirab)|
-|[Gustavo Lima](https://github.com/gustavolima00)|
-|[Leonardo Medeiros](https://github.com/leomedeiros1)|
-|[Shayane Alcântara](https://github.com/shayanealcantara)|
-|[Welison Almeida](https://github.com/WelisonR)|
-
-### Orientadora
-[Carla Silva Rocha Aguiar](https://github.com/RochaCarla)
 

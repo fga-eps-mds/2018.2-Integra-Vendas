@@ -18,3 +18,12 @@ sidebar_label: Conhecimento
 
 # Quadro de conhecimento Sprint 11
 ![conhecimento_sprint7](assets/metricas/conhecimento_sprint11.png)
+
+# Quadro de conhecimento Sprint 12
+![conhecimento_sprint7](assets/metricas/conhecimento_sprint12.png)
+
+# Quadro de conhecimento Sprint 13
+![conhecimento_sprint7](assets/metricas/conhecimento_sprint13.png)
+
+# Quadro de conhecimento Sprint 14
+![conhecimento_sprint7](assets/metricas/conhecimento_sprint14.png)

@@ -7,23 +7,23 @@ sidebar_label: TAP
 ## Stakeholders
 
 ### Engenharia de Produto de Software
-|Membro|E-mail|
-|------|------|
-|[Lucas Costa](https://github.com/lucasca73)|lucascostaa73@gmail.com|
-|[Lucas Pereira](https://github.com/lugope)|lucasgpereira.10@gmail.com|
-|[Ricardo Canela](https://github.com/ricardocanela)|ricardolimacanela@gmail.com|
-|[Wesley Araujo](https://github.com/wparaujo)|wparaujo7@gmail.com|
+|Membro|E-mail|Matrícula|
+|------|------|---------|
+|[Lucas Costa](https://github.com/lucasca73)|lucascostaa73@gmail.com|13/0060313|
+|[Lucas Pereira](https://github.com/lugope)|lucasgpereira.10@gmail.com|13/0013242|
+|[Ricardo Canela](https://github.com/ricardocanela)|ricardolimacanela@gmail.com|13/0132233|
+|[Wesley Araujo](https://github.com/wparaujo)|wparaujo7@gmail.com|13/0039217|
 
 ### Desenvolvedores
 
-|Membro|E-mail|
-|------|------|
-|[André Pinto](https://github.com/andrelucax)|andrelucax@gmail.com|
-|[Dâmaso Pereira](https://github.com/juniopereirab)|junio.pereirab@gmail.com|
-|[Gustavo Lima](https://github.com/gustavolima00)|gustavomarques.gml@gmail.com|
-|[Leonardo Medeiros](https://github.com/leomedeiros1)|leonardomedeiros.6@gmail.com|
-|[Shayane Alcântara](https://github.com/shayanealcantara)|shayanealcantaraa@gmail.com|
-|[Welison Almeida](https://github.com/WelisonR)|welison.almeida.923@gmail.com|
+|Membro|E-mail|Matrícula|
+|------|------|---------|
+|[André Pinto](https://github.com/andrelucax)|andrelucax@gmail.com|17/0068251|
+|[Dâmaso Pereira](https://github.com/juniopereirab)|junio.pereirab@gmail.com|17/0031438|
+|[Gustavo Lima](https://github.com/gustavolima00)|gustavomarques.gml@gmail.com|17/0035158|
+|[Leonardo Medeiros](https://github.com/leomedeiros1)|leonardomedeiros.6@gmail.com|17/0038891|
+|[Shayane Alcântara](https://github.com/shayanealcantara)|shayanealcantaraa@gmail.com|16/0144949|
+|[Welison Almeida](https://github.com/WelisonR)|welison.almeida.923@gmail.com|17/0024121|
 
 ### Orientadora
 [Carla Silva Rocha Aguiar](https://github.com/RochaCarla)
